@@ -1,0 +1,824 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.9.1 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Objective-C Tutorial 2 – Variables And Data Types - Byte Revel</title>
+<meta name="description" content=" ">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Byte Revel">
+<meta property="og:title" content="Objective-C Tutorial 2 – Variables And Data Types">
+<meta property="og:url" content="/2011/07/10/objective-c-tutorial-2-variables-and-data-types/">
+
+
+  <meta property="og:description" content=" ">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2011-07-10T14:14:13-07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/2011/07/10/objective-c-tutorial-2-variables-and-data-types/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Byte Revel",
+      "url": null,
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Byte Revel Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Byte Revel</a>
+        <ul class="visible-links">
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name"></h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Objective-C Tutorial 2 – Variables And Data Types">
+    <meta itemprop="description" content=" ">
+    <meta itemprop="datePublished" content="July 10, 2011">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Objective-C Tutorial 2 – Variables And Data Types
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p> </p>
+
+<p> </p>
+
+<p><a href="/wp-content/uploads/2011/06/objc.png"><img class="aligncenter size-full wp-image-1340" title="objective-c" src="/wp-content/uploads/2011/06/objc.png" alt="" width="303" height="297" srcset="/wp-content/uploads/2011/06/objc.png 303w, /wp-content/uploads/2011/06/objc-300x294.png 300w, /wp-content/uploads/2011/06/objc-30x30.png 30w, /wp-content/uploads/2011/06/objc-45x45.png 45w, /wp-content/uploads/2011/06/objc-180x176.png 180w" sizes="(max-width: 303px) 100vw, 303px" /></a></p>
+
+<p>In our <a href="/2011/06/20/objective-c-tutorial-1-set-up-xcode-hello-world-and-comments/" title="Objective-C Tutorial 1 – Set Up Xcode, Output Hello World!, And Make Comments">last Objective-C tutorial</a>, we covered setting up Xcode, running the Hello World program, and making comments. In this tutorial, we are going to go over variables.</p>
+
+<p>If you went through any basic algebra course, then you probably know what a mathematical variable is. As a quick reminder, a variable is a letter or symbol that represents a  value (or values). The value of a variable can change given different equations. In programming, variables are names that are placeholders for a data value. For example, a variable named “x” could represent 5.</p>
+
+<p>There are many different types of variables for different kinds of data values. For example, integer variables can only represent numbers that are integers (integers are pretty much whole numbers like -1, 0, and 1). Floats, or floating point numbers, are variables that represent numbers that can have decimal places (up to 7 digits total). A double is a variable type like a float, but it  can hold a much larger amount of digits. When displaying a double in the console window, scientific notation is used for numbers with more than 6 decimal places. Now I know that this paragraph is somewhat confusing and difficult to reference, so here is a comprehensive chart of data values that you can look over now, and back at in the future.</p>
+
+<table border="0" align="center">
+  <tr>
+    <td>
+      <strong>Date Type</strong>
+    </td>
+    
+    <td>
+      <strong>Description</strong>
+    </td>
+    
+    <td>
+      <strong>Example(s)</strong>
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      int
+    </td>
+    
+    <td>
+      variables that are integers can store whole numbers
+    </td>
+    
+    <td>
+      -1, 0, 1
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      float
+    </td>
+    
+    <td>
+      variables that are floats can store numbers with (a limited) number of decimals
+    </td>
+    
+    <td>
+       3.14, 5.68, 2.333
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      double
+    </td>
+    
+    <td>
+      variables that are doubles can store a very large amount of decimals and are displayed in scientific notation
+    </td>
+    
+    <td>
+       <span class="Apple-style-span" style="font-family: Consolas, Monaco, monospace; line-height: 18px; white-space: pre;">3.141592653589793238462643383279502884197169399375105820974944</span>
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+       char
+    </td>
+    
+    <td>
+       variables that are characters can store a letter
+    </td>
+    
+    <td>
+       a, b, c
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      bool
+    </td>
+    
+    <td>
+      a variable that is either true or false; boolean values are integers; any number that is not 0 is true, 0 is false
+    </td>
+    
+    <td>
+      true, false, 0, 1, 2
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      id
+    </td>
+    
+    <td>
+      id variables can store any type of data as well as entire objects
+    </td>
+    
+    <td>
+       &#8220;hello&#8221;, 1, pool
+    </td>
+  </tr>
+</table>
+
+<p> </p>
+
+<p>Don’t worry if you don’t understand some of these data types, we will be going over the use of integers right now, and the others we will cover in the future.</p>
+
+<p>It’s time do dive right in to the code. In this program, we will declare a variable “x” and set it equal to 3. Then, we will output the value of x using NSLog.</p>
+
+<table border="0" align="center">
+  <tr>
+    <td>
+      <pre>#import &lt;Foundation/Foundation.h&gt;</pre>
+      
+      <pre>int main (int argc, const char * argv[]) {</pre>
+      
+      <pre>NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];</pre>
+      
+      <pre>int x = 3;</pre>
+      
+      <pre>NSLog(@"The value of x is %i", x);</pre>
+      
+      <pre>[pool drain];</pre>
+      
+      <pre>return 0;</pre>
+      
+      <pre>}</pre>
+    </td>
+  </tr>
+</table>
+
+<p> </p>
+
+<p>If you run the program (see <a href="/2011/06/20/objective-c-tutorial-1-set-up-xcode-hello-world-and-comments/" title="Objective-C Tutorial 1 – Set Up Xcode, Output Hello World!, And Make Comments">tutorial 1</a>), you will find that it outputs “The value of x is 3”. Pretty darn amazing, eh? Now lets break it down and go through the lines of code that you haven’t sen before.</p>
+
+<p><span style="font-size: large;"><strong>int x = 3;</strong></span></p>
+
+<p>This sets the integer variable x to equal the value 3. It can also be typed as follows:</p>
+
+<table border="0" align="center">
+  <tr>
+    <td>
+      <pre>int x;</pre>
+      
+      <pre>x = 3;</pre>
+    </td>
+  </tr>
+</table>
+
+<p> </p>
+
+<p><span style="font-size: large;"><strong>NSLog(@”The value of x is %i”, x);</strong></span></p>
+
+<p>This NSLog statement outputs “The value of x is 3”. In order to output the value of an integer variable (in this case, x) in the NSLog statement, you must place %i in the part of the output (text in parenthesis) where you want the variable to be output. Then, you must follow the output statement in quotes by a comma and the name of the variable that you want the %i to represent (in this case, it was x).</p>
+
+<p>Now, let’s look at some situations that you might run into while using variables. Say you want to output the values of two variables in the same NSLog statement. The code would be as follows:</p>
+
+<table border="0" align="center">
+  <tr>
+    <td>
+      <pre>#import &lt;Foundation/Foundation.h&gt;</pre>
+      
+      <pre>int main (int argc, const char * argv[]) {</pre>
+      
+      <pre>NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];</pre>
+      
+      <pre>int x = 3;</pre>
+      
+      <pre>int y = 12;</pre>
+      
+      <pre>NSLog(@"The value of x is %i, and the value of y is %i", x, y);</pre>
+      
+      <pre>[pool drain];</pre>
+      
+      <pre>return 0;</pre>
+      
+      <pre>}</pre>
+    </td>
+  </tr>
+</table>
+
+<p> </p>
+
+<p>This will output “The value of x is 3, and the value of y is 12”.</p>
+
+<p><span style="font-size: large;"><strong>NSLog(@”The value of x is %i, and the value of y is %i”, x, y);</strong></span></p>
+
+<p>The two %i’s correspond to the variables that are in the same place in order in the list of variables after the quotation.</p>
+
+<p>Another interesting thing you can do with variables is set a variable to equal an equation that can include other variables. The following code demonstrates this:</p>
+
+<table border="0" align="center">
+  <tr>
+    <td>
+      <pre>#import &lt;Foundation/Foundation.h&gt;</pre>
+      
+      <pre>int main (int argc, const char * argv[]) {</pre>
+      
+      <pre>NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];</pre>
+      
+      <pre>int x = 3;</pre>
+      
+      <pre>int y = 12;</pre>
+      
+      <pre>int z = x + y;</pre>
+      
+      <pre>NSLog(@"The sum of x and y is %i", z);</pre>
+      
+      <pre>[pool drain];</pre>
+      
+      <pre>return 0;</pre>
+      
+      <pre>}</pre>
+    </td>
+  </tr>
+</table>
+
+<p> </p>
+
+<p>This outputs “The sum of x and y is 15”. The line “int z = x + y;” sets integer variable z to equal the sum of the values of x and y.</p>
+
+<p>The last thing I want to demonstrate is the use of a different data type. Let’s use a float.</p>
+
+<table border="0" align="center">
+  <tr>
+    <td>
+      <pre>#import &lt;Foundation/Foundation.h&gt;</pre>
+      
+      <pre>int main (int argc, const char * argv[]) {</pre>
+      
+      <pre>NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];</pre>
+      
+      <pre>float x = 3.1415;</pre>
+      
+      <pre>NSLog(@"The value of x is %f", x);</pre>
+      
+      <pre>[pool drain];</pre>
+      
+      <pre>return 0;</pre>
+      
+      <pre>}</pre>
+    </td>
+  </tr>
+</table>
+
+<p> </p>
+
+<p><span class="Apple-style-span" style="line-height: normal; font-size: small;">This outputs “The value of x is 3.141500”. Note how all 6 decimals are displayed, even if you didn’t have that many. Also note that we used %f in our NSLog statement to output a float. For doubles, we use %e. We will discuss the use of other variables in NSLog in future tutorials.</span></p>
+
+<p><span style="font-size: small;">I hope that you found this tutorial helpful! Please feel free to leave comments asking questions regarding this tutorial.</span></p>
+
+<p> </p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#2" class="page__taxonomy-item" rel="tag">2</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#data-types" class="page__taxonomy-item" rel="tag">data types</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#objective-c" class="page__taxonomy-item" rel="tag">objective-c</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#tutorial" class="page__taxonomy-item" rel="tag">tutorial</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#variables" class="page__taxonomy-item" rel="tag">variables</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#objective-c" class="page__taxonomy-item" rel="tag">Objective-C</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2011-07-10T14:14:13-07:00">July 10, 2011</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/2011/07/10/khan-academy-a-great-free-website-for-learning-a-plethora-of-subjects/" class="pagination--pager" title="Khan Academy – A Great, Free Website for Learning a Plethora of Subjects
+">Previous</a>
+    
+    
+      <a href="/2011/07/11/15-billion-ios-app-downloads-and-counting/" class="pagination--pager" title="15 Billion iOS App Downloads And Counting
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2016/08/icon1024.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2016/08/21/beardedspice-for-mac-lets-you-control-any-music-website-with-your-media-keys/" rel="permalink">BeardedSpice for Mac Lets You Control Any Music Website with Your Media Keys
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2016/02/uber-logo.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2016/02/21/the-growth-of-sharing-services/" rel="permalink">The Growth of Sharing Services
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Over the past few years, the tech sector has seen an emergence of, for lack of a better term, “sharing services,” or companies that network and rent out dist...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2015/11/Quantopian_S1.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2015/11/02/quantopian-technology-to-backtest-and-execute-algorithmic-trading/" rel="permalink">Quantopian – Technology to Backtest and Execute Algorithmic Trading
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Algorithmic trading is growing field in finance that uses computers to execute securities trades. With growing research in artificial intelligence and machin...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2015/10/Cu_computer_science.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2015/10/17/computer-science-at-undergraduate-level-part-i/" rel="permalink">Computer Science at Undergraduate Level (Part I)
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Computer Science is rapidly becoming a popular major among students as the job market for CS majors shows consistent growth. Additionally, the market for CS ...</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap">
+  <input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  <div id="results" class="results"></div>
+</div>
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Byte Revel. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+
+
+  
+  
+  <script src="/assets/js/lunr/lunr.min.js"></script>
+  <script src="/assets/js/lunr/lunr-store.js"></script>
+  <script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "/2011/07/10/objective-c-tutorial-2-variables-and-data-types/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/2011/07/10/objective-c-tutorial-2-variables-and-data-types"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://byte-revel.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+  </body>
+</html>

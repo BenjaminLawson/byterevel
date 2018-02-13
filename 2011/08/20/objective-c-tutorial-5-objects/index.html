@@ -1,0 +1,860 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.9.1 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Objective-C Tutorial 5 – Objects - Byte Revel</title>
+<meta name="description" content="">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Byte Revel">
+<meta property="og:title" content="Objective-C Tutorial 5 – Objects">
+<meta property="og:url" content="/2011/08/20/objective-c-tutorial-5-objects/">
+
+
+  <meta property="og:description" content="">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2011-08-20T12:47:17-07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/2011/08/20/objective-c-tutorial-5-objects/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Byte Revel",
+      "url": null,
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Byte Revel Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Byte Revel</a>
+        <ul class="visible-links">
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name"></h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Objective-C Tutorial 5 – Objects">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="August 20, 2011">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Objective-C Tutorial 5 – Objects
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p><a href="/wp-content/uploads/2011/06/objc.png"><img class="aligncenter size-full wp-image-1340" title="objective-c" src="/wp-content/uploads/2011/06/objc.png" alt="" width="303" height="297" srcset="/wp-content/uploads/2011/06/objc.png 303w, /wp-content/uploads/2011/06/objc-300x294.png 300w, /wp-content/uploads/2011/06/objc-30x30.png 30w, /wp-content/uploads/2011/06/objc-45x45.png 45w, /wp-content/uploads/2011/06/objc-180x176.png 180w" sizes="(max-width: 303px) 100vw, 303px" /></a></p>
+
+<p>Hit the play button on <a title="http://www.youtube.com/watch?v=dQw4w9WgXcQ" href="http://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">your favorite music video</a>, because it’s time for yet another tutorial on the awesome programming language that is Objective-C! In our <a title="Objective-C Tutorial 4 – Classes" href="/2011/07/20/objective-c-tutorial-4-classes/" target="_blank">last tutorial</a>, we studied classes. In our code, we made the “Alien” class. This time ’round, we’re going to make an object. This object is going to be “Bill”. Bill is going to be a member of the Alien class.</p>
+
+<p>We briefly discussed what objects were in our last tutorial, but let’s go over them again anyways. Objects are basically things that inherit all the characteristics of the class that it is a member of. To put this into a  real life example, “Humans” could be a class of objects. Your best friend Tom would be an object that is a member of the class “Humans”. Tom would inherit (from the Human class) variables like height, gender, age, and weight. Some methods that he might inherit include tying his shoe and walking. Still don’t get it? Let’s go over creating objects that are members of a class.</p>
+
+<h1 style="text-align: center;">
+  Making An Object
+</h1>
+
+<p>We are going to continue working with the code from our last tutorial. That code currently consists of the “Alien” class. Just like I promised, we are going to make the Alien “Bill”. Bill is going to be an object that is a member of the Alien class.</p>
+
+<p>When we declared the Alien class, we were working entirely outside of the main function. We are now going to start working in the main function, as that is where objects are declared.</p>
+
+<p>Here is the code we will use to create the object Bill:</p>
+
+<table border="0" align="center">
+  <tr>
+    <td>
+      <pre>#import &lt;Foundation/Foundation.h&gt;</pre>
+      
+      <pre>@interface Alien : NSObject {</pre>
+      
+      <pre>int NumberOfEyes;</pre>
+      
+      <pre>int Age;</pre>
+      
+      <pre>int NumberOfEars;</pre>
+      
+      <pre>}</pre>
+      
+      <pre>-(void) output;</pre>
+      
+      <pre>-(void) setNumberOfEyes: (int) i;</pre>
+      
+      <pre>-(void) setAge: (int) a;</pre>
+      
+      <pre>-(void) setNumberOfEars: (int) e;</pre>
+      
+      <pre>@end</pre>
+      
+      <pre>@implementation Alien</pre>
+      
+      <pre>-(void) output {</pre>
+      
+      <pre>NSLog(@"The alien is %i years old and has %i eyes and %i ears.", Age, NumberOfEyes, NumberOfEars);</pre>
+      
+      <pre>}</pre>
+      
+      <pre>-(void) setNumberOfEyes: (int) i {</pre>
+      
+      <pre>NumberOfEyes = i;</pre>
+      
+      <pre>}</pre>
+      
+      <pre>-(void) setAge: (int) a {</pre>
+      
+      <pre>Age = a;</pre>
+      
+      <pre>}</pre>
+      
+      <pre>-(void) setNumberOfEars: (int) e {</pre>
+      
+      <pre>NumberOfEars = e;</pre>
+      
+      <pre>}</pre>
+      
+      <pre>@end</pre>
+      
+      <pre>int main (int argc, const char * argv[]) {</pre>
+      
+      <pre>    NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];</pre>
+      
+      <pre><span style="color: #ff0000;">Alien *Bill;</span></pre>
+      
+      <pre><span style="color: #ff0000;">Bill = [Alien alloc];</span></pre>
+      
+      <pre><span style="color: #ff0000;">Bill = [Bill init];</span></pre>
+      
+      <pre>[pool drain];</pre>
+      
+      <pre>    return 0;</pre>
+      
+      <pre>}</pre>
+    </td>
+  </tr>
+</table>
+
+<p> </p>
+
+<p><span style="font-size: large;"><strong>Alien *Bill;</strong></span></p>
+
+<p>We declare an object by giving the name of a class followed by an asterisk and the name of the object you want to create (this is called a pointer, we’ll be going over them in a future tutorial). In this line, we created the object “Bill” that is a member of the class “Alien”.</p>
+
+<p><strong><span style="font-size: large;">Bill = [Alien alloc];</span></strong></p>
+
+<p>In this line, we allocate some memory for the object Bill. That is, we borrow some memory from the computer for our object to use. This is done by giving a declared object’s name, and setting it equal to “[Class alloc]” (replacing “Class” with the name of the class that the object is a member of).</p>
+
+<p><strong><span style="font-size: large;">Bill = [Bill init];</span></strong></p>
+
+<p>Before we can use our object, we have to initialize it. This is done by giving a declared object’s name, and setting it equal to “[Object init]” (replacing “Object” with the name of the object).</p>
+
+<p>That’s all there is to creating an object!</p>
+
+<h1 style="text-align: center;">
+  Using Methods
+</h1>
+
+<p>Now that we’ve created our object, we want to use the methods that our object inherited from the Alien class.</p>
+
+<table border="0" align="center">
+  <tr>
+    <td>
+      <pre>#import &lt;Foundation/Foundation.h&gt;</pre>
+      
+      <pre>@interface Alien : NSObject {</pre>
+      
+      <pre>int NumberOfEyes;</pre>
+      
+      <pre>int Age;</pre>
+      
+      <pre>int NumberOfEars;</pre>
+      
+      <pre>}</pre>
+      
+      <pre>-(void) output;</pre>
+      
+      <pre>-(void) setNumberOfEyes: (int) i;</pre>
+      
+      <pre>-(void) setAge: (int) a;</pre>
+      
+      <pre>-(void) setNumberOfEars: (int) e;</pre>
+      
+      <pre>@end</pre>
+      
+      <pre>@implementation Alien</pre>
+      
+      <pre>-(void) output {</pre>
+      
+      <pre>NSLog(@"The alien is %i years old and has %i eyes and %i ears.", Age, NumberOfEyes, NumberOfEars);</pre>
+      
+      <pre>}</pre>
+      
+      <pre>-(void) setNumberOfEyes: (int) i {</pre>
+      
+      <pre>NumberOfEyes = i;</pre>
+      
+      <pre>}</pre>
+      
+      <pre>-(void) setAge: (int) a {</pre>
+      
+      <pre>Age = a;</pre>
+      
+      <pre>}</pre>
+      
+      <pre>-(void) setNumberOfEars: (int) e {</pre>
+      
+      <pre>NumberOfEars = e;</pre>
+      
+      <pre>}</pre>
+      
+      <pre>@end</pre>
+      
+      <pre>int main (int argc, const char * argv[]) {</pre>
+      
+      <pre>    NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];</pre>
+      
+      <pre>Alien *Bill;</pre>
+      
+      <pre>Bill = [Alien alloc];</pre>
+      
+      <pre>Bill = [Bill init];</pre>
+      
+      <pre><span style="color: #ff0000;">[Bill setNumberOfEyes: 8];</span></pre>
+      
+      <pre>[pool drain];</pre>
+      
+      <pre>    return 0;</pre>
+      
+      <pre>}</pre>
+    </td>
+  </tr>
+</table>
+
+<p> </p>
+
+<p><strong><span style="font-size: large;">[Bill setNumberOfEyes: 8];</span></strong></p>
+
+<p>To call upon one of the methods that we declared in the Alien class, we put, inside of square brackets, the name of the object followed by the name of the method. If the method needs some kind of value passed into it, then we follow the function name with a colon and the value. In this case, we are using the setNumberOfEyes method and providing it with a value of 8. In our @Implementation section, we made the setNumberOfEyes method take whatever value was passed into it and set the variable NumberOfEyes equal to it. And, just like that, we used the setNumberOFEyes method to give Bill 8 eyes.</p>
+
+<p>Now that we’ve gone over how to use one method, let’s use all of the methods that we declared.</p>
+
+<table border="0" align="center">
+  <tr>
+    <td>
+      <pre>#import &lt;Foundation/Foundation.h&gt;</pre>
+      
+      <pre>@interface Alien : NSObject {</pre>
+      
+      <pre>int NumberOfEyes;</pre>
+      
+      <pre>int Age;</pre>
+      
+      <pre>int NumberOfEars;</pre>
+      
+      <pre>}</pre>
+      
+      <pre>-(void) output;</pre>
+      
+      <pre>-(void) setNumberOfEyes: (int) i;</pre>
+      
+      <pre>-(void) setAge: (int) a;</pre>
+      
+      <pre>-(void) setNumberOfEars: (int) e;</pre>
+      
+      <pre>@end</pre>
+      
+      <pre>@implementation Alien</pre>
+      
+      <pre>-(void) output {</pre>
+      
+      <pre>NSLog(@"The alien is %i years old and has %i eyes and %i ears.", Age, NumberOfEyes, NumberOfEars);</pre>
+      
+      <pre>}</pre>
+      
+      <pre>-(void) setNumberOfEyes: (int) i {</pre>
+      
+      <pre>NumberOfEyes = i;</pre>
+      
+      <pre>}</pre>
+      
+      <pre>-(void) setAge: (int) a {</pre>
+      
+      <pre>Age = a;</pre>
+      
+      <pre>}</pre>
+      
+      <pre>-(void) setNumberOfEars: (int) e {</pre>
+      
+      <pre>NumberOfEars = e;</pre>
+      
+      <pre>}</pre>
+      
+      <pre>@end</pre>
+      
+      <pre>int main (int argc, const char * argv[]) {</pre>
+      
+      <pre>    NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];</pre>
+      
+      <pre>Alien *Bill;</pre>
+      
+      <pre>Bill = [Alien alloc];</pre>
+      
+      <pre>Bill = [Bill init];</pre>
+      
+      <pre><span style="color: #ff0000;">[Bill setNumberOfEyes: 8];</span></pre>
+      
+      <pre><span style="color: #ff0000;">[Bill setAge: 344];</span></pre>
+      
+      <pre><span style="color: #ff0000;">[Bill setNumberOfEars: 3];</span></pre>
+      
+      <pre><span style="color: #ff0000;">[Bill output];</span></pre>
+      
+      <pre><span style="color: #ff0000;">[Bill release];</span></pre>
+      
+      <pre>[pool drain];</pre>
+      
+      <pre>    return 0;</pre>
+      
+      <pre>}</pre>
+    </td>
+  </tr>
+</table>
+
+<p> </p>
+
+<p><span style="font-size: large;"><strong>[Bill output];</strong></span></p>
+
+<p>The setAge and setNumberOfEars methods are pretty straightforward, but the output method could use a little narration. Unlike the other methods, it doesn’t need any arguments (values passed into it). What it does is take the variables that we set values for (with the other methods) and plugs them into the sentence we declared in the output method in the@implementation section. It then NSLog’s (outputs) the sentence to the console.</p>
+
+<p><span style="font-size: large;"><strong>[Bill release];</strong></span></p>
+
+<p>Remember how we allocated, or borrowed, some memory from the computer for our Bill object? Well, now we need to release, or give back, that memory. That is done with the line “[Object release];” (replacing “Object” with the name of the object).</p>
+
+<p>That’s it. We’re done. We created the object Bill. Bill was a member of the Alien class. We ran some methods that set the values of some of Bill’s variables (that he inherited from the Alien class) and then plugged those variables into a sentence and outputted that sentence to the screen. What? You haven’t done that last thing yet? Whoops. Let’s do that now.</p>
+
+<p>If you haven’t opened your console window already, do so now by going to Run -&gt; Console. Next, hit that shiny “Build and Run” button. The sentence  “The alien is 344 years old and has 8 eyes and 3 ears.” should be outputted to the console window.</p>
+
+<p>Feeling brave? try creating your own alien with different numbers of eyes and ears!</p>
+
+<p><span class="vvqbox vvqyoutube" style="width:585px;height:330px;"><span id="vvq-2436-youtube-1"><a href="http://www.youtube.com/watch?v=gBzJGckMYO4"><img src="http://img.youtube.com/vi/gBzJGckMYO4/0.jpg" alt="YouTube Preview Image" /></a></span></span></p>
+
+<p><em>So ya. That’s all folks. See you next time! I’m not yet sure what the next tutorial is going to be about.</em></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#alien" class="page__taxonomy-item" rel="tag">alien</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#bill" class="page__taxonomy-item" rel="tag">bill</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#classes" class="page__taxonomy-item" rel="tag">classes</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#objective-c" class="page__taxonomy-item" rel="tag">objective-c</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#objects" class="page__taxonomy-item" rel="tag">objects</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#tutorial" class="page__taxonomy-item" rel="tag">tutorial</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#objective-c" class="page__taxonomy-item" rel="tag">Objective-C</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2011-08-20T12:47:17-07:00">August 20, 2011</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/2011/08/20/grand-theft-auto-chinatown-wars-for-ios-app-review/" class="pagination--pager" title="Grand Theft Auto – Chinatown Wars For iOS (App Review)
+">Previous</a>
+    
+    
+      <a href="/2011/08/21/php-tutorial-3-variables-and-comments/" class="pagination--pager" title="PHP Tutorial 3 – Variables And Comments
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2016/08/icon1024.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2016/08/21/beardedspice-for-mac-lets-you-control-any-music-website-with-your-media-keys/" rel="permalink">BeardedSpice for Mac Lets You Control Any Music Website with Your Media Keys
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2016/02/uber-logo.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2016/02/21/the-growth-of-sharing-services/" rel="permalink">The Growth of Sharing Services
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Over the past few years, the tech sector has seen an emergence of, for lack of a better term, “sharing services,” or companies that network and rent out dist...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2015/11/Quantopian_S1.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2015/11/02/quantopian-technology-to-backtest-and-execute-algorithmic-trading/" rel="permalink">Quantopian – Technology to Backtest and Execute Algorithmic Trading
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Algorithmic trading is growing field in finance that uses computers to execute securities trades. With growing research in artificial intelligence and machin...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2015/10/Cu_computer_science.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2015/10/17/computer-science-at-undergraduate-level-part-i/" rel="permalink">Computer Science at Undergraduate Level (Part I)
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Computer Science is rapidly becoming a popular major among students as the job market for CS majors shows consistent growth. Additionally, the market for CS ...</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap">
+  <input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  <div id="results" class="results"></div>
+</div>
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Byte Revel. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+
+
+  
+  
+  <script src="/assets/js/lunr/lunr.min.js"></script>
+  <script src="/assets/js/lunr/lunr-store.js"></script>
+  <script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "/2011/08/20/objective-c-tutorial-5-objects/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/2011/08/20/objective-c-tutorial-5-objects"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://byte-revel.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+  </body>
+</html>

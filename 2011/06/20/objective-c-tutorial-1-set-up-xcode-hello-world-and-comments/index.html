@@ -1,0 +1,698 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.9.1 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Objective-C Tutorial 1 – Set Up Xcode, Output Hello World!, And Make Comments - Byte Revel</title>
+<meta name="description" content="  ">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Byte Revel">
+<meta property="og:title" content="Objective-C Tutorial 1 – Set Up Xcode, Output Hello World!, And Make Comments">
+<meta property="og:url" content="/2011/06/20/objective-c-tutorial-1-set-up-xcode-hello-world-and-comments/">
+
+
+  <meta property="og:description" content="  ">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2011-06-20T06:16:15-07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/2011/06/20/objective-c-tutorial-1-set-up-xcode-hello-world-and-comments/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Byte Revel",
+      "url": null,
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Byte Revel Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Byte Revel</a>
+        <ul class="visible-links">
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name"></h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Objective-C Tutorial 1 – Set Up Xcode, Output Hello World!, And Make Comments">
+    <meta itemprop="description" content="  ">
+    <meta itemprop="datePublished" content="June 20, 2011">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Objective-C Tutorial 1 – Set Up Xcode, Output Hello World!, And Make Comments
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p style="text-align: center;">
+  <a href="/wp-content/uploads/2011/06/objc.png"><img class="aligncenter size-full wp-image-1340" title="objc" src="/wp-content/uploads/2011/06/objc.png" alt="" width="303" height="297" srcset="/wp-content/uploads/2011/06/objc.png 303w, /wp-content/uploads/2011/06/objc-300x294.png 300w, /wp-content/uploads/2011/06/objc-30x30.png 30w, /wp-content/uploads/2011/06/objc-45x45.png 45w, /wp-content/uploads/2011/06/objc-180x176.png 180w" sizes="(max-width: 303px) 100vw, 303px" /></a>
+</p>
+
+<p>Objective-C is an object-oriented programming language that builds upon the C programming language. The language is most commonly used on Apple’s Macintosh operating system and Apple’s mobile operating system, iOS.</p>
+
+<p>Before we start programming in Objective-C, we will want to set up our IDE. Xcode is the best IDE for Objective-C out there, so we’re going to go with that. In general, it’s best to always use the latest version of a piece of software. The latest version of Xcode (Xcode 4 as of the writing of this post) can be found in the Mac App Store ( <a title="http://itunes.apple.com/app/xcode/id422352214" href="http://itunes.apple.com/app/xcode/id422352214" target="_blank">link</a>), and Apple charges USD $4.99 for it. If you aren’t able to shell out the cash, or if you are running a version of Mac OS younger than 10.6, you can sign up for a developer account at <a title="http://developer.apple.com/programs/register/" href="http://developer.apple.com/programs/register/" target="_blank">http://developer.apple.com/programs/register/</a> and then find an earlier version of Xcode at <a href="http://connect.apple.com/">http://connect.apple.com</a> (in the “Developer Tools” section).</p>
+
+<p>Once you have downloaded Xcode, open it (if you downloaded it to the default location, it can be found in the root folder -&gt; Developer -&gt; Applications -&gt; Xcode). Hit the “Create a new Xcode project” button. In the Mac OS X section of the sidebar, select “Application”. After that, choose “Command Line Tool” and, in the “Type” drop-down menu, choose “Foundation” (yes, Foundation as in the <em>Foundation</em> Series by Isaac Asimov =P ). Next, click the “Choose…” button and give your project a name. Save it, and your project window will open.</p>
+
+<p>The Hello World program is the default code of a new project. It can be found in the main file (<em>projectname</em>.m). The code is as follows:</p>
+
+<table style="width: 90%;" border="0" align="center">
+  <tr>
+    <td>
+      <pre> <span style="font-size: small;">#import </span></pre>
+      
+      <pre><span style="font-size: small;">int main (int argc, const char * argv[]) {</span></pre>
+      
+      <pre><span style="font-size: small;">NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];</span></pre>
+      
+      <pre><span style="font-size: small;">NSLog(@"Hello, World!");</span></pre>
+      
+      <pre><span style="font-size: small;">[pool drain];</span></pre>
+      
+      <pre><span style="font-size: small;">return 0;</span></pre>
+      
+      <pre><span style="font-size: small;">}</span></pre>
+    </td>
+  </tr>
+</table>
+
+<p>It would seem obvious that to run the program, you should click the “Build and Run” button. While this WILL run the program, you won’t actually be able to see any output! What you are going to want to do is go to (in the menu bar) Run -&gt; Console. This will bring up the console window that will show you program output and will allow for input as well. Hit “Build and Run” and watch “Hello World!” be outputted to the console!</p>
+
+<p>Now, let’s go through the program line by line and I will explain what you should know about this program.</p>
+
+<p><strong><span style="font-size: medium;">#import </span></strong></p>
+
+<p><span style="font-size: small;">This imports a header file that allows the computer to access the functionality of the Foundation framework. To simplify what I just said…. er… typed, there is a file with a bunch of code in it that you don’t want to have to type and this imports all of that code into the program. However, this functionality isn’t used in this program (and will run fine without it).</span></p>
+
+<p><strong><span style="font-size: medium;">int main (int argc, const char * argv[]) {</span></strong></p>
+
+<p><span style="font-size: small;">This declares the main function, and is known as a “function header”. The main function is the starting point for all programs in Objective-C. It is what is run by the computer when the entire program itself is run. Functions in general are chunks of code that contain instructions for the computer. They can be called upon at any time from any other function. For now, don’t worry about the code in the parentheses. Lastly, the “{” (left curly brace) begins the body of the main function.</span></p>
+
+<p><strong><span style="font-size: medium;">NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];</span></strong></p>
+
+<p><span style="font-size: small;">This line borrows some memory from your computer so that your program can run.</span></p>
+
+<p><strong><span style="font-size: medium;">NSLog(@”Hello, World!”);</span></strong></p>
+
+<p><span style="font-size: small;">NSLog is used to display/output text on the screen. Anything in the quotation marks is the text that gets outputted.</span></p>
+
+<p><strong><span style="font-size: medium;">[pool drain];</span></strong></p>
+
+<p><span style="font-size: small;">This line releases, or “drains”, the memory that we borrowed earlier in the <em>NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];</em> line.</span></p>
+
+<p><strong><span style="font-size: medium;">return 0;</span></strong></p>
+
+<p><span style="font-size: small;">This line returns the value “0” to the computer. Every function, except for the void function, returns a value. This value is described by the data type declared in the function header. In this case, the data type is an int, or integer. Returning the value of “0” indicates that the program ran successfully.</span></p>
+
+<p><span style="font-size: medium;"><strong>}</strong></span></p>
+
+<p><span style="font-size: small;">The right curly brace is simply the end of the body function.</span></p>
+
+<p style="text-align: center;">
+  <span style="font-size: x-large;"><strong>Comments</strong></span>
+</p>
+
+<p><span style="font-size: small;">A comment is a section of text that isn’t run in a program. A single line comment is indicated by two forward slashes (//). All text after that on the same line won’t be run by the computer when it comes to it. Comments can be used to describe parts of your program, or to turn parts of your program off.</span></p>
+
+<p><span style="font-size: small;">In addition to a single line comment, there are multi-line comments. Multi-line comments are comments that cover more than when line. They are started with a “/<em>” and ended with a “</em>/”.</span></p>
+
+<p><span style="font-size: small;">Here’s an example of comments in use:</span></p>
+
+<table style="width: 90%;" border="0" align="center">
+  <tr>
+    <td>
+      <pre><span style="font-size: small;"> #import </span></pre>
+      
+      <pre><span style="font-size: small;">int main (int argc, const char * argv[]) {</span></pre>
+      
+      <pre><span style="font-size: small;">NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];</span></pre>
+      
+      <pre><span style="font-size: small;">// this is a single line commment!</span></pre>
+      
+      <pre><span style="font-size: small;">/*</span></pre>
+      
+      <pre><span style="font-size: small;">this is a</span></pre>
+      
+      <pre><span style="font-size: small;">multi-line</span></pre>
+      
+      <pre><span style="font-size: small;">comment!</span></pre>
+      
+      <pre><span style="font-size: small;">*/</span></pre>
+      
+      <pre><span style="font-size: small;">[pool drain];</span></pre>
+      
+      <pre><span style="font-size: small;">return 0;</span></pre>
+      
+      <pre><span style="font-size: small;">}</span></pre>
+    </td>
+  </tr>
+</table>
+
+<p><span style="font-size: small;">That’s all for now folks, I hope that you found this tutorial helpful! I encourage you to play around with the code by changing the text outputted with NSLog and by testing out comments.</span></p>
+
+<p>EDIT: Objective-C tutorial 2 is now up at:<a href="/2011/07/10/objective-c-tutorial-2-variables-and-data-types/" title="/2011/07/10/objective-c-tutorial-2-variables-and-data-types/"> /2011/07/10/objective-c-tutorial-2-variables-and-data-types/</a> .</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#comments" class="page__taxonomy-item" rel="tag">comments</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#hello-world" class="page__taxonomy-item" rel="tag">hello world</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#ios" class="page__taxonomy-item" rel="tag">ios</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#language" class="page__taxonomy-item" rel="tag">language</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#mac" class="page__taxonomy-item" rel="tag">mac</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#macintosh" class="page__taxonomy-item" rel="tag">macintosh</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#obj-c" class="page__taxonomy-item" rel="tag">obj-c</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#object-oriented" class="page__taxonomy-item" rel="tag">object-oriented</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#objective-c" class="page__taxonomy-item" rel="tag">objective-c</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#programming" class="page__taxonomy-item" rel="tag">programming</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#tutorial-1" class="page__taxonomy-item" rel="tag">tutorial 1</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#xcode" class="page__taxonomy-item" rel="tag">xcode</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#objective-c" class="page__taxonomy-item" rel="tag">Objective-C</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2011-06-20T06:16:15-07:00">June 20, 2011</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/2011/06/20/nestopia-play-classic-nintendo-games-on-your-computer/" class="pagination--pager" title="Play Classic Nintendo Games On Your Computer With The Nestopia Emulator
+">Previous</a>
+    
+    
+      <a href="/2011/06/21/generate-upside-down-text-with-this-nifty-website/" class="pagination--pager" title="Generate Upside-Down Text With This Nifty Website
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2016/08/icon1024.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2016/08/21/beardedspice-for-mac-lets-you-control-any-music-website-with-your-media-keys/" rel="permalink">BeardedSpice for Mac Lets You Control Any Music Website with Your Media Keys
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2016/02/uber-logo.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2016/02/21/the-growth-of-sharing-services/" rel="permalink">The Growth of Sharing Services
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Over the past few years, the tech sector has seen an emergence of, for lack of a better term, “sharing services,” or companies that network and rent out dist...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2015/11/Quantopian_S1.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2015/11/02/quantopian-technology-to-backtest-and-execute-algorithmic-trading/" rel="permalink">Quantopian – Technology to Backtest and Execute Algorithmic Trading
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Algorithmic trading is growing field in finance that uses computers to execute securities trades. With growing research in artificial intelligence and machin...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2015/10/Cu_computer_science.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2015/10/17/computer-science-at-undergraduate-level-part-i/" rel="permalink">Computer Science at Undergraduate Level (Part I)
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Computer Science is rapidly becoming a popular major among students as the job market for CS majors shows consistent growth. Additionally, the market for CS ...</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap">
+  <input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  <div id="results" class="results"></div>
+</div>
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Byte Revel. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+
+
+  
+  
+  <script src="/assets/js/lunr/lunr.min.js"></script>
+  <script src="/assets/js/lunr/lunr-store.js"></script>
+  <script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "/2011/06/20/objective-c-tutorial-1-set-up-xcode-hello-world-and-comments/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/2011/06/20/objective-c-tutorial-1-set-up-xcode-hello-world-and-comments"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://byte-revel.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+  </body>
+</html>

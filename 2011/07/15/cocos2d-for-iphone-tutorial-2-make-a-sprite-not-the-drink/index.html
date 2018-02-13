@@ -1,0 +1,840 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.9.1 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Cocos2D For iPhone Tutorial 2 –  Make A Sprite (Not The Drink!) - Byte Revel</title>
+<meta name="description" content="  ">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Byte Revel">
+<meta property="og:title" content="Cocos2D For iPhone Tutorial 2 –  Make A Sprite (Not The Drink!)">
+<meta property="og:url" content="/2011/07/15/cocos2d-for-iphone-tutorial-2-make-a-sprite-not-the-drink/">
+
+
+  <meta property="og:description" content="  ">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2011-07-15T15:34:35-07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/2011/07/15/cocos2d-for-iphone-tutorial-2-make-a-sprite-not-the-drink/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Byte Revel",
+      "url": null,
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Byte Revel Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Byte Revel</a>
+        <ul class="visible-links">
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name"></h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Cocos2D For iPhone Tutorial 2 –  Make A Sprite (Not The Drink!)">
+    <meta itemprop="description" content="  ">
+    <meta itemprop="datePublished" content="July 15, 2011">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Cocos2D For iPhone Tutorial 2 –  Make A Sprite (Not The Drink!)
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p style="text-align: center;">
+  <a href="/wp-content/uploads/2011/07/cocos2d-logo.png"><img class="aligncenter size-full wp-image-1965" title="cocos2d logo" src="/wp-content/uploads/2011/07/cocos2d-logo.png" alt="" width="160" height="237" /></a>
+</p>
+
+<p>Okay, now that you’ve <a title="Cocos2D for iPhone Tutorial I – How To Install Cocos2D for iPhone in Xcode" href="/2011/06/02/cocos2d-tutorial-i-how-to-install-cocos2d-in-xcode/" target="_blank">successfully installed Cocos2D for iPhone</a>, let’s go over making a project and displaying a sprite.</p>
+
+<p>First off, we need to create a new project. This is done by opening Xcode and going to File -&gt; New Project. Alternatively, Hit the “Create a new Xcode project” button in the welcome window. In the new project window, select “Cocos2d” from the user templates section of the sidebar. The type of application that you want to make right now is a “cocos2d Application”. Double click the corresponding icon.</p>
+
+<p>In your project sidebar, expand the “Classes” folder. The file that we are going to work with in this tutorial is “HelloWorldScene.m”. Click it.</p>
+
+<p>Be default, the code should be as follows:</p>
+
+<table border="0" align="center">
+  <tr>
+    <td>
+      <span class="Apple-style-span" style="font-family: Consolas, Monaco, monospace; font-size: 12px; line-height: 18px; white-space: pre;">//  HelloWorldLayer.m</span>&lt;/p&gt; 
+      
+      <pre>// Import the interfaces</pre>
+      
+      <pre>#import "HelloWorldScene.h"</pre>
+      
+      <pre>// HelloWorld implementation</pre>
+      
+      <pre>@implementation HelloWorld</pre>
+      
+      <pre>+(id) scene</pre>
+      
+      <pre>{</pre>
+      
+      <pre>// 'scene' is an autorelease object.</pre>
+      
+      <pre>CCScene *scene = [CCScene node];</pre>
+      
+      <pre>// 'layer' is an autorelease object.</pre>
+      
+      <pre>HelloWorld *layer = [HelloWorld node];</pre>
+      
+      <pre>// add layer as a child to scene</pre>
+      
+      <pre>[scene addChild: layer];</pre>
+      
+      <pre>// return the scene</pre>
+      
+      <pre>return scene;</pre>
+      
+      <pre>}</pre>
+      
+      <pre>// on "init" you need to initialize your instance</pre>
+      
+      <pre>-(id) init</pre>
+      
+      <pre>{</pre>
+      
+      <pre>// always call "super" init</pre>
+      
+      <pre>// Apple recommends to re-assign "self" with the "super" return value</pre>
+      
+      <pre>if( (self=[super init] )) {</pre>
+      
+      <pre>// create and initialize a Label</pre>
+      
+      <pre>CCLabelTTF *label = [CCLabelTTF labelWithString:@"Hello World" fontName:@"Marker Felt" fontSize:64];</pre>
+      
+      <pre>// ask director the the window size</pre>
+      
+      <pre>CGSize size = [[CCDirector sharedDirector] winSize];</pre>
+      
+      <pre>// position the label on the center of the screen</pre>
+      
+      <pre>label.position =  ccp( size.width /2 , size.height/2 );</pre>
+      
+      <pre>// add the label as a child to this Layer</pre>
+      
+      <pre>[self addChild: label];</pre>
+      
+      <pre>}</pre>
+      
+      <pre>return self;</pre>
+      
+      <pre>}</pre>
+      
+      <pre>// on "dealloc" you need to release all your retained objects</pre>
+      
+      <pre>- (void) dealloc</pre>
+      
+      <pre>{</pre>
+      
+      <pre>// in case you have something to dealloc, do it in this method</pre>
+      
+      <pre>// in this particular example nothing needs to be released.</pre>
+      
+      <pre>// cocos2d will automatically release all the children (Label)</pre>
+      
+      <pre>// don't forget to call "super dealloc"</pre>
+      
+      <pre>[super dealloc];</pre>
+      
+      <pre>}</pre>
+      
+      <pre>@end</pre>
+    </td>
+  </tr>
+</table>
+
+<p>To make sure Cocos2D is configured correctly, click “Build and Debug” (at the top of the window). The iOs simulator application should open, and the Cocos2D application should run. The default code will cause “Hello World” to be displayed on the screen. All is well? Good.</p>
+
+<p>After getting rid of all the unnecessary parts of code in our HelloWorldScene.m file, such as comments, we can trim it down to:</p>
+
+<table border="0" align="center">
+  <tr>
+    <td>
+      <pre>#import "HelloWorldScene.h"</pre>
+      
+      <pre>@implementation HelloWorld</pre>
+      
+      <pre>+(id) scene</pre>
+      
+      <pre>{</pre>
+      
+      <pre>CCScene *scene = [CCScene node];</pre>
+      
+      <pre>HelloWorld *layer = [HelloWorld node];</pre>
+      
+      <pre>[scene addChild: layer];</pre>
+      
+      <pre>return scene;</pre>
+      
+      <pre>}</pre>
+      
+      <pre>-(id) init</pre>
+      
+      <pre>{</pre>
+      
+      <pre>if( (self=[super init] )) {</pre>
+      
+      <pre>}</pre>
+      
+      <pre>return self;</pre>
+      
+      <pre>}</pre>
+      
+      <pre>- (void) dealloc</pre>
+      
+      <pre>{</pre>
+      
+      <pre>[super dealloc];</pre>
+      
+      <pre>}</pre>
+      
+      <pre>@end</pre>
+    </td>
+  </tr>
+</table>
+
+<p> </p>
+
+<p>Before we get to writing the code that will display a sprite, let’s make sure we know what a sprite is. The definition of a sprite is “A computer graphic that may be moved on-screen and otherwise manipulated as a single entity”. For example, in <a title="Top 10 iPhone Games – Physics Games" href="/2011/05/11/top-10-iphone-games-physics-games/" target="_blank">Angry Birds</a>, the birds that you launch with a slingshot are sprites.</p>
+
+<p>Now that we’ve got that over with, let’s get back to the project. Obviously, we are going to need a sprite that we can manipulate. Luckily, there is a default Cocos2D icon in the “Resources” folder in the sidebar that we can use. If you’re really against using that, then you can import your own small png image to the Resources folder and adjust the code that we go through accordingly. For the purpose of this tutorial, though, we are going to use the default image “Icon.png”.</p>
+
+<p>Let’s cut to the code (I love saying that). We’re going to start off by making an object for our sprite. We do this by making an object in the class “CCSprite”. Let’s call our object “icon” because that’s the name of the image we are using. The code for this is “CCSprite *icon;”.  “Where do I put this?” you ask. Glad you asked. We are going to put this right under the #import code. Like so:</p>
+
+<table border="0" align="center">
+  <tr>
+    <td>
+      <pre>#import "HelloWorldScene.h"</pre>
+      
+      <pre><span style="color: #ff0000;">CCSprite *icon;</span></pre>
+      
+      <pre>@implementation HelloWorld</pre>
+      
+      <pre>+(id) scene</pre>
+      
+      <pre>{</pre>
+      
+      <pre>CCScene *scene = [CCScene node];</pre>
+      
+      <pre>HelloWorld *layer = [HelloWorld node];</pre>
+      
+      <pre>[scene addChild: layer];</pre>
+      
+      <pre>return scene;</pre>
+      
+      <pre>}</pre>
+      
+      <pre>-(id) init</pre>
+      
+      <pre>{</pre>
+      
+      <pre>if( (self=[super init] )) {</pre>
+      
+      <pre>}</pre>
+      
+      <pre>return self;</pre>
+      
+      <pre>}</pre>
+      
+      <pre>- (void) dealloc</pre>
+      
+      <pre>{</pre>
+      
+      <pre>[super dealloc];</pre>
+      
+      <pre>}</pre>
+      
+      <pre>@end</pre>
+    </td>
+  </tr>
+</table>
+
+<p>Because we declared our object outside of the methods, all of the methods will be able to access it. While this isn’t of real importance right now, it will become necessary when our code becomes more complicated.</p>
+
+<p>The next thing we need to do is connect our icon.png file to our object “icon” and tell the iOS simulator where to place the image on the screen. The section of code that we are going to work in is the “init” method (look at the above code for “-(id) init”). The init method is what is run/initialized when a scene is loaded (we’ll go over scenes in a future tutorial, but you can probably figure out what they are by their name). It’s unnecessary for me to show the code in the rest of the program, so the next bit of code will only be the init method (you will want to add this to the init method in the code above).</p>
+
+<table border="0" align="center">
+  <tr>
+    <td>
+      <pre>-(id) init</pre>
+      
+      <pre>{</pre>
+      
+      <pre>if( (self=[super init] )) {</pre>
+      
+      <pre>icon = [CCSprite spriteWithFile:@"Icon.png"];</pre>
+      
+      <pre>icon.position = ccp(300,200);</pre>
+      
+      <pre>[self addChild:icon];</pre>
+      
+      <pre>}</pre>
+      
+      <pre>return self;</pre>
+      
+      <pre>}</pre>
+    </td>
+  </tr>
+</table>
+
+<p> </p>
+
+<p><span style="font-size: large;"><strong>icon = [CCSprite spriteWithFile:@”Icon.png”];</strong></span></p>
+
+<p>This line of code sets the image file of the sprite. You would change the object name (in this case, “icon”) depending on the name of your object. Also, the name of the image file would change depending on what the name of the image in your Resources folder is called.</p>
+
+<p><span style="font-size: large;"><strong>icon.position = ccp(300,200);</strong></span></p>
+
+<p>You can’t just tell a computer to stick an image on the screen and expect it to go where you want it to. This code specifies the coordinates of the image. In the case of Cocos2D, the origin of the coordinate plane is the bottom left corner of the iPhone or iPod Touch screen. The coordinate itself refers to the location of the exact center of the sprite/image.</p>
+
+<p><span style="font-size: large;"><strong>[self addChild:icon];</strong></span></p>
+
+<p>This simply adds the icon sprite to the current layer. We’ll go over layers and their many uses in a future tutorial.</p>
+
+<h1 style="text-align: center;">
+  That&#8217;s it.
+</h1>
+
+<p>Click “Run and Debug” and watch the Cocos2D icon sit at the coordinates (300,200) on your virtual iPhone screen!</p>
+
+<p style="text-align: center;">
+  <a href="/wp-content/uploads/2011/07/cocos2d-icon-on-screen.png"><img class="aligncenter size-full wp-image-1973" title="cocos2d icon on screen" src="/wp-content/uploads/2011/07/cocos2d-icon-on-screen.png" alt="" width="515" height="265" srcset="/wp-content/uploads/2011/07/cocos2d-icon-on-screen.png 716w, /wp-content/uploads/2011/07/cocos2d-icon-on-screen-300x154.png 300w, /wp-content/uploads/2011/07/cocos2d-icon-on-screen-180x92.png 180w, /wp-content/uploads/2011/07/cocos2d-icon-on-screen-360x185.png 360w" sizes="(max-width: 515px) 100vw, 515px" /></a>
+</p>
+
+<p style="text-align: left;">
+  For practice (and to test your understanding), I suggest you try adding multiple sprites with different images to the screen.
+</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#cocos2d" class="page__taxonomy-item" rel="tag">cocos2d</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#icon" class="page__taxonomy-item" rel="tag">icon</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#ios" class="page__taxonomy-item" rel="tag">ios</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#iphone" class="page__taxonomy-item" rel="tag">iphone</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#ipod-touch" class="page__taxonomy-item" rel="tag">ipod touch</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#sorite" class="page__taxonomy-item" rel="tag">sorite</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#sprites" class="page__taxonomy-item" rel="tag">sprites</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#tutorial" class="page__taxonomy-item" rel="tag">tutorial</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#cocos2d" class="page__taxonomy-item" rel="tag">Cocos2D</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2011-07-15T15:34:35-07:00">July 15, 2011</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/2011/07/14/music-streaming-service-spotify-is-now-available-in-the-u-s/" class="pagination--pager" title="Music Streaming Service Spotify Is Now Available In The U.S. !
+">Previous</a>
+    
+    
+      <a href="/2011/07/17/what-to-expect-when-beginning-iphone-development/" class="pagination--pager" title="What to Expect When Beginning iPhone App Development
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2016/08/icon1024.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2016/08/21/beardedspice-for-mac-lets-you-control-any-music-website-with-your-media-keys/" rel="permalink">BeardedSpice for Mac Lets You Control Any Music Website with Your Media Keys
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2016/02/uber-logo.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2016/02/21/the-growth-of-sharing-services/" rel="permalink">The Growth of Sharing Services
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Over the past few years, the tech sector has seen an emergence of, for lack of a better term, “sharing services,” or companies that network and rent out dist...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2015/11/Quantopian_S1.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2015/11/02/quantopian-technology-to-backtest-and-execute-algorithmic-trading/" rel="permalink">Quantopian – Technology to Backtest and Execute Algorithmic Trading
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Algorithmic trading is growing field in finance that uses computers to execute securities trades. With growing research in artificial intelligence and machin...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2015/10/Cu_computer_science.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2015/10/17/computer-science-at-undergraduate-level-part-i/" rel="permalink">Computer Science at Undergraduate Level (Part I)
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Computer Science is rapidly becoming a popular major among students as the job market for CS majors shows consistent growth. Additionally, the market for CS ...</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap">
+  <input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  <div id="results" class="results"></div>
+</div>
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Byte Revel. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+
+
+  
+  
+  <script src="/assets/js/lunr/lunr.min.js"></script>
+  <script src="/assets/js/lunr/lunr-store.js"></script>
+  <script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "/2011/07/15/cocos2d-for-iphone-tutorial-2-make-a-sprite-not-the-drink/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/2011/07/15/cocos2d-for-iphone-tutorial-2-make-a-sprite-not-the-drink"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://byte-revel.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+  </body>
+</html>

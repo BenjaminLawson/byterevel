@@ -1,0 +1,716 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.9.1 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>PHP Tutorial 1 – About PHP &#038; Installing MAMP And XAMPP - Byte Revel</title>
+<meta name="description" content="">
+
+
+  <meta name="author" content="Nikhil Palanki">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Byte Revel">
+<meta property="og:title" content="PHP Tutorial 1 – About PHP &#038; Installing MAMP And XAMPP">
+<meta property="og:url" content="/2011/07/28/php-tutorial-i-about-php-installing-mamp-and-xampp/">
+
+
+  <meta property="og:description" content="">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2011-07-28T15:53:30-07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/2011/07/28/php-tutorial-i-about-php-installing-mamp-and-xampp/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Byte Revel",
+      "url": null,
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Byte Revel Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Byte Revel</a>
+        <ul class="visible-links">
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Nikhil Palanki</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        I have been writing at ByteRevel since its inception in 2011 and helped make it what it is today. I've always been fascinated by the intersection between human phenomena and computing, specifically in fields of education, financial markets, and creative design. My programming interests are in machine learning, artificial intelligence, neural networks, cryptography, blockchain infrastructure, market making, simulation and modeling, and quantum computing. Outside of ByteRevel, I co-founded and spent four years working on a software consulting company, Quadral Apps (It's now defunct as the founders have all left). My interests outside of computer science are poverty alleviation, humanitarian engineering, education, financial markets and economics research.
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/nikhilpalanki" itemprop="sameAs">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="PHP Tutorial 1 – About PHP &#038; Installing MAMP And XAMPP">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="July 28, 2011">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">PHP Tutorial 1 – About PHP &#038; Installing MAMP And XAMPP
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p><a href="/wp-content/uploads/2011/07/PHP-icon.jpeg"><img class="aligncenter size-full wp-image-2185" title="PHP icon" src="/wp-content/uploads/2011/07/PHP-icon.jpeg" alt="" width="238" height="283" srcset="/wp-content/uploads/2011/07/PHP-icon.jpeg 238w, /wp-content/uploads/2011/07/PHP-icon-180x214.jpeg 180w" sizes="(max-width: 238px) 100vw, 238px" /></a></p>
+
+<p>PHP is one of the most useful and powerful scripting languages in web development. Facebook was mostly coded using PHP (along with the help of database management system Mysql). You can create an entire search engine for a website using PHP. The possibilities are endless. But the main reasons that PHP is so great is that it is easy to use and it allows for rapidly changing web pages. One can even just incorporate a little bit of PHP into their HTML document and voila! PHP all done!</p>
+
+<p style="text-align: center;">
+  <span style="font-size: large;"><strong>What is PHP?</strong></span>
+</p>
+
+<p>PHP stands for “PHP: Hypertext Preprocessor”. It was first designed by Rasmus Lerdorf back in 1994 with the goal of recording website traffic and displaying his résumé. Since then, a number of developers have stepped in and further developed the language.</p>
+
+<p>PHP is used for server-side scripting. That is, PHP code is interpreted, run, and compiled by the server it is on. Scripting and markup languages such as Javascript and HTML, on the other hand, are executed by a browser. Understand the difference? Good.</p>
+
+<p>When PHP code is compiled and run, it results in HTML. This HTML is then sent to the browser that is requesting a web page. PHP is extremely useful for creating dynamic web pages. The content of these pages can constantly change depending on what information the PHP code is given. This is done by means of variables and functions (which you should be familiar with if you have worked with almost any programming language). Enough of my blabbering, let’s set up our PHP environments and start coding!</p>
+
+<p style="text-align: center;">
+  <span style="font-size: large;"><strong>Installing A Server Environment</strong></span>
+</p>
+
+<p style="text-align: left;">
+  Most computers don&#8217;t come with PHP installed. An exception is Macintosh, but you&#8217;ll still want to install a complete server environment even if you are on a Mac.
+</p>
+
+<p style="text-align: left;">
+  Server environment installers and managers install all the necessary libraries and programs necessary to run PHP, Mysql, Apache, and more (depending on which server environment you go with). There are a large number of these environment packages available, and it can seem a little overwhelming. Allow me to break it down for you and instruct you on how to choose and install them.
+</p>
+
+<table border="0" align="center">
+  <tr>
+    <td>
+      <strong>Environment &amp; What It Stands For/What It Offers</strong>
+    </td>
+    
+    <td>
+      <strong>Operating System(s) It Can Run On</strong>
+    </td>
+    
+    <td>
+      <strong>How To Install</strong>
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      MAMP &#8211; Mac Apache Mysql PHP
+    </td>
+    
+    <td>
+      Mac
+    </td>
+    
+    <td>
+       Head on over to <a title="http://www.mamp.info/en/downloads/index.html" href="http://www.mamp.info/en/downloads/index.html" target="_blank">http://www.mamp.info/en/downloads/index.html</a> and hit the big download link at the top of the page. This will download a zip file containing the software installer packages for the MAMP software. Run the package to install MAMP. Done.
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      WAMP &#8211; Windows, Apache, Mysql, PHP
+    </td>
+    
+    <td>
+      Windows
+    </td>
+    
+    <td>
+       Go to <a title="http://www.wampserver.com/en/download.php" href="http://www.wampserver.com/en/download.php" target="_blank">http://www.wampserver.com/en/download.php</a> and click the corresponding download link. Simply run the executable to install.
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      LAMP &#8211; Linux, Apache, Mysql, PHP
+    </td>
+    
+    <td>
+      Linux
+    </td>
+    
+    <td>
+      LAMP doesn&#8217;t come in a nice bundle of software, you have to install each element separately. Due to this, I&#8217;m just going to refer you to this helpful tutorial: <a title="http://www.howtoforge.com/ubuntu_lamp_for_newbies" href="http://www.howtoforge.com/ubuntu_lamp_for_newbies" target="_blank">http://www.howtoforge.com/ubuntu_lamp_for_newbies</a>
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      XAMPP
+    </td>
+    
+    <td>
+      Mac, Windows, Linux, Solaris
+    </td>
+    
+    <td>
+       Click on over to <a title="http://www.apachefriends.org/en/xampp.html" href="http://www.apachefriends.org/en/xampp.html" target="_blank">http://www.apachefriends.org/en/xampp.html</a> and select your operating system from the list. After you download the file from the page that you are sent to, follow the detailed instructions on the download page to install.
+    </td>
+  </tr>
+</table>
+
+<p> </p>
+
+<p>For the purposes of this series of tutorials, I suggest you use MAMP if you are on a Mac, and XAMPP if you are on Windows or Linux. If MAMP doesn’t work for you for some reason, try XAMPP. If XAMPP on Windows doesn’t work for you, try WAMP.</p>
+
+<p>Now let’s make sure we’ve got our environment set up correctly (and go over starting all the necessary servers). Each has a slightly different start procedure, so I’m going to go through them separately.</p>
+
+<p style="text-align: center;">
+  <span style="font-size: large;"><strong>MAMP</strong></span>
+</p>
+
+<p style="text-align: left;">
+  There are two ways to start up the MAMP server. The first is using the MAMP app that comes bundled with the MAMP software. Navigate to the MAMP folder that you installed to your Applications folder. The MAMP application is in this folder. Upon opening it, a small control window will pop up. If the server statuses don&#8217;t switch to the on position automatically, click the &#8220;start servers&#8221; button. Next, click the &#8220;preferences&#8230;&#8221; button, and, in the &#8220;ports&#8221; tab, click &#8220;set to default Apache and MySQL ports&#8221; button.
+</p>
+
+<p style="text-align: left;">
+  <a href="/wp-content/uploads/2011/07/mamp-screenshot.jpeg"><img class="aligncenter size-full wp-image-2200" title="mamp screenshot" src="/wp-content/uploads/2011/07/mamp-screenshot.jpeg" alt="" width="430" height="350" srcset="/wp-content/uploads/2011/07/mamp-screenshot.jpeg 430w, /wp-content/uploads/2011/07/mamp-screenshot-300x244.jpeg 300w, /wp-content/uploads/2011/07/mamp-screenshot-350x285.jpeg 350w, /wp-content/uploads/2011/07/mamp-screenshot-180x146.jpeg 180w, /wp-content/uploads/2011/07/mamp-screenshot-360x293.jpeg 360w" sizes="(max-width: 430px) 100vw, 430px" /></a>
+</p>
+
+<p style="text-align: left;">
+  An alternative way (that I prefer) is using the dashboard widget. Unfortunately, the only way to get it is to download the old version of MAMP (the link can be found at the bottom of the MAMP download page). It&#8217;s in the MAMP folder that is in the disk image (MAmp Control.wdgt). Once the widget is installed (double-click it), all you have to do is click the start button on the widget when viewing your dashboard.
+</p>
+
+<p style="text-align: left;">
+  Once all of the lights are green and everything is running, go to <a title="http://localhost/MAMP/" href="http://localhost/MAMP/" target="_blank">http://localhost/MAMP/</a> . You should see the &#8220;Welcome to MAMP&#8221; screen.
+</p>
+
+<p style="text-align: center;">
+  <span style="font-size: large;"><strong>XAMPP</strong></span>
+</p>
+
+<p> On Macintosh, starting your server is as easy as opening the “XAMPP Control” application that is in the XAMPP folder. If you installed it as described in the instructions, the XAMPP folder is in your Applications folder. Upon opening it, a small control window will open. Start Apache. If all is well, you should see the XAMPP splash screen when you go to <a title="http://localhost" href="http://localhost" target="_blank">http://localhost</a> .</p>
+
+<p>On Windows, you can access the XAMPP control panel by clicking on the “XAMPP Control Panel” shortcut that was made on your desktop during the installation. Start “Apache”, and navigate to <a title="http://localhost" href="http://localhost" target="_blank">http://localhost</a> . You should see the XAMPP splash screen.</p>
+
+<p><a href="/wp-content/uploads/2011/07/xampp-windows-splash.png"><img class="aligncenter size-full wp-image-2201" title="xampp windows splash" src="/wp-content/uploads/2011/07/xampp-windows-splash.png" alt="" width="449" height="309" srcset="/wp-content/uploads/2011/07/xampp-windows-splash.png 449w, /wp-content/uploads/2011/07/xampp-windows-splash-300x206.png 300w, /wp-content/uploads/2011/07/xampp-windows-splash-168x117.png 168w, /wp-content/uploads/2011/07/xampp-windows-splash-263x180.png 263w, /wp-content/uploads/2011/07/xampp-windows-splash-180x123.png 180w, /wp-content/uploads/2011/07/xampp-windows-splash-360x247.png 360w" sizes="(max-width: 449px) 100vw, 449px" /></a></p>
+
+<p>On Linux, starting XAMPP is as easy as running the command “/opt/lampp/lampp start”. Point your browser to <a title="http://localhost" href="http://localhost" target="_blank">http://localhost</a> and you should see the XAMPP splash screen.</p>
+
+<p>I hope you found this tutorial helpful! In our next tutorial, we are going to go over where to put our PHP files, what we should use to edit them, and a how to write basic program in PHP.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#lamp" class="page__taxonomy-item" rel="tag">lamp</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#mamp" class="page__taxonomy-item" rel="tag">mamp</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#php" class="page__taxonomy-item" rel="tag">php</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#tutorial" class="page__taxonomy-item" rel="tag">tutorial</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#wamp" class="page__taxonomy-item" rel="tag">wamp</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#xampp" class="page__taxonomy-item" rel="tag">xampp</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#php" class="page__taxonomy-item" rel="tag">PHP</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2011-07-28T15:53:30-07:00">July 28, 2011</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/2011/07/27/google-and-ok-go-worked-together-to-create-this-awesome-chrome-experiment/" class="pagination--pager" title="Google and OK Go Worked Together To Create This Awesome Chrome Experiment
+">Previous</a>
+    
+    
+      <a href="/2011/07/30/php-tutorial-2-creating-your-first-web-page-using-php-hello-world/" class="pagination--pager" title="PHP Tutorial 2 – Creating Your First Web Page Using PHP (Hello World)
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2016/08/icon1024.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2016/08/21/beardedspice-for-mac-lets-you-control-any-music-website-with-your-media-keys/" rel="permalink">BeardedSpice for Mac Lets You Control Any Music Website with Your Media Keys
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2016/02/uber-logo.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2016/02/21/the-growth-of-sharing-services/" rel="permalink">The Growth of Sharing Services
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Over the past few years, the tech sector has seen an emergence of, for lack of a better term, “sharing services,” or companies that network and rent out dist...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2015/11/Quantopian_S1.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2015/11/02/quantopian-technology-to-backtest-and-execute-algorithmic-trading/" rel="permalink">Quantopian – Technology to Backtest and Execute Algorithmic Trading
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Algorithmic trading is growing field in finance that uses computers to execute securities trades. With growing research in artificial intelligence and machin...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2015/10/Cu_computer_science.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2015/10/17/computer-science-at-undergraduate-level-part-i/" rel="permalink">Computer Science at Undergraduate Level (Part I)
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Computer Science is rapidly becoming a popular major among students as the job market for CS majors shows consistent growth. Additionally, the market for CS ...</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap">
+  <input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  <div id="results" class="results"></div>
+</div>
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Byte Revel. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+
+
+  
+  
+  <script src="/assets/js/lunr/lunr.min.js"></script>
+  <script src="/assets/js/lunr/lunr-store.js"></script>
+  <script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "/2011/07/28/php-tutorial-i-about-php-installing-mamp-and-xampp/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/2011/07/28/php-tutorial-i-about-php-installing-mamp-and-xampp"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://byte-revel.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+  </body>
+</html>

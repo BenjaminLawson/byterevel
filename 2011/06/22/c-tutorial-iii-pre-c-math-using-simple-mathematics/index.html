@@ -1,0 +1,904 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.9.1 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>C++ Tutorial III – Using Simple Mathematics - Byte Revel</title>
+<meta name="description" content="To understand it better, you should first be familiar with everyday C++ Math Functions. In the following tutorial, look over the following 5 examples and look at how the code changes. We’ll look at Addition, Subtraction, Multiplication, and Division.">
+
+
+  <meta name="author" content="Nikhil Palanki">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Byte Revel">
+<meta property="og:title" content="C++ Tutorial III – Using Simple Mathematics">
+<meta property="og:url" content="/2011/06/22/c-tutorial-iii-pre-c-math-using-simple-mathematics/">
+
+
+  <meta property="og:description" content="To understand it better, you should first be familiar with everyday C++ Math Functions. In the following tutorial, look over the following 5 examples and look at how the code changes. We’ll look at Addition, Subtraction, Multiplication, and Division.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2011-06-22T04:23:43-07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/2011/06/22/c-tutorial-iii-pre-c-math-using-simple-mathematics/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Byte Revel",
+      "url": null,
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Byte Revel Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Byte Revel</a>
+        <ul class="visible-links">
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Nikhil Palanki</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        I have been writing at ByteRevel since its inception in 2011 and helped make it what it is today. I've always been fascinated by the intersection between human phenomena and computing, specifically in fields of education, financial markets, and creative design. My programming interests are in machine learning, artificial intelligence, neural networks, cryptography, blockchain infrastructure, market making, simulation and modeling, and quantum computing. Outside of ByteRevel, I co-founded and spent four years working on a software consulting company, Quadral Apps (It's now defunct as the founders have all left). My interests outside of computer science are poverty alleviation, humanitarian engineering, education, financial markets and economics research.
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/nikhilpalanki" itemprop="sameAs">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="C++ Tutorial III – Using Simple Mathematics">
+    <meta itemprop="description" content="To understand it better, you should first be familiar with everyday C++ Math Functions. In the following tutorial, look over the following 5 examples and look at how the code changes. We’ll look at Addition, Subtraction, Multiplication, and Division.">
+    <meta itemprop="datePublished" content="June 22, 2011">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">C++ Tutorial III – Using Simple Mathematics
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>To understand it better, you should first be familiar with everyday C++ Math Functions. In the following tutorial, look over the following 5 examples and look at how the code changes. We’ll look at Addition, Subtraction, Multiplication, and Division.</p>
+
+<p><strong>ADDITION</strong></p>
+
+<p>*The Math is bolded while the rest is in regular font</p>
+
+<table border="0">
+  <tr>
+    <td>
+      <table border="0" align="left">
+        <tr>
+          <td>
+            #include <iostream>&lt;/p&gt; 
+            
+            <p>
+              using namespace std;
+            </p>
+            
+            <p>
+              &nbsp;
+            </p>
+            
+            <p>
+              int main()
+            </p>
+            
+            <p>
+              {
+            </p>
+            
+            <p>
+              int x;
+            </p>
+            
+            <p>
+              int y;
+            </p>
+            
+            <p>
+              cout&lt;&lt;&#8220;Have You Ever Wanted to Add 2 Numbers? Of course! You can do that right here! Enter your first number!&#8221;;
+            </p>
+            
+            <p>
+              cin&gt;&gt; x;
+            </p>
+            
+            <p>
+              cout&lt;&lt;&#8220;Enter your second number!&#8221;;
+            </p>
+            
+            <p>
+              cin&gt;&gt; y;
+            </p>
+            
+            <p>
+              cout&lt;&lt;&#8220;The sum of the two numbers is &#8221; <strong>&lt;&lt; x+y;</strong>
+            </p>
+            
+            <p>
+              system(&#8220;pause&#8221;);
+            </p>
+            
+            <p>
+              return 0;
+            </p>
+            
+            <p>
+              }
+            </p>
+            
+            <p>
+              &nbsp;&lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt; &lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt; 
+              
+              <p>
+                &nbsp;
+              </p>
+              
+              <p>
+                Pretty easy, huh? All you really need to know is how to place a variable within the quotations. But that isn&#8217;t too hard is it?
+              </p>
+              
+              <p>
+                <strong>SUBTRACTION</strong>
+              </p>
+              
+              <p>
+                Our next function is subtraction and it is not any more difficult. If you must see what the code looks like, look below. Notice that you show the variables the same way you do with addition but you take out the addition sign and place a subtraction sign.
+              </p>
+              
+              <table border="0">
+                <tr>
+                  <td>
+                    #include <iostream>using namespace std;&nbsp;&lt;/p&gt; 
+                    
+                    <p>
+                      int main()
+                    </p>
+                    
+                    <p>
+                      {
+                    </p>
+                    
+                    <p>
+                      int x;
+                    </p>
+                    
+                    <p>
+                      int y;
+                    </p>
+                    
+                    <p>
+                      cout&lt;&lt;&#8220;Have You Ever Wanted to subtract 2 Numbers? Of course! You can do that right here! Enter your first number!&#8221;;
+                    </p>
+                    
+                    <p>
+                      cin&gt;&gt; x;
+                    </p>
+                    
+                    <p>
+                      cout&lt;&lt;&#8220;Enter your second number!&#8221;;
+                    </p>
+                    
+                    <p>
+                      cin&gt;&gt; y;
+                    </p>
+                    
+                    <p>
+                      cout&lt;&lt;&#8220;The difference of the two numbers is &#8221; <strong>&lt;&lt; x-y;</strong>
+                    </p>
+                    
+                    <p>
+                      system(&#8220;pause&#8221;);
+                    </p>
+                    
+                    <p>
+                      return 0;
+                    </p>
+                    
+                    <p>
+                      }&lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt; 
+                      
+                      <p>
+                        Not hard at all. In fact, multiplication and division are practically the EXACT SAME. Just change the sign. Look below for an example of each.
+                      </p>
+                      
+                      <p>
+                        <strong>MULTIPLICATION</strong>
+                      </p>
+                      
+                      <table border="0">
+                        <tr>
+                          <td>
+                            #include <iostream>using namespace std;&nbsp;&lt;/p&gt; 
+                            
+                            <p>
+                              int main()
+                            </p>
+                            
+                            <p>
+                              {
+                            </p>
+                            
+                            <p>
+                              int x;
+                            </p>
+                            
+                            <p>
+                              int y;
+                            </p>
+                            
+                            <p>
+                              cout&lt;&lt;&#8220;Have You Ever Wanted to Multiply 2 Numbers? Of course! You can do that right here! Enter your first number!&#8221;;
+                            </p>
+                            
+                            <p>
+                              cin&gt;&gt; x;
+                            </p>
+                            
+                            <p>
+                              cout&lt;&lt;&#8220;Enter your second number!&#8221;;
+                            </p>
+                            
+                            <p>
+                              cin&gt;&gt; y;
+                            </p>
+                            
+                            <p>
+                              cout&lt;&lt;&#8220;The product of the two numbers is &#8221; <strong>&lt;&lt; x*y;</strong>
+                            </p>
+                            
+                            <p>
+                              system(&#8220;pause&#8221;);
+                            </p>
+                            
+                            <p>
+                              return 0;
+                            </p>
+                            
+                            <p>
+                              }&lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt; 
+                              
+                              <p>
+                                <strong>DIVISION</strong>
+                              </p>
+                              
+                              <table border="0">
+                                <tr>
+                                  <td>
+                                    #include <iostream>using namespace std;&nbsp;&lt;/p&gt; 
+                                    
+                                    <p>
+                                      int main()
+                                    </p>
+                                    
+                                    <p>
+                                      {
+                                    </p>
+                                    
+                                    <p>
+                                      int x;
+                                    </p>
+                                    
+                                    <p>
+                                      int y;
+                                    </p>
+                                    
+                                    <p>
+                                      cout&lt;&lt;&#8220;Have You Ever Wanted to Divide 2 Numbers? Of course! You can do that right here! Enter your dividend number!&#8221;;
+                                    </p>
+                                    
+                                    <p>
+                                      cin&gt;&gt; x;
+                                    </p>
+                                    
+                                    <p>
+                                      cout&lt;&lt;&#8220;Enter your divisor number!&#8221;;
+                                    </p>
+                                    
+                                    <p>
+                                      cin&gt;&gt; y;
+                                    </p>
+                                    
+                                    <p>
+                                      cout&lt;&lt;&#8220;The quotient of the two numbers is &#8221; <strong>&lt;&lt; x/y;</strong>
+                                    </p>
+                                    
+                                    <p>
+                                      system(&#8220;pause&#8221;);
+                                    </p>
+                                    
+                                    <p>
+                                      return 0;
+                                    </p>
+                                    
+                                    <p>
+                                      }&lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt; 
+                                      
+                                      <p>
+                                        <strong>THE CALCULATOR</strong>
+                                      </p>
+                                      
+                                      <p>
+                                        Now I think you&#8217;re ready to see what happens when everything is laced together. Our good friend iPodnerd wrote the following program for a class he taught and was gracious enough to let us use the code. Here is the following code for a simple calculator.
+                                      </p>
+                                      
+                                      <table border="0">
+                                        <tr>
+                                          <td>
+                                            #include <iostream>using namespace std;&nbsp;&lt;/p&gt; 
+                                            
+                                            <p>
+                                              int main()<br /> {<br /> int choice;<br /> float first;<br /> float second;<br /> char quit = &#8216;n&#8217;;<br /> cout &lt;&lt; &#8220;Welcome to The Calculator&#8221; &lt;&lt; endl;<br /> while(quit == &#8216;n&#8217;)<br /> {<br /> cout &lt;&lt; endl &lt;&lt; &#8220;Type:\n&#8221;<br /> &#8220;&#8216;1&#8217; If you would like to add two numbers together\n&#8221;<br /> &#8220;&#8216;2&#8217; If you would like to subtract one number from another\n&#8221;<br /> &#8220;&#8216;3&#8217; If you would like to multiply two numbers together\n&#8221;<br /> &#8220;&#8216;4&#8217; If you would like to divide one number by another&#8221; &lt;&lt; endl;<br /> cin &gt;&gt; choice;
+                                            </p>
+                                            
+                                            <p>
+                                              if(choice == 1)<br /> {<br /> cout &lt;&lt; &#8220;\nType the first number in the equation: &#8220;;<br /> cin &gt;&gt; first;<br /> cout &lt;&lt; endl &lt;&lt; &#8220;Type the second number in the equation: &#8220;;<br /> cin &gt;&gt; second;<br /> cout &lt;&lt; &#8220;The sum of &#8221; &lt;&lt; first &lt;&lt; &#8221; and &#8221; &lt;&lt; second &lt;&lt; &#8221; is &#8221; &lt;&lt; <strong>first+second;</strong><br /> cout &lt;&lt; &#8220;, do you want to quit? (y/n): &#8220;;<br /> cin &gt;&gt; quit;<br /> }<br /> if(choice == 2)<br /> {<br /> cout &lt;&lt; &#8220;\nType the first number in the equation (the one to be subtracted from): &#8220;;<br /> cin &gt;&gt; first;<br /> cout &lt;&lt; endl &lt;&lt; &#8220;Type the second number in the equation (the one to subtract): &#8220;;<br /> cin &gt;&gt; second;<br /> cout &lt;&lt; &#8220;The difference of &#8221; &lt;&lt; first &lt;&lt; &#8221; and &#8221; &lt;&lt; second &lt;&lt; &#8221; is &#8221; &lt;&lt; <strong>first-second;</strong><br /> cout &lt;&lt; &#8220;, do you want to quit? (y/n): &#8220;;<br /> cin &gt;&gt; quit;<br /> }<br /> if(choice == 3)<br /> {<br /> cout &lt;&lt; &#8220;\nType the first number in the equation: &#8220;;<br /> cin &gt;&gt; first;<br /> cout &lt;&lt; endl &lt;&lt; &#8220;Type the second number in the equation : &#8220;;<br /> cin &gt;&gt; second;<br /> cout &lt;&lt; &#8220;The product of &#8221; &lt;&lt; first &lt;&lt; &#8221; and &#8221; &lt;&lt; second &lt;&lt; &#8221; is &#8221; &lt;&lt; <strong>first*second;</strong><br /> cout &lt;&lt; &#8220;, do you want to quit? (y/n): &#8220;;<br /> cin &gt;&gt; quit;<br /> }<br /> if(choice == 4)<br /> {<br /> cout &lt;&lt; &#8220;\nType the first number in the equation (the dividend): &#8220;;<br /> cin &gt;&gt; first;<br /> cout &lt;&lt; endl &lt;&lt; &#8220;Type the second number in the equation (the divisor): &#8220;;<br /> cin &gt;&gt; second;<br /> cout &lt;&lt; &#8220;The quotient of &#8221; &lt;&lt; first &lt;&lt; &#8221; and &#8221; &lt;&lt; second &lt;&lt; &#8221; is &#8221; &lt;&lt;<strong> first/second</strong>;<br /> cout &lt;&lt; &#8220;, do you want to quit? (y/n): &#8220;;<br /> cin &gt;&gt; quit;<br /> }<br /> }
+                                            </p>
+                                            
+                                            <p>
+                                              system(&#8220;pause&#8221;)<br /> return 0;<br /> }&lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt; 
+                                              
+                                              <p>
+                                                This may have come across as intimidating but it uses simple functions. Look at it carefully and notice the following two points as you scan the code:
+                                              </p>
+                                              
+                                              <ul>
+                                                <li>
+                                                  At the beginning of the entire program, everything look standard, right?  iPodnerd defined all of the variables and all that happiness. But he used floats instead of integers! What the !@#$ is a float, you ask. Well, a float is another way of looking at integers. If you have trouble understanding floats, refer to <a href="/2011/06/22/c-tutorial-ii-float-vs-int/">this</a> tutorial.
+                                                </li>
+                                                <li>
+                                                  The rest of the code is just like the addition, subtraction, multiplication, and division segments, but all in one. He reuses the same variable to make the code more concise and easier to follow.
+                                                </li>
+                                              </ul>
+                                              
+                                              <p>
+                                                That wasn&#8217;t so hard was it? Of course not! Next time, we&#8217;ll show you other C++ Math functions. And remember the following:
+                                              </p>
+                                              
+                                              <ul>
+                                                <li>
+                                                  Addition uses &#8220;+&#8221; when adding numbers
+                                                </li>
+                                                <li>
+                                                  Subtraction uses &#8220;-&#8221; when subtracting numbers
+                                                </li>
+                                                <li>
+                                                  Multiplication uses &#8220;*&#8221; when multiplying numbers
+                                                </li>
+                                                <li>
+                                                  Division uses &#8220;/&#8221; when dividing numbers
+                                                </li>
+                                              </ul>
+                                              
+                                              <p>
+                                                Happy trails!
+                                              </p>
+</p></iostream></td></tr></table></p></iostream></td></tr></table></p></iostream></td></tr></table></p></iostream></td></tr></table></p></iostream></td></tr></table></td></tr></table>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#byterevel" class="page__taxonomy-item" rel="tag">byterevel</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#c-math" class="page__taxonomy-item" rel="tag">c math</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#c-tutorial-iii" class="page__taxonomy-item" rel="tag">c++ tutorial III</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#c" class="page__taxonomy-item" rel="tag">c++</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#i-wanna-learn-c" class="page__taxonomy-item" rel="tag">i wanna learn c++</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#pre-c-math" class="page__taxonomy-item" rel="tag">pre-c math</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#simple-mathematics-functions" class="page__taxonomy-item" rel="tag">simple mathematics functions</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#c" class="page__taxonomy-item" rel="tag">C++</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/categories/#tutorials" class="page__taxonomy-item" rel="tag">Tutorials</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2011-06-22T04:23:43-07:00">June 22, 2011</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/2011/06/22/c-tutorial-ii-float-vs-int/" class="pagination--pager" title="C++ Tutorial II – Float vs. Int
+">Previous</a>
+    
+    
+      <a href="/2011/06/22/icann-to-open-up-custom-domain-suffixes-for-registration/" class="pagination--pager" title="ICANN To Open Up Custom Domain Suffixes For Registration
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2016/08/icon1024.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2016/08/21/beardedspice-for-mac-lets-you-control-any-music-website-with-your-media-keys/" rel="permalink">BeardedSpice for Mac Lets You Control Any Music Website with Your Media Keys
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2016/02/uber-logo.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2016/02/21/the-growth-of-sharing-services/" rel="permalink">The Growth of Sharing Services
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Over the past few years, the tech sector has seen an emergence of, for lack of a better term, “sharing services,” or companies that network and rent out dist...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2015/11/Quantopian_S1.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2015/11/02/quantopian-technology-to-backtest-and-execute-algorithmic-trading/" rel="permalink">Quantopian – Technology to Backtest and Execute Algorithmic Trading
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Algorithmic trading is growing field in finance that uses computers to execute securities trades. With growing research in artificial intelligence and machin...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2015/10/Cu_computer_science.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2015/10/17/computer-science-at-undergraduate-level-part-i/" rel="permalink">Computer Science at Undergraduate Level (Part I)
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Computer Science is rapidly becoming a popular major among students as the job market for CS majors shows consistent growth. Additionally, the market for CS ...</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap">
+  <input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  <div id="results" class="results"></div>
+</div>
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Byte Revel. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+
+
+  
+  
+  <script src="/assets/js/lunr/lunr.min.js"></script>
+  <script src="/assets/js/lunr/lunr-store.js"></script>
+  <script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "/2011/06/22/c-tutorial-iii-pre-c-math-using-simple-mathematics/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/2011/06/22/c-tutorial-iii-pre-c-math-using-simple-mathematics"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://byte-revel.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+  </body>
+</html>

@@ -1,0 +1,762 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.9.1 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Objective-C Tutorial 4 – Classes - Byte Revel</title>
+<meta name="description" content="">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Byte Revel">
+<meta property="og:title" content="Objective-C Tutorial 4 – Classes">
+<meta property="og:url" content="/2011/07/20/objective-c-tutorial-4-classes/">
+
+
+  <meta property="og:description" content="">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2011-07-20T11:58:15-07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/2011/07/20/objective-c-tutorial-4-classes/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Byte Revel",
+      "url": null,
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Byte Revel Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Byte Revel</a>
+        <ul class="visible-links">
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name"></h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Objective-C Tutorial 4 – Classes">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="July 20, 2011">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Objective-C Tutorial 4 – Classes
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p><a href="/wp-content/uploads/2011/06/objc.png"><img class="aligncenter size-full wp-image-1340" title="objective-c" src="/wp-content/uploads/2011/06/objc.png" alt="" width="303" height="297" srcset="/wp-content/uploads/2011/06/objc.png 303w, /wp-content/uploads/2011/06/objc-300x294.png 300w, /wp-content/uploads/2011/06/objc-30x30.png 30w, /wp-content/uploads/2011/06/objc-45x45.png 45w, /wp-content/uploads/2011/06/objc-180x176.png 180w" sizes="(max-width: 303px) 100vw, 303px" /></a></p>
+
+<p>As you probably heard on the news this morning, there is a new Objective-C tutorial out. And it’s right here. How cool is that? Last time, we <a href="/2011/07/13/objective-c-tutorial-3-if-else-statements-and-basic-looping/" title="Objective-C Tutorial 3 – If Else Statements And Basic Looping">discussed if else statements and basic loops</a>. This time, we’re going to master the art of the class. So what is a class? A class is basically a classification and framework for an object. Objects that are members of a class inherit variables and methods that are declared in the class. To put this into a real life example, you would be an object of the class “Human”. You might inherit variables such as height, gender, age, and weight. Some methods that you might inherit include tying your shoe and walking. Get it yet? Don’t worry if you don’t. That’s what this tutorial is for. Let’s make a class “aliens” (and, in the next tutorial, an object “Bill”).</p>
+
+<h1 style="text-align: center;">
+  Interface
+</h1>
+
+<p>The first part of a class is the interface. In the interface, we name the variables and  methods of the class. When making a program that adheres to proper Objective-C practices, the interface goes in the header file ( .h ) and is imported into the main ( .m ) file. For the purpose of this tutorial, however, we are going to ignorantly put it in the main ( .m ) file. That’s pretty important to know.</p>
+
+<p>Our class is going to be “Alien”. The variables that we want members of the alien class to have include: number of eyes, age, and number of ears. Methods that members of the alien class are going to inherit will include: setNumberOfEyes, setAge, setNumberOfEars, and output. All of the “set” methods will be used in our program to set the value of the variables. Enough explaining for now, lets look over the code of an interface. Since we are coding only in the main file for now, the interface section will go right under the “#import” line(s).</p>
+
+<table border="0" align="center">
+  <tr>
+    <td>
+      <pre>#import &lt;Foundation/Foundation.h&gt;</pre>
+      
+      <pre><span style="color: #ff0000;">@interface Alien : NSObject {</span></pre>
+      
+      <pre><span style="color: #ff0000;">int NumberOfEyes;</span></pre>
+      
+      <pre><span style="color: #ff0000;">int Age;</span></pre>
+      
+      <pre><span style="color: #ff0000;">int NumberOfEars;</span></pre>
+      
+      <pre><span style="color: #ff0000;">}</span></pre>
+      
+      <pre><span style="color: #ff0000;">-(void) output;</span></pre>
+      
+      <pre><span style="color: #ff0000;">-(void) setNumberOfEyes: (int) i;</span></pre>
+      
+      <pre><span style="color: #ff0000;">-(void) setAge: (int) a;</span></pre>
+      
+      <pre><span style="color: #ff0000;">-(void) setNumberOfEars: (int) e;</span></pre>
+      
+      <pre><span style="color: #ff0000;">@end</span></pre>
+      
+      <pre>int main (int argc, const char * argv[]) {</pre>
+      
+      <pre>    NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];</pre>
+      
+      <pre>[pool drain];</pre>
+      
+      <pre>    return 0;</pre>
+      
+      <pre>}</pre>
+    </td>
+  </tr>
+</table>
+
+<p> </p>
+
+<p><span style="font-size: large;"><strong>@interface Alien : NSObject {</strong></span></p>
+
+<p>We declare the interface of a class with “@interface” followed by the class name (in this case “Alien”), a colon, and the super class (you really don’t need to know about them yet, don’t worry about it; just use NSObject for your programs until a later date on which I will explain them). The opening curly bracket opens the section of the interface where we will give the variables of the class.</p>
+
+<p><span style="font-size: large;"><strong>int NumberOfEyes;</strong></span></p>
+
+<p><span style="font-size: large;"><strong>int Age;</strong></span></p>
+
+<p><span style="font-size: large;"><strong>int NumberOfEars;</strong></span></p>
+
+<p><span style="font-size: large;"><strong>}</strong></span></p>
+
+<p>This is where we declare the variables that members of our class will inherit. If we create an object that is a member of the class “Alien”, then it will have the variables NumberOfEyes, Age, and NumberOfEars. The closing curly bracket closes the part of the interface where we declare the variables.</p>
+
+<p><span style="font-size: large;"><strong>-(void) output;</strong></span></p>
+
+<p><span style="font-size: large;"><strong>-(void) setNumberOfEyes: (int) i;</strong></span></p>
+
+<p><span style="font-size: large;"><strong>-(void) setAge: (int) a;</strong></span></p>
+
+<p><span style="font-size: large;"><strong>-(void) setNumberOfEars: (int) e;</strong></span></p>
+
+<p>These are the declarations of the methods for our class. The actual methods will be in the implementation section (which we will go over next). Let’s go over how we declare a method. First, we have a dash followed by what the method will be returning (the “return value”). By returning, I mean that when we call a method in our program, do we want to get  any information back from the method to use in our program, or do we just want the code in our method to run. If we don’t want to return anything, we put “void”. If we wanted to return an integer value, we would put “-(int)”. Next, we name out method. In the method “-(void) setNumberOfEyes: (int) i;”, setNumberOfEyes is the name of the method. This will be what we use to call on the method in our program. For methods that don’t need any information (they just run a bit of code when called upon), we would be done now (as is the case of the output method). For other methods, like setNumberOfEyes, we need to declare what type of information we are passing into it as well as the name of the variable that will be equal to the value that we pass into it. In the code of our methods, we can use that variable. If you don’t quite understand what I’m saying, just keep following along and you will get it at some point.</p>
+
+<p><span class="Apple-style-span" style="font-size: large;"><strong>@end</strong></span></p>
+
+<p>We use @end to end our interface section. Bam. We’re done with the interface. That wasn’t so bad, was it?</p>
+
+<h1 style="text-align: center;">
+  Implementation
+</h1>
+
+<p>The second part of a class is the implementation section. In it, we give the methods that we declared in the interface some body. That is, each of the methods that we declared in the interface has to have some code to run when they are called upon, and we write that code in the implementation section. You savvy? Here’s what the implementation section of our program is going to look like:</p>
+
+<table border="0" align="center">
+  <tr>
+    <td>
+      <pre>#import &lt;Foundation/Foundation.h&gt;</pre>
+      
+      <pre>@interface Alien : NSObject {</pre>
+      
+      <pre>int NumberOfEyes;</pre>
+      
+      <pre>int Age;</pre>
+      
+      <pre>int NumberOfEars;</pre>
+      
+      <pre>}</pre>
+      
+      <pre>-(void) output;</pre>
+      
+      <pre>-(void) setNumberOfEyes: (int) i;</pre>
+      
+      <pre>-(void) setAge: (int) a;</pre>
+      
+      <pre>-(void) setNumberOfEars: (int) e;</pre>
+      
+      <pre>@end</pre>
+      
+      <pre><span style="color: #ff0000;">@implementation Alien</span></pre>
+      
+      <pre><span style="color: #ff0000;">-(void) output {</span></pre>
+      
+      <pre><span style="color: #ff0000;">NSLog(@"The alien is %i years old and has %i eyes and %i ears.", Age, NumberOfEyes, NumberOfEars);</span></pre>
+      
+      <pre><span style="color: #ff0000;">}</span></pre>
+      
+      <pre><span style="color: #ff0000;">-(void) setNumberOfEyes: (int) i {</span></pre>
+      
+      <pre><span style="color: #ff0000;">NumberOfEyes = i;</span></pre>
+      
+      <pre><span style="color: #ff0000;">}</span></pre>
+      
+      <pre><span style="color: #ff0000;">-(void) setAge: (int) a {</span></pre>
+      
+      <pre><span style="color: #ff0000;">Age = a;</span></pre>
+      
+      <pre><span style="color: #ff0000;">}</span></pre>
+      
+      <pre><span style="color: #ff0000;">-(void) setNumberOfEars: (int) e {</span></pre>
+      
+      <pre><span style="color: #ff0000;">NumberOfEars = e;</span></pre>
+      
+      <pre><span style="color: #ff0000;">}</span></pre>
+      
+      <pre><span style="color: #ff0000;">@end</span></pre>
+      
+      <pre>int main (int argc, const char * argv[]) {</pre>
+      
+      <pre>    NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];</pre>
+      
+      <pre>[pool drain];</pre>
+      
+      <pre>    return 0;</pre>
+      
+      <pre>}</pre>
+    </td>
+  </tr>
+</table>
+
+<p> </p>
+
+<p><span style="font-size: large;"><strong>@implementation Alien</strong></span></p>
+
+<p>We declare the implementation section with a simple @implementation followed by the name of the class that the implementation corresponds to.</p>
+
+<p><span style="font-size: large;"><strong>-(void) output {</strong></span></p>
+
+<p><span style="font-size: large;"><strong>NSLog(@”The alien is %i years old and has %i eyes and %i ears.”, Age, NumberOfEyes, NumberOfEars);</strong></span></p>
+
+<p><span style="font-size: large;"><strong>}</strong></span></p>
+
+<p><span style="font-size: large;"><strong>-(void) setNumberOfEyes: (int) i {</strong></span></p>
+
+<p><span style="font-size: large;"><strong>NumberOfEyes = i;</strong></span></p>
+
+<p><span style="font-size: large;"><strong>}</strong></span></p>
+
+<p><span style="font-size: large;"><strong>-(void) setAge: (int) a {</strong></span></p>
+
+<p><span style="font-size: large;"><strong>Age = a;</strong></span></p>
+
+<p><span style="font-size: large;"><strong>}</strong></span></p>
+
+<p><span style="font-size: large;"><strong>-(void) setNumberOfEars: (int) e {</strong></span></p>
+
+<p><span style="font-size: large;"><strong>NumberOfEars = e;</strong></span></p>
+
+<p><span style="font-size: large;"><strong>}</strong></span></p>
+
+<p>These are the bodies of our methods. In order to tell the computer which lines of code correspond to which methods in the interface, we copy the interface method declaration (minus the semicolon) from the interface and paste it in the implementation section. Then, we surround the code of each method with curly brackets (as shown the code above). As I mentioned in the explanation of the interface, methods that require information to be passed into them have a colon after the method name followed by the data type and the name of the variable that will be equal to the information we are passing into the method. We can then use that variable in the code of each method. For example, the “setNumberOfEyes” method requires that an integer value be passed into it. The variable “i” will be set equal to the value that is passed into the method. In the code of our method, we set the variable “NumberOfEyes” (as declared in our @interface) equal to the variable “i”, thus setting “NumberOfEyes” equal to the integer value that is passed into the method.</p>
+
+<p>You might ask why we are taking the long way around setting the alue of the variables that were declared in the interface section. Well, those variables are “protected” as it were, and can only be accessed by the methods of the same class.</p>
+
+<p><span style="font-size: large;"><strong>@end</strong></span></p>
+
+<p>Just like the interface, we end our implementation section with a “@end”.</p>
+
+<p><em>In our next tutorial, we will go over making objects that are members of our class.</em></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#class" class="page__taxonomy-item" rel="tag">class</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#interface" class="page__taxonomy-item" rel="tag">interface</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#method" class="page__taxonomy-item" rel="tag">method</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#objective-c" class="page__taxonomy-item" rel="tag">objective-c</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#programming" class="page__taxonomy-item" rel="tag">programming</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#tutorial" class="page__taxonomy-item" rel="tag">tutorial</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#variable" class="page__taxonomy-item" rel="tag">variable</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#objective-c" class="page__taxonomy-item" rel="tag">Objective-C</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2011-07-20T11:58:15-07:00">July 20, 2011</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/2011/07/19/google-now-accessible-via-a-native-iphone-app/" class="pagination--pager" title="Google+ Now Accessible Via A Native iPhone App
+">Previous</a>
+    
+    
+      <a href="/2011/07/21/mac-os-10-7-lion-released/" class="pagination--pager" title="Mac OS 10.7 Lion Released
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2016/08/icon1024.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2016/08/21/beardedspice-for-mac-lets-you-control-any-music-website-with-your-media-keys/" rel="permalink">BeardedSpice for Mac Lets You Control Any Music Website with Your Media Keys
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2016/02/uber-logo.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2016/02/21/the-growth-of-sharing-services/" rel="permalink">The Growth of Sharing Services
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Over the past few years, the tech sector has seen an emergence of, for lack of a better term, “sharing services,” or companies that network and rent out dist...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2015/11/Quantopian_S1.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2015/11/02/quantopian-technology-to-backtest-and-execute-algorithmic-trading/" rel="permalink">Quantopian – Technology to Backtest and Execute Algorithmic Trading
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Algorithmic trading is growing field in finance that uses computers to execute securities trades. With growing research in artificial intelligence and machin...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2015/10/Cu_computer_science.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2015/10/17/computer-science-at-undergraduate-level-part-i/" rel="permalink">Computer Science at Undergraduate Level (Part I)
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Computer Science is rapidly becoming a popular major among students as the job market for CS majors shows consistent growth. Additionally, the market for CS ...</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap">
+  <input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  <div id="results" class="results"></div>
+</div>
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Byte Revel. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+
+
+  
+  
+  <script src="/assets/js/lunr/lunr.min.js"></script>
+  <script src="/assets/js/lunr/lunr-store.js"></script>
+  <script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "/2011/07/20/objective-c-tutorial-4-classes/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/2011/07/20/objective-c-tutorial-4-classes"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://byte-revel.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+  </body>
+</html>

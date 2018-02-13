@@ -1,0 +1,624 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.9.1 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Seven Considerations for PHP Hosting - Byte Revel</title>
+<meta name="description" content="">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Byte Revel">
+<meta property="og:title" content="Seven Considerations for PHP Hosting">
+<meta property="og:url" content="/2013/06/17/seven-considerations-for-php-hosting/">
+
+
+  <meta property="og:description" content="">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2013-06-17T15:16:23-07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/2013/06/17/seven-considerations-for-php-hosting/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Byte Revel",
+      "url": null,
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Byte Revel Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Byte Revel</a>
+        <ul class="visible-links">
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name"></h3>
+    
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Seven Considerations for PHP Hosting">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="June 17, 2013">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Seven Considerations for PHP Hosting
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p><a href="/wp-content/uploads/2013/06/php-server.png"><img class="aligncenter size-full wp-image-4374" title="php-server" src="/wp-content/uploads/2013/06/php-server.png" alt="" width="340" height="228" srcset="/wp-content/uploads/2013/06/php-server.png 340w, /wp-content/uploads/2013/06/php-server-300x201.png 300w, /wp-content/uploads/2013/06/php-server-180x120.png 180w" sizes="(max-width: 340px) 100vw, 340px" /></a></p>
+
+<p>PHP is one of the universal scripting languages for web content delivery. In fact, many popular systems run on the PHP language:WordPress, Joomla, vBulletin and phpBB, to name a few.</p>
+
+<p>Because of its popularity, businesses often need the support of PHP services when choosing a <a href="http://www.rackspace.com/cloud/">cloud host provider</a>. PHP is naturally supported by both the Linux and Microsoft web hosting platforms, so whichever operating system is chosen, PHP can be used on the servers.</p>
+
+<p><strong>Easy Installation</strong></p>
+
+<p style="text-align: center;">
+  <a href="/wp-content/uploads/2013/06/lamp-logos.png"><img class="aligncenter size-full wp-image-4375" title="lamp-logos" src="/wp-content/uploads/2013/06/lamp-logos.png" alt="" width="443" height="320" srcset="/wp-content/uploads/2013/06/lamp-logos.png 492w, /wp-content/uploads/2013/06/lamp-logos-300x217.png 300w, /wp-content/uploads/2013/06/lamp-logos-180x130.png 180w, /wp-content/uploads/2013/06/lamp-logos-360x260.png 360w" sizes="(max-width: 443px) 100vw, 443px" /></a>
+</p>
+
+<p>The PHP coding engine is included with LAMP (Linux, Apache, MySQL, and PHP) environments. Microsoft IIS supports the language naturally with newer versions. For older versions of IIS, the PHP engine is a quick installation with little configuration requirements. The PHP system uses a flat text file to configure an environment, so there are no difficult interfaces to support.</p>
+
+<p><strong>Cost</strong></p>
+
+<p>Microsoft environments are expensive, but PHP and LAMP systems are affordable, especially when the business pays for cloud hosting costs up-front. For instance, Rackspace has the Ubuntu operating system with Apache installed, which are both free operating systems for Linux. The costs associated with Linux are a fraction of the cost to set up Microsoft applications, and plenty of developers offer free tools to install on the server.</p>
+
+<p><strong>Performance</strong></p>
+
+<p>PHP is used in even large corporate web environments. The language is linear, and does not use much server overhead to execute. PHP is great for high traffic websites, and it’s a common language for software developers, so finding a contract or permanent software developer to join the IT team is not difficult.</p>
+
+<p><strong>Security</strong></p>
+
+<p>Security is always an issue when allowing Internet traffic to access a web server. PHP has several functions and configurations to facilitate a safe transaction environment. PHP hosting environments also allow for SSL certificates, which provide encryption for transactions with sensitive customer information.</p>
+
+<p><strong>Support</strong></p>
+
+<p>Support is integral for a web-based business, and a good cloud host provides <a href="http://www.rackspace.com/cloud/sites/web-hosting/php/">PHP support</a> when LAMP servers are installed. The host will support any security breaches, network hardware failures, or in some cases, PHP errors that stem from a server configuration issue. The cloud host support team should be able to identify any issue that’s related to the host server configurations and permissions.</p>
+
+<p><strong>Bandwidth</strong></p>
+
+<p>LAMP servers use very little resources, but bandwidth is also a consideration for connectivity support and performance. Cloud computing hosts serve data to users based on geolocation, so bandwidth use is minimized while connectivity performance is maximized. A good cloud host offers data centers everywhere in the world, so even international customers have a fast user experience on the business website.</p>
+
+<p><strong>Number of Domains</strong></p>
+
+<p>PHP supports any number of domains on the web server. PHP is a lightweight language, so there is not a lot of overhead to support multiple sites on one server. This is a consideration when using dedicated servers in the cloud. Theoretically, the server can host hundreds of websites using the PHP scripting language as a backend engine and provider.</p>
+
+<p>Not all considerations are created equal, but the IT manager should ensure that each of these considerations is researched when finding the right host provider.</p>
+
+<p> </p>
+
+<p style="text-align: center;">
+  <em>Jennifer Marsh is a software developer, programmer and technology writer and occasionally blogs for open cloud company </em><a href="http://www.rackspace.com/cloud/"><em>Rackspace Hosting</em></a><em>.</em>
+</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#hosting" class="page__taxonomy-item" rel="tag">hosting</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#lamp" class="page__taxonomy-item" rel="tag">lamp</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#linux" class="page__taxonomy-item" rel="tag">linux</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#php" class="page__taxonomy-item" rel="tag">php</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#rackspace" class="page__taxonomy-item" rel="tag">rackspace</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#security" class="page__taxonomy-item" rel="tag">security</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#server" class="page__taxonomy-item" rel="tag">server</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#linux" class="page__taxonomy-item" rel="tag">Linux</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/categories/#php" class="page__taxonomy-item" rel="tag">PHP</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/categories/#programming" class="page__taxonomy-item" rel="tag">Programming</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2013-06-17T15:16:23-07:00">June 17, 2013</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/2013/06/05/ghostery/" class="pagination--pager" title="Ghostery – Defend Your Online Privacy!
+">Previous</a>
+    
+    
+      <a href="/2013/06/21/making-stop-motion-animations-is-easy-with-istopmotion-for-ipad/" class="pagination--pager" title="Making Stop-Motion Animations is Easy with iStopMotion for iPad
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2016/08/icon1024.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2016/08/21/beardedspice-for-mac-lets-you-control-any-music-website-with-your-media-keys/" rel="permalink">BeardedSpice for Mac Lets You Control Any Music Website with Your Media Keys
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2016/02/uber-logo.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2016/02/21/the-growth-of-sharing-services/" rel="permalink">The Growth of Sharing Services
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Over the past few years, the tech sector has seen an emergence of, for lack of a better term, “sharing services,” or companies that network and rent out dist...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2015/11/Quantopian_S1.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2015/11/02/quantopian-technology-to-backtest-and-execute-algorithmic-trading/" rel="permalink">Quantopian – Technology to Backtest and Execute Algorithmic Trading
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Algorithmic trading is growing field in finance that uses computers to execute securities trades. With growing research in artificial intelligence and machin...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2015/10/Cu_computer_science.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2015/10/17/computer-science-at-undergraduate-level-part-i/" rel="permalink">Computer Science at Undergraduate Level (Part I)
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Computer Science is rapidly becoming a popular major among students as the job market for CS majors shows consistent growth. Additionally, the market for CS ...</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap">
+  <input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  <div id="results" class="results"></div>
+</div>
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Byte Revel. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+
+
+  
+  
+  <script src="/assets/js/lunr/lunr.min.js"></script>
+  <script src="/assets/js/lunr/lunr-store.js"></script>
+  <script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "/2013/06/17/seven-considerations-for-php-hosting/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/2013/06/17/seven-considerations-for-php-hosting"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://byte-revel.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+  </body>
+</html>

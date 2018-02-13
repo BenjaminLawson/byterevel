@@ -1,0 +1,660 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.9.1 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Python Tutorial I – Background, Setting Up, and Hello World! - Byte Revel</title>
+<meta name="description" content="Setting Up">
+
+
+  <meta name="author" content="Nikhil Palanki">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Byte Revel">
+<meta property="og:title" content="Python Tutorial I – Background, Setting Up, and Hello World!">
+<meta property="og:url" content="/2011/09/18/python-tutorial-i-background-setting-up-and-hello-world/">
+
+
+  <meta property="og:description" content="Setting Up">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2011-09-18T04:09:20-07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/2011/09/18/python-tutorial-i-background-setting-up-and-hello-world/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Byte Revel",
+      "url": null,
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Byte Revel Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Byte Revel</a>
+        <ul class="visible-links">
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Nikhil Palanki</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        I have been writing at ByteRevel since its inception in 2011 and helped make it what it is today. I've always been fascinated by the intersection between human phenomena and computing, specifically in fields of education, financial markets, and creative design. My programming interests are in machine learning, artificial intelligence, neural networks, cryptography, blockchain infrastructure, market making, simulation and modeling, and quantum computing. Outside of ByteRevel, I co-founded and spent four years working on a software consulting company, Quadral Apps (It's now defunct as the founders have all left). My interests outside of computer science are poverty alleviation, humanitarian engineering, education, financial markets and economics research.
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/nikhilpalanki" itemprop="sameAs">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Python Tutorial I – Background, Setting Up, and Hello World!">
+    <meta itemprop="description" content="Setting Up">
+    <meta itemprop="datePublished" content="September 18, 2011">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Python Tutorial I – Background, Setting Up, and Hello World!
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p><strong>Setting Up</strong></p>
+
+<p>If you have a Mac, you are already good to go. All you have to do is open up Terminal, and type Python. After typing Python, you should see the following screen.</p>
+
+<div id="attachment_2844" style="max-width: 580px" class="wp-caption aligncenter">
+  <a href="/2011/09/18/python-tutorial-i-background-setting-up-and-hello-world/screen-shot-2011-09-18-at-11-33-03-am/" rel="attachment wp-att-2844"><img class="size-full wp-image-2844 " title="Screen Shot 2011-09-18 at 11.33.03 AM" src="/wp-content/uploads/2011/09/Screen-Shot-2011-09-18-at-11.33.03-AM.png" alt="" width="570" height="313" srcset="/wp-content/uploads/2011/09/Screen-Shot-2011-09-18-at-11.33.03-AM.png 570w, /wp-content/uploads/2011/09/Screen-Shot-2011-09-18-at-11.33.03-AM-300x164.png 300w, /wp-content/uploads/2011/09/Screen-Shot-2011-09-18-at-11.33.03-AM-180x98.png 180w, /wp-content/uploads/2011/09/Screen-Shot-2011-09-18-at-11.33.03-AM-360x197.png 360w" sizes="(max-width: 570px) 100vw, 570px" /></a>
+  
+  <p class="wp-caption-text">
+    Just type &#8220;Python&#8221; and it&#8217;ll open up the Command Line
+  </p>
+</div>
+
+<p>If you use Windows, all you need to do is go to the <a href="http://www.python.org/download/">Python website</a>, go to downloads, and download the installer. Then go to Command Prompt, type Python, and it should work just fine.</p>
+
+<p>For other users, such as those of Linux, Solaris etc. There are Python builds for your system, also, but they are maintained by various Python enthusiasts. Their links are under <strong>Downloads » Other.</strong></p>
+
+<p><strong>But, Joe Blabbah, Why are there These (»&gt;) Junks on the Screen?</strong></p>
+
+<p>Your oddly worded question will be answered. Python uses “these junks” in the Terminal version of their programming. It shows the indentations required by the Interpreter to make the program work. In the future, if you use an IDE to write the program, the indentations will be automatically provided for you.</p>
+
+<p><strong>Hello, World!</strong></p>
+
+<p>This will be the shortest Hello, World! yet. In Terminal or Command Prompt, open up the Python interface. Then type the following:</p>
+
+<p><strong>print “Hello, World!”</strong></p>
+
+<p>And then hit enter. If you did everything correctly, it should look like this:</p>
+
+<div id="attachment_2845" style="max-width: 583px" class="wp-caption aligncenter">
+  <a href="/2011/09/18/python-tutorial-i-background-setting-up-and-hello-world/screen-shot-2011-09-18-at-11-50-35-am/" rel="attachment wp-att-2845"><img class="size-full wp-image-2845" title="Screen Shot 2011-09-18 at 11.50.35 AM" src="/wp-content/uploads/2011/09/Screen-Shot-2011-09-18-at-11.50.35-AM.png" alt="" width="573" height="64" srcset="/wp-content/uploads/2011/09/Screen-Shot-2011-09-18-at-11.50.35-AM.png 573w, /wp-content/uploads/2011/09/Screen-Shot-2011-09-18-at-11.50.35-AM-300x33.png 300w, /wp-content/uploads/2011/09/Screen-Shot-2011-09-18-at-11.50.35-AM-180x20.png 180w, /wp-content/uploads/2011/09/Screen-Shot-2011-09-18-at-11.50.35-AM-360x40.png 360w" sizes="(max-width: 573px) 100vw, 573px" /></a>
+  
+  <p class="wp-caption-text">
+    !!!
+  </p>
+</div>
+
+<p>And now you are done!</p>
+
+<p><strong>Print</strong></p>
+
+<p>All the Print command does is print out whatever you put in the quotations. This is pretty self-explanatory. So if you want to make any other Python programs where all you do is print stuff, now you know how to!</p>
+
+<p><strong>IDEs and Stuff</strong></p>
+
+<p>If you are looking for a good IDE or Text Editor for Python, here are some good ones:</p>
+
+<p><strong>PyCharm</strong></p>
+
+<p>Developer: JetBrains</p>
+
+<p>Cost: $99 (on sale as of the publishing of this article for $49)</p>
+
+<p><a href="/2011/09/18/python-tutorial-i-background-setting-up-and-hello-world/pc_hello1/" rel="attachment wp-att-2847"><img class="size-full wp-image-2847 aligncenter" title="PC_Hello1" src="/wp-content/uploads/2011/09/PC_Hello1.png" alt="" width="590" height="315" srcset="/wp-content/uploads/2011/09/PC_Hello1.png 655w, /wp-content/uploads/2011/09/PC_Hello1-300x160.png 300w, /wp-content/uploads/2011/09/PC_Hello1-180x96.png 180w, /wp-content/uploads/2011/09/PC_Hello1-360x192.png 360w" sizes="(max-width: 590px) 100vw, 590px" /></a></p>
+
+<p><a href="/2011/09/18/python-tutorial-i-background-setting-up-and-hello-world/pc_hello2/" rel="attachment wp-att-2848"><img class="size-full wp-image-2848 aligncenter" title="PC_Hello2" src="/wp-content/uploads/2011/09/PC_Hello2.png" alt="" width="590" height="315" srcset="/wp-content/uploads/2011/09/PC_Hello2.png 655w, /wp-content/uploads/2011/09/PC_Hello2-300x160.png 300w, /wp-content/uploads/2011/09/PC_Hello2-180x96.png 180w, /wp-content/uploads/2011/09/PC_Hello2-360x192.png 360w" sizes="(max-width: 590px) 100vw, 590px" /></a></p>
+
+<p> </p>
+
+<p><strong>Wingware Python IDE</strong></p>
+
+<p>Developer: Wingware</p>
+
+<p>Cost: Free – $245</p>
+
+<p><a href="/2011/09/18/python-tutorial-i-background-setting-up-and-hello-world/001692f2_medium/" rel="attachment wp-att-2849"><img class="size-full wp-image-2849 aligncenter" title="001692f2_medium" src="/wp-content/uploads/2011/09/001692f2_medium.jpeg" alt="" width="228" height="239" srcset="/wp-content/uploads/2011/09/001692f2_medium.jpeg 228w, /wp-content/uploads/2011/09/001692f2_medium-30x30.jpeg 30w, /wp-content/uploads/2011/09/001692f2_medium-180x188.jpeg 180w" sizes="(max-width: 228px) 100vw, 228px" /></a></p>
+
+<p><strong>Active Python</strong></p>
+
+<p>Developer: ActiveState</p>
+
+<p>Price: Varies</p>
+
+<p><a href="/2011/09/18/python-tutorial-i-background-setting-up-and-hello-world/omylcvjd/" rel="attachment wp-att-2850"><img class="size-full wp-image-2850 aligncenter" title="omylcvjd" src="/wp-content/uploads/2011/09/omylcvjd.png" alt="" width="200" height="210" srcset="/wp-content/uploads/2011/09/omylcvjd.png 200w, /wp-content/uploads/2011/09/omylcvjd-180x189.png 180w" sizes="(max-width: 200px) 100vw, 200px" /></a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#byterevel" class="page__taxonomy-item" rel="tag">byterevel</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#guido-van-rossum" class="page__taxonomy-item" rel="tag">guido van rossum</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#joe-blabbah" class="page__taxonomy-item" rel="tag">joe blabbah</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#monty-python" class="page__taxonomy-item" rel="tag">monty python</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#programming" class="page__taxonomy-item" rel="tag">programming</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#python" class="page__taxonomy-item" rel="tag">python</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#programming" class="page__taxonomy-item" rel="tag">Programming</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/categories/#python" class="page__taxonomy-item" rel="tag">Python</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/categories/#tutorials" class="page__taxonomy-item" rel="tag">Tutorials</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2011-09-18T04:09:20-07:00">September 18, 2011</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/2011/09/17/original-portal-is-free-until-september-20/" class="pagination--pager" title="Original Portal Is Free Until September 20
+">Previous</a>
+    
+    
+      <a href="/2011/09/22/google-goes-public-rolls-out-cool-new-hangout-features/" class="pagination--pager" title="Google+ Goes Public, Rolls Out Cool New Hangout Features
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2016/08/icon1024.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2016/08/21/beardedspice-for-mac-lets-you-control-any-music-website-with-your-media-keys/" rel="permalink">BeardedSpice for Mac Lets You Control Any Music Website with Your Media Keys
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2016/02/uber-logo.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2016/02/21/the-growth-of-sharing-services/" rel="permalink">The Growth of Sharing Services
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Over the past few years, the tech sector has seen an emergence of, for lack of a better term, “sharing services,” or companies that network and rent out dist...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2015/11/Quantopian_S1.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2015/11/02/quantopian-technology-to-backtest-and-execute-algorithmic-trading/" rel="permalink">Quantopian – Technology to Backtest and Execute Algorithmic Trading
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Algorithmic trading is growing field in finance that uses computers to execute securities trades. With growing research in artificial intelligence and machin...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2015/10/Cu_computer_science.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2015/10/17/computer-science-at-undergraduate-level-part-i/" rel="permalink">Computer Science at Undergraduate Level (Part I)
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Computer Science is rapidly becoming a popular major among students as the job market for CS majors shows consistent growth. Additionally, the market for CS ...</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap">
+  <input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  <div id="results" class="results"></div>
+</div>
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Byte Revel. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+
+
+  
+  
+  <script src="/assets/js/lunr/lunr.min.js"></script>
+  <script src="/assets/js/lunr/lunr-store.js"></script>
+  <script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "/2011/09/18/python-tutorial-i-background-setting-up-and-hello-world/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/2011/09/18/python-tutorial-i-background-setting-up-and-hello-world"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://byte-revel.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+  </body>
+</html>

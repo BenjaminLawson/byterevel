@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-02-12T20:43:36-08:00</updated><id>/</id><title type="html">Byte Revel</title><subtitle>Just another tech blog.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;bio&quot;=&gt;nil, &quot;location&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;uri&quot;=&gt;nil, &quot;home&quot;=&gt;nil, &quot;bitbucket&quot;=&gt;nil, &quot;codepen&quot;=&gt;nil, &quot;dribbble&quot;=&gt;nil, &quot;flickr&quot;=&gt;nil, &quot;facebook&quot;=&gt;nil, &quot;foursquare&quot;=&gt;nil, &quot;github&quot;=&gt;nil, &quot;gitlab&quot;=&gt;nil, &quot;google_plus&quot;=&gt;nil, &quot;keybase&quot;=&gt;nil, &quot;instagram&quot;=&gt;nil, &quot;lastfm&quot;=&gt;nil, &quot;linkedin&quot;=&gt;nil, &quot;pinterest&quot;=&gt;nil, &quot;soundcloud&quot;=&gt;nil, &quot;stackoverflow&quot;=&gt;nil, &quot;steam&quot;=&gt;nil, &quot;tumblr&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil, &quot;vine&quot;=&gt;nil, &quot;weibo&quot;=&gt;nil, &quot;xing&quot;=&gt;nil, &quot;youtube&quot;=&gt;nil}</name></author><entry><title type="html">BeardedSpice for Mac Lets You Control Any Music Website with Your Media Keys</title><link href="/2016/08/21/beardedspice-for-mac-lets-you-control-any-music-website-with-your-media-keys/" rel="alternate" type="text/html" title="BeardedSpice for Mac Lets You Control Any Music Website with Your Media Keys" /><published>2016-08-21T13:49:24-07:00</published><updated>2016-08-21T13:49:24-07:00</updated><id>/2016/08/21/beardedspice-for-mac-lets-you-control-any-music-website-with-your-media-keys</id><content type="html" xml:base="/2016/08/21/beardedspice-for-mac-lets-you-control-any-music-website-with-your-media-keys/">&lt;p&gt;&lt;img src=&quot;/wp-content/uploads/2016/08/icon1024.png&quot; alt=&quot;BeardedSpice&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Have you ever tried to pause your music with your native media keys only to accidentally start up iTunes and have multiple songs playing at once? Have you ever had the absurd notion that pressing the “skip” button should play the next video in a YouTube playlist? You aren’t alone. Providing this intuitive functionality has been the goal of open source project &lt;a href=&quot;http://beardedspice.github.io/&quot;&gt;BeardedSpice&lt;/a&gt; since late 2013, and the &lt;a href=&quot;https://github.com/beardedspice/beardedspice#supported-sites&quot;&gt;list of services it supports&lt;/a&gt; is huge! It even supports now defunct websites like GrooveShark (yikes, if a contributor is reading this, please removing this!).&lt;/p&gt;
+
+&lt;p&gt;BeardedSpice lives in your menu bar. It will attempt to control the currently focused tab or application, but you can also select the service you want to control from its dropdown menu.&lt;/p&gt;
+
+&lt;p&gt;It would seem that the ability to pause any media playing should be native functionality for all Macs, but implementing specific javascript hooks for controlling web applications is delicate and messy at the best of times. BeardedSpice works by applying scripts developed by the community to supported websites that interact with their javascript controls, so support can indeed break at any time, and adding support for websites is time consuming.&lt;/p&gt;
+
+&lt;p&gt;To maintain consistency, the utility also supports popular native media players like &lt;a href=&quot;/2011/07/14/music-streaming-service-spotify-is-now-available-in-the-u-s/&quot;&gt;Spotify&lt;/a&gt; and &lt;a href=&quot;/2011/06/24/vlc-the-media-playback-gurus-one-tool/&quot;&gt;VLC&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;size-full wp-image-4930 aligncenter&quot; src=&quot;/wp-content/uploads/2016/08/beardedspice-screenshot.jpg&quot; alt=&quot;BeardedSpice Menu&quot; width=&quot;319&quot; height=&quot;187&quot; srcset=&quot;/wp-content/uploads/2016/08/beardedspice-screenshot.jpg 319w, /wp-content/uploads/2016/08/beardedspice-screenshot-300x176.jpg 300w, /wp-content/uploads/2016/08/beardedspice-screenshot-180x106.jpg 180w&quot; sizes=&quot;(max-width: 319px) 100vw, 319px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you don’t use a keyboard with media keys, fear not. BeardedSpice is highly configurable and allows you to bind any keys to ‘previous’, ‘pause/play’, and ‘next’ actions. Be sure to set it to launch on login!&lt;/p&gt;
+
+&lt;p&gt;This is a great opportunity to make contributions to an open source project that will be noticed and appreciated. If a website you use isn’t yet supported, consider &lt;a href=&quot;https://github.com/beardedspice/beardedspice&quot;&gt;having a go at it&lt;/a&gt; and submitting your plugin to the project. There are also a few open issues with websites that people already want support for.&lt;/p&gt;</content><author><name>Ben Lawson</name></author><category term="itunes" /><category term="mac" /><category term="music" /><category term="Software" /><category term="soundcloud" /><category term="spotify" /><category term="vlc" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/wp-content/uploads/2016/08/icon1024.png" /></entry><entry><title type="html">The Growth of Sharing Services</title><link href="/2016/02/21/the-growth-of-sharing-services/" rel="alternate" type="text/html" title="The Growth of Sharing Services" /><published>2016-02-21T13:28:32-08:00</published><updated>2016-02-21T13:28:32-08:00</updated><id>/2016/02/21/the-growth-of-sharing-services</id><content type="html" xml:base="/2016/02/21/the-growth-of-sharing-services/">&lt;p&gt;Over the past few years, the tech sector has seen an emergence of, for lack of a better term, “sharing services,” or companies that network and rent out distributed capital. In simpler terms, these are start-ups that don’t own the capital that provides a service (e.g. a car for a taxi service company) but rather connect people who are willing to “rent” out their capital to people who would rather “rent” than purchase capital outright.&lt;/p&gt;
+
+&lt;p&gt;Consider &lt;a href=&quot;https://www.uber.com/?int=a&quot;&gt;Über&lt;/a&gt;, &lt;a href=&quot;www.breather.com&quot;&gt;Breather&lt;/a&gt;, or &lt;a href=&quot;https://www.airbnb.com&quot;&gt;airbnb&lt;/a&gt;. These businesses don’t own cars, office spaces, or vacation homes. Rather, they are built on existing infrastructure. Their businesses rely on matching unused capital (such as cars / drivers, office buildings / meeting spaces, home space) with people in need of services. By exploiting unused capital instead of purchasing new capital outright, these businesses are able to lower their own costs thus making “rentals” much cheaper. In all, these “sharing services” are making capital use more efficient as the owners of capital are not losing as much money as they could by leaving their cars, office spaces, rooms unused (in terms of economic profit) and consumers benefit tremendously from lower prices. The middlemen, Über, Breather, or airbnb, collect a small fee for providing the network as well. It’s a win-win-win.&lt;/p&gt;
+
+&lt;p&gt;When I worked for Quadral Apps LLC, a software consulting company that I co-founded, one of our clients was Next Image Medical (now they’ve been absorbed by Canterbury Healthcare). Next Image Medical was in the “sharing services” business but with a very specific form of capital: MRI machines. When MRI machines were unused, they would contact Next Image Medical who would in turn schedule MRI appointments for patients. Since the machines would otherwise be unused, the MRIs were discounted and Next Image would collect a small premium on each appointment scheduled. This type of “capital sharing” business model is similar to that of the aforementioned companies.&lt;/p&gt;
+
+&lt;p&gt;Essentially, these “sharing services” are using technology to make markets or make existing markets more efficient. The growth of technology over the past few years has allowed these types of “capital sharing” networks to emerge dramatically. As a note to all entrepreneurs pondering new startup ideas, I’d suggest looking into developing new “capital sharing” networks; look for unused capital that can be rented out in some capacity and build a network around connecting them to consumers looking to borrow rather than own.&lt;/p&gt;
+
+&lt;p&gt;An aside – I realized that I’m coining a lot of terms in this article, some of which may not be completely accurate; I hope they convey the ideas nonetheless&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;</content><author><name>Nikhil Palanki</name></author><category term="airbnb" /><category term="breather" /><category term="entrepreneurship" /><category term="sharing services" /><category term="uber" /><summary type="html">Over the past few years, the tech sector has seen an emergence of, for lack of a better term, “sharing services,” or companies that network and rent out distributed capital. In simpler terms, these are start-ups that don’t own the capital that provides a service (e.g. a car for a taxi service company) but rather connect people who are willing to “rent” out their capital to people who would rather “rent” than purchase capital outright.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/wp-content/uploads/2016/02/uber-logo.png" /></entry><entry><title type="html">Quantopian – Technology to Backtest and Execute Algorithmic Trading</title><link href="/2015/11/02/quantopian-technology-to-backtest-and-execute-algorithmic-trading/" rel="alternate" type="text/html" title="Quantopian &amp;#8211; Technology to Backtest and Execute Algorithmic Trading" /><published>2015-11-02T00:29:09-08:00</published><updated>2015-11-02T00:29:09-08:00</updated><id>/2015/11/02/quantopian-technology-to-backtest-and-execute-algorithmic-trading</id><content type="html" xml:base="/2015/11/02/quantopian-technology-to-backtest-and-execute-algorithmic-trading/">&lt;p&gt;Algorithmic trading is growing field in finance that uses computers to execute securities trades. With growing research in artificial intelligence and machine learning, a computer’s ability to interact with markets and other human phenomena has rapidly increased. The financial sector is becoming increasingly reliant on computers for finding transactions, making markets, and executing trades, and at the heart of algorithmic trading are simply computers following their programming to make buy/sell orders for certain securities. For awhile though, algorithmic trading was a field pertaining only to experienced data scientists, programmers, and mathematicians that worked on Wall Street banks and Chicago prop shops. Yet, with the development of tools such as Quantopian and QuantConnect, any trader can connect his or her brokerage account to an algorithmic platform and execute computerized transactions.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Quantopian&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Quantopian is a fascinating company founded in Boston under the mission of “bringing Wall Street to main street.” Beneath its bright red exterior on the &lt;a href=&quot;http://www.quantopian.com&quot;&gt;homepage&lt;/a&gt; is a service that offers testing grounds for trading algorithms, algorithm design competitions, full-fledged brokerage connection services to trade real money, and a crowd-sourced hedge fund. The last feature, a crowd-sourced hedge fund, is a curious dynamic offered by Quantopian.&lt;/p&gt;
+
+&lt;p&gt;Quantopian holds competitions between its users to write stock trading algorithms. Whoever has the most successful algorithms is then invited to manage $100,000 of Quantopian funds and &lt;em&gt;keep&lt;/em&gt; all of the profits made on that money. Given that it’s free to register for Quantopian, anyone interested in having their stock market strategies see large-scale use (or at least, larger than individual investing) should learn the Quantopian trading API  (which is in Python) and compete in their monthly contests.&lt;/p&gt;
+
+&lt;div id=&quot;attachment_4865&quot; style=&quot;max-width: 310px&quot; class=&quot;wp-caption aligncenter&quot;&gt;
+  &lt;a href=&quot;/wp-content/uploads/2015/11/Screen-Shot-2015-11-02-at-8.25.45-AM.png&quot;&gt;&lt;img class=&quot;wp-image-4865 size-medium&quot; src=&quot;/wp-content/uploads/2015/11/Screen-Shot-2015-11-02-at-8.25.45-AM-300x286.png&quot; alt=&quot;Screen Shot 2015-11-02 at 8.25.45 AM&quot; width=&quot;300&quot; height=&quot;286&quot; srcset=&quot;/wp-content/uploads/2015/11/Screen-Shot-2015-11-02-at-8.25.45-AM-300x286.png 300w, /wp-content/uploads/2015/11/Screen-Shot-2015-11-02-at-8.25.45-AM-30x30.png 30w, /wp-content/uploads/2015/11/Screen-Shot-2015-11-02-at-8.25.45-AM-180x172.png 180w, /wp-content/uploads/2015/11/Screen-Shot-2015-11-02-at-8.25.45-AM-360x343.png 360w, /wp-content/uploads/2015/11/Screen-Shot-2015-11-02-at-8.25.45-AM.png 710w&quot; sizes=&quot;(max-width: 300px) 100vw, 300px&quot; /&gt;&lt;/a&gt;
+  
+  &lt;p class=&quot;wp-caption-text&quot;&gt;
+    Sample Code provided by Quantopian
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In all, I highly recommend investigating Quantopian’s services if you are interested in learning how algorithmic trading works or testing your own strategies. The 35,000+ Quantopian community provides support for all levels of experience, from seasoned investors without knowledge of Python to college programmers looking to get into the finance industry.&lt;/p&gt;
+
+&lt;div id=&quot;attachment_4866&quot; style=&quot;max-width: 830px&quot; class=&quot;wp-caption aligncenter&quot;&gt;
+  &lt;img class=&quot;wp-image-4866 size-large&quot; src=&quot;/wp-content/uploads/2015/11/Screen-Shot-2015-11-02-at-8.25.23-AM-1024x493.png&quot; alt=&quot;Screen Shot 2015-11-02 at 8.25.23 AM&quot; width=&quot;820&quot; height=&quot;395&quot; srcset=&quot;/wp-content/uploads/2015/11/Screen-Shot-2015-11-02-at-8.25.23-AM-1024x493.png 1024w, /wp-content/uploads/2015/11/Screen-Shot-2015-11-02-at-8.25.23-AM-300x144.png 300w, /wp-content/uploads/2015/11/Screen-Shot-2015-11-02-at-8.25.23-AM-180x87.png 180w, /wp-content/uploads/2015/11/Screen-Shot-2015-11-02-at-8.25.23-AM-360x173.png 360w, /wp-content/uploads/2015/11/Screen-Shot-2015-11-02-at-8.25.23-AM-790x380.png 790w, /wp-content/uploads/2015/11/Screen-Shot-2015-11-02-at-8.25.23-AM-1095x527.png 1095w, /wp-content/uploads/2015/11/Screen-Shot-2015-11-02-at-8.25.23-AM.png 1218w&quot; sizes=&quot;(max-width: 820px) 100vw, 820px&quot; /&gt;
+  
+  &lt;p class=&quot;wp-caption-text&quot;&gt;
+    Sample backtesting interface
+  &lt;/p&gt;
+&lt;/div&gt;</content><author><name>Nikhil Palanki</name></author><summary type="html">Algorithmic trading is growing field in finance that uses computers to execute securities trades. With growing research in artificial intelligence and machine learning, a computer’s ability to interact with markets and other human phenomena has rapidly increased. The financial sector is becoming increasingly reliant on computers for finding transactions, making markets, and executing trades, and at the heart of algorithmic trading are simply computers following their programming to make buy/sell orders for certain securities. For awhile though, algorithmic trading was a field pertaining only to experienced data scientists, programmers, and mathematicians that worked on Wall Street banks and Chicago prop shops. Yet, with the development of tools such as Quantopian and QuantConnect, any trader can connect his or her brokerage account to an algorithmic platform and execute computerized transactions.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/wp-content/uploads/2015/11/Quantopian_S1.png" /></entry><entry><title type="html">Computer Science at Undergraduate Level (Part I)</title><link href="/2015/10/17/computer-science-at-undergraduate-level-part-i/" rel="alternate" type="text/html" title="Computer Science at Undergraduate Level (Part I)" /><published>2015-10-17T06:42:13-07:00</published><updated>2015-10-17T06:42:13-07:00</updated><id>/2015/10/17/computer-science-at-undergraduate-level-part-i</id><content type="html" xml:base="/2015/10/17/computer-science-at-undergraduate-level-part-i/">&lt;p&gt;Computer Science is rapidly becoming a popular major among students as the job market for CS majors shows consistent growth. Additionally, the market for CS majors shows Wall Street-esque behavior, as CS majors are generally given large signing bonuses and moving between tech firms has a very up-and-out feel to it. Yet, I believe that studying CS with the intention of making lots of money can lead to foreseeable discontentment. If your heart isn’t in CS, given the sharp learning curve, necessity to train oneself constantly in order to stay relevant, and the inherent meritocracy of the technology industry, you will find yourself in a career that quickly drains any entrepreneurial motivation to succeed in this industry.&lt;/p&gt;
+
+&lt;p&gt;In these articles, I hope to give guidance on both how to quickly decide if you want to study computer science and how to choose a university at which to study this discipline. In further articles, I will go into more depth about specific universities and their CS programs.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Should I study computer science?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Computer science is an exciting field, and I love the inherently entrepreneurial nature of the discipline. You are constantly forced to reform your ideas, learn new concepts, and integrate STEM across all of the sciences. Every few weeks, the community develops new tools, ideas, algorithms, software, etc… which keeps the field constantly fresh. The only other industry with this type of innovation is finance, and currently, finance and computer science are growing symbiotically which makes this a very exciting time to study both fields.&lt;/p&gt;
+
+&lt;p&gt;Now, here is a list of questions you should ask yourself if you are considering a career in CS. These questions are ordered in increasing abstraction:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Do I genuinely enjoy using computers, machines, and technology? Am I interested in how they work, how they can be improved, and how we can use computers best, or do I prefer to just use computers as tools to reach an end?&lt;/li&gt;
+  &lt;li&gt;Do I enjoy few or more of the following subjects: logic, mathematics, economics, physics, philosophy, neuroscience, psychology?&lt;/li&gt;
+  &lt;li&gt;Am I interested in creating, developing, and innovating? Do I have a desire to improve? Am I motivated by problem-solving?&lt;/li&gt;
+  &lt;li&gt;Do I learn for the sake of learning? Do I enjoy learning new things, and do I view education as a lifelong endeavor?&lt;/li&gt;
+  &lt;li&gt;Am I interested in what it means to know, to process, to understand, to interpret, to convey, and to learn? Am I interested in the fundamental underpinnings of thinking and knowledge?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Granted, there are many other ways to determine if CS is for you, but from a very philosophical standpoint, these are important questions to ask yourself about the field of computing.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Where should I study computer science?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Assuming you have decided that computer science is the career for you, where should you study computer science as an undergraduate? This is a difficult question which would require much more introspection, and in later articles I will give more concrete overviews of CS at specific universities, but for now, consider this idea: because CS is meritocratic, meaning you are constantly having to prove yourself as both an innovator, learner, and collaborator in order to keep a job in this industry, the prestige, selectivity, and curriculum of a college matters very little; rather, the character, drive, discipline, and intellect of the individual defines the quality of his or her career. It’s true, certain schools attract more recruiters from bigger name jobs, but the fact of the matter is that entering the technology industry depends little on prestige (for example, Wall Street maintains exclusivity by recruiting at only a handful of universities) but rather on what one can prove. This aspect makes CS both an exciting and competitive industry.&lt;/p&gt;
+
+&lt;p&gt;When choosing an undergraduate college for computer science, I believe there are three factors to consider:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Am I interested in working closely with professors or do I prefer large lecture based environments?&lt;/li&gt;
+  &lt;li&gt;Am I interested in a particular professor’s or department’s CS research projects?&lt;/li&gt;
+  &lt;li&gt;Would I be challenged and motivated to continue learning throughout my life?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The last one is a little tricky and much more subjective, but it is nonetheless crucial to choosing a path for undergraduate study. Some sugegstions I have for determining #3 include reviewing the major requirements, emailing or calling professors, and looking through the department’s mission statement.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This overview is not meant to provide an all-encompassing determination of whether or not CS is for you, but I do hope it helps with understanding what it means to study computer science. In Part II, I will talk about specific undergraduate programs and what these colleges offer in the way of teaching undergraduates computer science.&lt;/p&gt;</content><author><name>Nikhil Palanki</name></author><category term="should i study computer science" /><category term="should i study cs" /><category term="studying cs at the undergraduate level" /><category term="undergraduate computer science" /><summary type="html">Computer Science is rapidly becoming a popular major among students as the job market for CS majors shows consistent growth. Additionally, the market for CS majors shows Wall Street-esque behavior, as CS majors are generally given large signing bonuses and moving between tech firms has a very up-and-out feel to it. Yet, I believe that studying CS with the intention of making lots of money can lead to foreseeable discontentment. If your heart isn’t in CS, given the sharp learning curve, necessity to train oneself constantly in order to stay relevant, and the inherent meritocracy of the technology industry, you will find yourself in a career that quickly drains any entrepreneurial motivation to succeed in this industry.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/wp-content/uploads/2015/10/Cu_computer_science.jpg" /></entry><entry><title type="html">Skiplagged – Understanding the Ethics behind “Hidden City” Ticketing</title><link href="/2015/03/03/skiplagged-understanding-the-ethics-behind-hidden-city-ticketing/" rel="alternate" type="text/html" title="Skiplagged &amp;#8211; Understanding the Ethics behind &amp;#8220;Hidden City&amp;#8221; Ticketing" /><published>2015-03-03T11:47:27-08:00</published><updated>2015-03-03T11:47:27-08:00</updated><id>/2015/03/03/skiplagged-understanding-the-ethics-behind-hidden-city-ticketing</id><content type="html" xml:base="/2015/03/03/skiplagged-understanding-the-ethics-behind-hidden-city-ticketing/">&lt;p&gt;It has been awhile since I’ve written an article, but I’ve found the chatter surrounding “hidden city ticketing,” an approach to obtaining cheaper air tickets to be a worthwhile discussion. Orbitz and United Airlines have recently entered a lawsuit against Aktarer Zaman, the twenty-two year old founder of Skiplagged, a website that helps users find cheap tickets by exploiting a method called “hidden city ticketing.” Zaman earlier this year launched a fundraiser to help him cover lawyer fees and has since gained widespread crowd support. Now, the legality of “hidden city ticketing” is a complex dilemma and the ruling on this case could redefine how airlines utilize the hub-and-spoke system.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What is Hidden City Ticketing?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Let’s say you want to fly from San Diego to Cleveland on ByteRevel Airways. It may not be a highly trafficked route, so a direct flight from San Diego to Cleveland may be somewhat expensive. But ByteRevel Airways offers a flight from San Diego to New York, a popular route, that happens to have a layover in Cleveland. The SD-NY route costs half of what the SD-Cleveland ticket costs, so you reason that you could just buy a ticket for SD-NY but leave the route after your plane lands in Cleveland. You pay as if you were traveling to New York, but you leave the plan just before the last leg of the journey. This type of flight arrangement is known as “hidden city” ticketing, where your real destination is in the middle of the flight route you purchased a ticket for and you don’t complete the entire journey.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;What is the problem with Hidden City Ticketing?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;At first glance, this scheme seems to be a greater hassle for those buying tickets and reneging on the entire journey. You can’t check in bags, or they will end up at your flight’s destination. It’s hard to make the journey a roundtrip, because if an airline notices that you didn’t complete the flight, it’s likely they will cancel your ticket. Similarly, airlines can dock you miles if it is determined that you didn’t complete your flight’s full journey. But why do airlines hate this scheme so much? They still get money from your ticket; it seems as if they are losing an opportunity to make even more money if they could’ve sold your ticket ahead of time.&lt;/p&gt;
+
+&lt;p&gt;HCT causes a few issues for airlines. It disrupts an airline’s logistics especially if many passengers are not boarding flights they paid for.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If a sizeable number of people aren’t boarding a plane, the plane could be delayed.&lt;/li&gt;
+  &lt;li&gt;Airlines overbook planes (another questionable practice, but it technically helps keep airfares low even if it messes up a flight queue) and they determine how much to overbook a plane by the historical numbers of people who don’t show up to the flight (a dubious statistical method that has more sociological implications than economic).&lt;/li&gt;
+  &lt;li&gt;An airline could’ve booked that seat but because of the fact someone bought a ticket, they are required to honor that purchase (although they may try to bump you if their overbooking algorithms fail). This last reason also has another economic implication. The airlines are losing a chance to make more money by booking a San Diego-New York route instead of a San Diego-Cleveland and Cleveland-New York route.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Ethical Questions&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;So what do you think? Do you think airlines deserve to have these “arbitrage-esque” situations exploited as they already charge overinflated prices for airline travel? Or do you think Hidden City Ticketing will produce more damage to consumers than the airlines, especially if many buyers use this method to quickly traverse short distances?&lt;/p&gt;</content><author><name>Nikhil Palanki</name></author><category term="hidden city ticketing" /><category term="skiplagged" /><summary type="html">It has been awhile since I’ve written an article, but I’ve found the chatter surrounding “hidden city ticketing,” an approach to obtaining cheaper air tickets to be a worthwhile discussion. Orbitz and United Airlines have recently entered a lawsuit against Aktarer Zaman, the twenty-two year old founder of Skiplagged, a website that helps users find cheap tickets by exploiting a method called “hidden city ticketing.” Zaman earlier this year launched a fundraiser to help him cover lawyer fees and has since gained widespread crowd support. Now, the legality of “hidden city ticketing” is a complex dilemma and the ruling on this case could redefine how airlines utilize the hub-and-spoke system.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/wp-content/uploads/2015/03/zslvga5hlfqifnqt8g0d.jpg" /></entry><entry><title type="html">Top 5 Activator Actions That Will Make Your Life Easier</title><link href="/2015/01/18/top-5-activator-actions-that-will-make-your-life-easier/" rel="alternate" type="text/html" title="Top 5 Activator Actions That Will Make Your Life Easier" /><published>2015-01-18T07:33:08-08:00</published><updated>2015-01-18T07:33:08-08:00</updated><id>/2015/01/18/top-5-activator-actions-that-will-make-your-life-easier</id><content type="html" xml:base="/2015/01/18/top-5-activator-actions-that-will-make-your-life-easier/">&lt;p&gt;Activator is one of the &lt;a href=&quot;/2012/07/13/top-15-jailbreak-apps-and-tweaks/&quot; title=&quot;Top 15 Jailbreak Apps and Tweaks&quot;&gt;most popular tweaks&lt;/a&gt; for Jailbroken iOS devices for a reason. It is fantastically useful in making shortcuts for various tasks through a multitude of different triggers. The following are some of my favorite actions that I use on a daily basis. I hope that you find them as helpful as I do!&lt;/p&gt;
+
+&lt;p&gt;To install Activator add &lt;a href=&quot;http://rpetri.ch/&quot;&gt;http://rpetri.ch/&lt;/a&gt; to your Cydia sources.&lt;/p&gt;
+
+&lt;h2 id=&quot;1replace-home-button-presses-with-touch-id&quot;&gt;1. Replace Home Button Presses With Touch ID&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;/wp-content/uploads/2015/01/IMG_0135-e1421618436579.png&quot;&gt;&lt;img class=&quot; wp-image-4819  alignright&quot; src=&quot;/wp-content/uploads/2015/01/IMG_0135-e1421618436579.png&quot; alt=&quot;IMG_0135&quot; width=&quot;344&quot; height=&quot;518&quot; srcset=&quot;/wp-content/uploads/2015/01/IMG_0135-e1421618436579.png 639w, /wp-content/uploads/2015/01/IMG_0135-e1421618436579-199x300.png 199w, /wp-content/uploads/2015/01/IMG_0135-e1421618436579-180x271.png 180w, /wp-content/uploads/2015/01/IMG_0135-e1421618436579-360x542.png 360w&quot; sizes=&quot;(max-width: 344px) 100vw, 344px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Pressing that home button all the time causes wear and tear that could eventually break it. Plus, it requires more effort to push down on the button than to simply touch it. The latest version of activator lets you set actions for the Touch ID fingerprint sensor, and it opens up a world of possibilities. Adding these two actions effectively replaces home button presses, but you’ll have to choose your own action for Siri!&lt;/p&gt;
+
+&lt;p&gt;Instructions:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Choose where you want to action to work. I recommend “Anywhere” so it works like the home button.&lt;/li&gt;
+  &lt;li&gt;In the Touch ID section select “Single Press”.&lt;/li&gt;
+  &lt;li&gt;Select “Home Button”. Now touching your home button once will do the same thing as pressing the home button.&lt;/li&gt;
+  &lt;li&gt;Go back to the Touch ID section and select “Short Hold”.&lt;/li&gt;
+  &lt;li&gt;Select “Activate Switcher”.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;There is another Jailbreak tweak called &lt;a href=&quot;http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=virtualhome8Dp&quot;&gt;Virtual Home&lt;/a&gt; that essentially lets you do the same thing, but it costs money and the fewer tweaks you need to install the better. Plus, Activator is more customizable.&lt;/p&gt;
+
+&lt;p&gt;The iPhone 5s or newer is required to use this activator tweak.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;##&lt;/p&gt;
+
+&lt;p&gt;##&lt;/p&gt;
+
+&lt;p&gt;##&lt;/p&gt;
+
+&lt;p&gt;##&lt;/p&gt;
+
+&lt;h2 id=&quot;2-previousnext-song-volume-buttons&quot;&gt;2. Previous/Next Song Volume Buttons&lt;/h2&gt;
+
+&lt;p&gt;If you’re like me and you usually keep your phone in your pocket when you listen to music, then this is a must have. Rather than taking your phone out, waking it up, and tapping the previous/next icons, just feel for the volume buttons and press them accordingly. Even if you just leave your phone sitting out on your desk, pressing the volume buttons is still faster than waking it up and finding the icons.&lt;/p&gt;
+
+&lt;p&gt;Note that this will disable the default functionality of holding the volume buttons to turn off or maximize the volume by holding them. I rarely feel the need for that, but maybe it’s indispensable to you.&lt;/p&gt;
+
+&lt;p&gt;Instructions:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Select “Anywhere”.&lt;/li&gt;
+  &lt;li&gt;In the “Volume Buttons” section select “Down Short Hold”.&lt;/li&gt;
+  &lt;li&gt;Select “Next Track”.&lt;/li&gt;
+  &lt;li&gt;Go back to the “Volume Buttons” section and select “Up Short Hold”.&lt;/li&gt;
+  &lt;li&gt;Select “Previous Track”.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;h2 id=&quot;3-swipe-app-icons-toopen-different-apps&quot;&gt;3. Swipe App Icons to Open Different Apps&lt;/h2&gt;
+
+&lt;p&gt;A lot of apps exist in pairs or are very similar to each other. For instance, Facebook and Messenger compliment each other. This action will save you time hunting down for apps and let you embed shortcuts to alternative apps right in your home screen. Just swipe up on one app to open up the alternative app!&lt;/p&gt;
+
+&lt;p&gt;Instructions:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Select “Home Screen”.&lt;/li&gt;
+  &lt;li&gt;Tap the “More” button.&lt;/li&gt;
+  &lt;li&gt;Select “Icon Flick Up”.&lt;/li&gt;
+  &lt;li&gt;Select the app you want to swipe upwards to open the alternative app.&lt;/li&gt;
+  &lt;li&gt;Tap “Save”.&lt;/li&gt;
+  &lt;li&gt;Tap “Done”.&lt;/li&gt;
+  &lt;li&gt;Select the new “(app name) Icon Flick Up” action that you just created.&lt;/li&gt;
+  &lt;li&gt;Select the app you want to open when you swipe up on the first app’s icon.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Possibilities:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Swipe up on Camera to activate Photos&lt;/li&gt;
+  &lt;li&gt;Swipe up on Facebook to open Facebook Messenger&lt;/li&gt;
+  &lt;li&gt;Swipe up on Safari to open Chrome&lt;/li&gt;
+  &lt;li&gt;Swipe up on Music to open Pandora&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;h2 id=&quot;4-headphone-menu&quot;&gt;4. Headphone Menu&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;/wp-content/uploads/2015/01/IMG_0139.png&quot;&gt;&lt;img class=&quot;  wp-image-4831 alignright&quot; src=&quot;/wp-content/uploads/2015/01/IMG_0139.png&quot; alt=&quot;IMG_0139&quot; width=&quot;321&quot; height=&quot;301&quot; srcset=&quot;/wp-content/uploads/2015/01/IMG_0139.png 640w, /wp-content/uploads/2015/01/IMG_0139-300x282.png 300w, /wp-content/uploads/2015/01/IMG_0139-180x169.png 180w, /wp-content/uploads/2015/01/IMG_0139-360x338.png 360w&quot; sizes=&quot;(max-width: 321px) 100vw, 321px&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;Usually when you plug in your headphones you intend to use them right away. Wouldn’t it be convenient to be presented with a list of audio sources since you were going to have to find them anyway? This action takes advantage of Activator’s menu feature to create a menu of the apps you use for audio for quick and easy access when you use your headphones.&lt;/p&gt;
+
+&lt;p&gt;Instructions:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Select “Menus”.&lt;/li&gt;
+  &lt;li&gt;Select “Add New Menu” and name your menu.&lt;/li&gt;
+  &lt;li&gt;Select your newly created menu.&lt;/li&gt;
+  &lt;li&gt;Select “Add Action” and select an app you want in your menu.&lt;/li&gt;
+  &lt;li&gt;Repeat step 4 until you have all the apps you want in your menu.&lt;/li&gt;
+  &lt;li&gt;Go back to Activator’s main screen and select “Anywhere”.&lt;/li&gt;
+  &lt;li&gt;In the “Wired Headset” section (at the very bottom) select “Connected”.&lt;/li&gt;
+  &lt;li&gt;Select your menu in the “Menus” dropdown.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;5-home-button-flashlight&quot;&gt;5. Home Button Flashlight&lt;/h2&gt;
+
+&lt;p&gt;Sometimes you need to whip out a flashlight quickly and you don’t want to fiddle with the Control Center to turn on your phone’s flash. This action will let you double tap your home button from the lock screen and brighten up your surroundings in a jiffy.&lt;/p&gt;
+
+&lt;p&gt;Instructions:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Select “At Lock Screen”.&lt;/li&gt;
+  &lt;li&gt;Select “Double Press”.&lt;/li&gt;
+  &lt;li&gt;Select “Flashlight”.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;That one was easy!&lt;/p&gt;</content><author><name>Ben Lawson</name></author><category term="activator" /><category term="ios" /><category term="iphone" /><category term="jailbreak" /><summary type="html">Activator is one of the most popular tweaks for Jailbroken iOS devices for a reason. It is fantastically useful in making shortcuts for various tasks through a multitude of different triggers. The following are some of my favorite actions that I use on a daily basis. I hope that you find them as helpful as I do!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/wp-content/uploads/2015/01/IMG_0139.png" /></entry><entry><title type="html">Rabb.it is a Revolution in Social Web Browsing and Video Streaming</title><link href="/2015/01/18/rabb-it-is-a-revolution-in-social-web-browsing-and-video-streaming/" rel="alternate" type="text/html" title="Rabb.it is a Revolution in Social Web Browsing and Video Streaming" /><published>2015-01-18T05:36:44-08:00</published><updated>2015-01-18T05:36:44-08:00</updated><id>/2015/01/18/rabb-it-is-a-revolution-in-social-web-browsing-and-video-streaming</id><content type="html" xml:base="/2015/01/18/rabb-it-is-a-revolution-in-social-web-browsing-and-video-streaming/">&lt;p&gt;Google Hangouts formerly set the standard for online video chat, but a new contestant has taken the lead with a service that not only offers flawless video chat, but also a perfectly synced Chrome window between all call participants. Welcome Rabbit to the stage.&lt;/p&gt;
+
+&lt;p&gt;Recently redesigned video chat service Rabbit broadcasts a Chrome window from a virtualized desktop to all call participants (up to 10). Participants can take turns “holding the remote” (controlling Chrome) to entertain or collaborate with other people.&lt;/p&gt;
+
+&lt;p&gt;The best possibility Rabb.it has to offer is watching movies or TV shows together with friends on services like Netflix, YouTube, Hulu, et cetera. Since everyone is sharing the same screen, only one person needs to log in to a premium content service like Netflix to enable everybody to use it. I’m sure this would concern service providers if they found out, and it’s probably against their TOS, but it’s not that different from just watching movies in your living room with friends, so I wouldn’t have any qualms about it.&lt;/p&gt;
+
+&lt;p&gt;Another use is playing music together on websites like &lt;a href=&quot;/2011/07/14/music-streaming-service-spotify-is-now-available-in-the-u-s/&quot; title=&quot;Music Streaming Service Spotify Is Now Available In The U.S. !&quot;&gt;Spotify&lt;/a&gt;, Pandora, and &lt;a href=&quot;/2011/05/03/grooveshark-listen-to-millions-of-songs-for-free/&quot; title=&quot;Grooveshark – Listen to Millions of Songs For Free&quot;&gt;Grooveshark&lt;/a&gt;. With Grooveshark, for instance, you could collaboratively build a music queue or have someone act as a DJ for other call participants.&lt;/p&gt;
+
+&lt;p&gt;A third fun way to use Rabbit is to play online games. Unfortunately, since only one person can control the screen at once, playing multiplayer games at the same time isn’t possible, but turn based games or games with levels where you can trade off work well. Alternatively, maybe someone in your group is really good at a game and everyone just wants to watch them play (without going through the hassle of setting up Twitch).&lt;/p&gt;
+
+&lt;p&gt;The quality of the video from the virtualized desktop is surprisingly good. It is in HD, the audio is smooth, and the interaction lag is barely perceptible. The only gripe I have about the video is that the virtualized cursor is shown under your own cursor, and since they are slightly unsynchronised it is distracting. This is unavoidable though without sending a different stream to the controlling user, and I would rather have a duplicate cursor than lose the ability to gesture to things on the screen for other people.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://rabb.it/&quot;&gt;Rabbit&lt;/a&gt; works in Chrome, Firefox, and Opera.&lt;/p&gt;</content><author><name>Ben Lawson</name></author><category term="browser" /><category term="chat" /><category term="chrome" /><category term="hangouts" /><category term="video chat" /><summary type="html">Google Hangouts formerly set the standard for online video chat, but a new contestant has taken the lead with a service that not only offers flawless video chat, but also a perfectly synced Chrome window between all call participants. Welcome Rabbit to the stage.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/wp-content/uploads/2015/01/screenshot_148.jpg" /></entry><entry><title type="html">Introduction to Stochastics – A Look at Monte Carlo Method and Hidden Markov Model</title><link href="/2015/01/18/introduction-to-stochastics-a-look-at-monte-carlo-method-and-hidden-markov-model/" rel="alternate" type="text/html" title="Introduction to Stochastics &amp;#8211; A Look at Monte Carlo Method and Hidden Markov Model" /><published>2015-01-18T02:52:19-08:00</published><updated>2015-01-18T02:52:19-08:00</updated><id>/2015/01/18/introduction-to-stochastics-a-look-at-monte-carlo-method-and-hidden-markov-model</id><content type="html" xml:base="/2015/01/18/introduction-to-stochastics-a-look-at-monte-carlo-method-and-hidden-markov-model/">&lt;p&gt;&lt;strong&gt;Note: &lt;/strong&gt;This is a paper I wrote for my AH Computer Science course, hence the formality.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Preface&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A stochastic process is a process that involves aggregating results to find patterns in an otherwise random-seeming phenomena. Sometimes we can’t determine exact functions for representing complicated events or processes and rather than assuming everything is arbitrary and random, mathematicians and computer scientists have developed algorithms for modeling these processes and determining trends. While the models tend not to be consistent exactly with reality, as they are simplifying assumptions, they do help us determine trends in things that we would otherwise think are random processes.&lt;/p&gt;
+
+&lt;p&gt;The Hidden Markov Model and Monte Carlo Method are two different ideas in computer science with a connected goal of determining algorithms although they solve different problems. The Hidden Markov Model is a model developed to understand processes where the effects can be observed but the algorithm is unknown. The hidden process is referred to as the “Markov Process,” and the model is the graphical interpretation of the possible algorithms. The Monte Carlo Method is a class of algorithms rather than a model for visualizing possible processes. The algorithms are designed to compute values that are generally not easy to find via a function through probabilistic sampling. These algorithms, while part of a broad category, follow a general structure of taking a domain of possible input values with probabilities of these values occurring and then using a “deterministic algorithm” (an algorithm that takes gives a unique output for each unique input) to find individual results. The idea is that aggregating all of the algorithm results will maintain some sort of consistent behavior with which we can use to determine the behavior of the object for which the Monte Carlo algorithm was designed.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Hidden Markov Process&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;There are a few definitions surrounding what a Markov Process is. A Markov Process is not solely a hidden algorithm. It’s an algorithm that, at each state of the algorithm, we are able to determine the entire history of the algorithm (Ghahramani). For example, consider speech. A person talks with a non-random string of words (because humans cannot be random). We don’t know for certain what word will come next but we can use the previous words to make a guess as to what will come next. This is a Markov Process.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Hidden Markov Model&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The HMM is a model for visualizing a Markov Process. Instead of delving into the mathematics, I will first illustrate how this model works by showing a few examples.&lt;/p&gt;
+
+&lt;div id=&quot;attachment_4838&quot; style=&quot;max-width: 437px&quot; class=&quot;wp-caption alignright&quot;&gt;
+  &lt;a href=&quot;/wp-content/uploads/2015/01/Screen-Shot-2015-01-18-at-9.28.34-PM.png&quot;&gt;&lt;img class=&quot;size-full wp-image-4838&quot; src=&quot;/wp-content/uploads/2015/01/Screen-Shot-2015-01-18-at-9.28.34-PM.png&quot; alt=&quot;Observe this schematic&quot; width=&quot;427&quot; height=&quot;232&quot; srcset=&quot;/wp-content/uploads/2015/01/Screen-Shot-2015-01-18-at-9.28.34-PM.png 427w, /wp-content/uploads/2015/01/Screen-Shot-2015-01-18-at-9.28.34-PM-300x163.png 300w, /wp-content/uploads/2015/01/Screen-Shot-2015-01-18-at-9.28.34-PM-180x98.png 180w, /wp-content/uploads/2015/01/Screen-Shot-2015-01-18-at-9.28.34-PM-360x196.png 360w&quot; sizes=&quot;(max-width: 427px) 100vw, 427px&quot; /&gt;&lt;/a&gt;
+  
+  &lt;p class=&quot;wp-caption-text&quot;&gt;
+    Observe this schematic
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Here is an example of the Hidden Markov Model that I came up with. Let’s say Spencer is in a room with &lt;em&gt;n&lt;/em&gt; different dictionaries, each of the same language. The problem is that each definition within each dictionary is unique. We don’t know how they are unique but we know that each dictionary has a random assortment of definitions although they all contain the same words. Alex is on the outside of the room. Spencer, with an unknown algorithm, chooses a definition from any of the dictionaries and sends out to Alex to determine which dictionary it came from so he can find what word it is. Alex has no way of figuring out how Spencer is choosing definitions but can say with a certain probability, specifically 1/n, which dictionary it is coming from. Spencer continues with this process and over a finite period of time, Alex will be able to determine the algorithm through probabilistic interpolation.&lt;/p&gt;
+
+&lt;p&gt;An example given on Wikipedia is that there is a room with a conveyor belt leading out. A genie is within the room with &lt;em&gt;n&lt;/em&gt; urns containing some assortment of colored balls and has a hidden Markov Process or unknown algorithm for sending the balls out of the room. An observer, we’ll say Peter, is outside observing the stream of colored balls exiting the room. He can’t determine what algorithm the genie is using because he doesn’t know from which urns the colored balls are coming from (because the colored balls exist in all possible urns). But he can make probability guesses as to figure out what the algorithm is. Consider the following schematic on the left. The long arrow indicates direction while the arrows from urns to the colored circles indicate possible ball orderings. One aspect about the Markov Process is that the genie’s choice of next urn is dependent on the present urn.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Monte Carlo Method&lt;/strong&gt;**&lt;/p&gt;
+
+&lt;p&gt;**&lt;/p&gt;
+
+&lt;p&gt;The Monte Carlo Method is a class of algorithms based on random sampling. Based on the statistical idea that a near-infinite quantity (yet finite) of tests will reveal a pattern and if a near-infinite quantity of tests doesn’t reveal a pattern, we can conclude that it is a random procedure.&lt;/p&gt;
+
+&lt;p&gt;Let’s say you want to find the value of pi. The ratio of the area of a circle to the area of a square with a side length congruent to the radius of the circle is equal to pi. So we place the square within the circle and proceed to throw grains of rice, each of unit area 1, onto the circle-square body. We continue with this random sampling of points, all the while taking the ratio of number of rice grains outside of the square and within the square to the number of rice grains found within the square. This ratio will be very close to pi once both the square and circle are covered in rice grains.&lt;/p&gt;
+
+&lt;p&gt;An important aspect of the Monte Carlo Method is that these algorithms tend to follow a general procedure:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Given a domain of possible inputs, determine each input’s probability of being chosen&lt;/li&gt;
+  &lt;li&gt;Use a deterministic algorithm to sample each input and record the output&lt;/li&gt;
+  &lt;li&gt;Aggregate the outputs&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The Monte Carlo Method allows computers to quickly calculate all possible outcomes within a reasonable time period. This is a useful procedure especially in situations where there exists uncertainty to human perspective but a computer can visualize with probabilities all risky outcomes.&lt;/p&gt;
+
+&lt;p&gt;The Monte Carlo Method is one of the defining algorithms of stochastics as it depends on aggregating results from a model.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Monte Carlo Algorithm Examples&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is an example I thought of while driving. Let’s say you throw a handful of sand onto a sidewalk and you want to determine each grain’s location. You could start with looking at each sand grain’s trajectory, factoring in its mass and its direction by projecting the grains into three-dimensional space. You could then account for the various directions of forces acting on the flying sand grains. This is wildly unrealistic given all of the anomalous forces that could affect a tiny sand grain, including the gravitational force of every sand grain on each other. We have to simplify the forces acting on the grains of sand but let’s say we reduce it to several thousand varying forces. So, with a rather long calculation (somewhat long for a computer to calculate trajectories for a thousand sand grains in three-dimensional space) we can estimate the locations of grains of sand.&lt;/p&gt;
+
+&lt;p&gt;An alternate way, by using the Monte Carlo Method, ignores all varying forces that could be acting on the grains of sand. Here is the algorithm I propose:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Assume that all of the anomalous forces are not anomalous but consistent with every trial. Similarly, assume that all external factors are held constant, each handful of sand is equal in mass and volume to the next, and each throw is consistent. These are reasonable assumptions given that external factors don’t vary much, grains of sand are close to being the same, and each throw can be made consistent. Similarly, we are only searching for an estimate, not an exact calculation. Finally, we assume that each grain of sand corresponds to another grain in a consecutive trial. These grains have the same initial trajectory.&lt;/li&gt;
+  &lt;li&gt;Take a handful of sand and throw it. Record the locations in 2-d space of all grains of sand.&lt;/li&gt;
+  &lt;li&gt;Clear sidewalk and repeat step 1 until you’ve collected enough results, whatever “enough” is in your definition. I would say several hundred thousand.&lt;/li&gt;
+  &lt;li&gt;Aggregate the results by averaging the positions of each grain of sand based on their initial trajectory.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;We should be able to estimate where grains of sand will land given certain conditions because of repeated analysis.&lt;/p&gt;
+
+&lt;p&gt;In general though, Monte Carlo Methods aren’t straight-up repeated aggregations of experiments. Sometimes there exist models which are repeatedly tested until a general pattern emerges.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Applications of the Hidden Markov Model &amp;amp; Monte Carlo Method&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A Hidden Markov Model is a way of modeling a Hidden Markov Process or an algorithm that cannot be viewed except for its output states. Examples of Hidden Markov Processes include speaking, weather, and financial forecasting. We can use models that view the previous outputs and then extrapolate or predict the next output based off of certain probabilities. The Hidden Markov Model can be used in many different contexts, ranging from AI video game design to stock market predictions. Yet, while the HMM is a surprisingly simple concept, applying it can range in complexity. Generally, applications of the Hidden Markov Model require a physical knowledge of the phenomena that the system describes. For example, if I wanted to design an algorithm to predict stock market movement, I would have to physically determine a relationship between market behavior and its past few states.&lt;/p&gt;
+
+&lt;p&gt;A connection between the Hidden Markov Model and the Monte Carlo Method is that the HMM relies on a physical correlation to be clear while the Monte Carlo Method can determine a physical correlation via random sampling tests. Let’s say we have a model for a Hidden Markov process but we don’t have a physical relationship (like numbers corresponding to probabilities, etc…), we can use the Monte Carlo Method based on the model to derive probabilities via random sampling. If we have a process that we think we have modeled, and would like to determine the physical correlation, we could run the model many, many times and aggregate the results. The results would then show a probability trend distributed over the tests which we could then use in conjunction with the Hidden Markov Model to definitively determine and implement an algorithm or computer software that predicts process outputs.&lt;/p&gt;
+
+&lt;p&gt;The Monte Carlo Method isn’t solely for procedures with hidden algorithms or processes. But, it is used when computing a trend or exact value is not evident, timely, or possible within a reasonable time period. It’s easy to run repeated tests and aggregate results, but it is not easy to determine theoretical answers to problems via logical reasoning. Its myriad applications include everything from investment analysis to operations research.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Introduction to Stochastics&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The Hidden Markov Model and the Monte Carlo Method are both part of a discipline known as stochastics. Stochastics is the science of determining or predicting future states with a given probability. While we cannot be one hundred percent certain about future events, we can try to determine the probability (and to a greater extent, the certainty) behind a given phenomena. The Hidden Markov Model is a way of correlating outputs with a hidden process and the Monte Carlo Method is a way of determining patterns in processes that are seemingly impossible to compute or determine. The Monte Carlo Method requires a model to run tests on (which could be the Hidden Markov Model) while the Hidden Markov Model is a way of representing the connection between hidden algorithms and their outputs. These two ideas are fundamental to the discipline of stochastics and have wide applications ranging from bioinformatics, finance, linguistics, and meteorology.&lt;/p&gt;
+
+&lt;p&gt;Stochastics is a wide field extending into a variety of human and scientific disciplines. Essentially, it is the science of uncertainty, randomness, and probability. The Monte Carlo Method and the Hidden Markov Model are two fundamental ideas in stochastics. Yet, these two ideas are very wide-reaching and contain many different sub-categories for research and software development. When designing software that deals with physically random phenomena, the Monte Carlo Method and Hidden Markov Model are two approaches to use when modeling and designing algorithms to achieve physical results.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Works Cited&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://mlg.eng.cam.ac.uk/zoubin/papers/ijprai.pdf&quot;&gt;http://mlg.eng.cam.ac.uk/zoubin/papers/ijprai.pdf&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.cs.umd.edu/~djacobs/CMSC828/ApplicationsHMMs.pdf&quot;&gt;http://www.cs.umd.edu/~djacobs/CMSC828/ApplicationsHMMs.pdf&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://statweb.stanford.edu/~owen/mc/Ch-intro.pdf&quot;&gt;http://statweb.stanford.edu/~owen/mc/Ch-intro.pdf&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Hidden_Markov_model&quot;&gt;http://en.wikipedia.org/wiki/Hidden_Markov_model&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.ma.utexas.edu/users/gordanz/notes/introduction_to_stochastic_processes.pdf&quot;&gt;https://www.ma.utexas.edu/users/gordanz/notes/introduction_to_stochastic_processes.pdf&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;</content><author><name>Nikhil Palanki</name></author><category term="explaining stochastics" /><category term="hidden markov model" /><category term="monte carlo method" /><category term="stochastics" /><category term="what are stochastics" /><summary type="html">Note: This is a paper I wrote for my AH Computer Science course, hence the formality.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/wp-content/uploads/2015/01/Rayleigh-Taylor_instability.jpg" /></entry><entry><title type="html">Simogo – Aesthetically Creative iOS Developers</title><link href="/2014/11/30/simogo-aesthetically-creative-ios-developers/" rel="alternate" type="text/html" title="Simogo &amp;#8211; Aesthetically Creative iOS Developers" /><published>2014-11-30T05:51:59-08:00</published><updated>2014-11-30T05:51:59-08:00</updated><id>/2014/11/30/simogo-aesthetically-creative-ios-developers</id><content type="html" xml:base="/2014/11/30/simogo-aesthetically-creative-ios-developers/">&lt;p&gt;While I don’t consider myself to be an avid video gamer, what I find most interesting about the media genre is the story, visual, and audio craft. Depending on the medium, whether it is a console or handheld device, I am interested in the defamiliarization that developers strive to achieve with their gamecraft. When I stumble upon a game that is aesthetically original, I can’t help feeling intrigued.&lt;/p&gt;
+
+&lt;p&gt;I have always been interested in &lt;a href=&quot;http://simogo.com&quot;&gt;Simogo’s&lt;/a&gt; creative work. As a development firm, every application that they’ve released is imbued with the mystical creativity that indie developers strive to achieve. From Beat Sneak Bandit’s combination of music with puzzle solving to the wistful Bumpy Road, which out of its simplicity and grace smoothly expounds a touching story. Another example of Simogo’s boundary pushing creativity is their Device 6. Combining a text-based adventure with a book-like reading is perhaps one of the most unique and interesting iPhone game experiences. Rather than simple puzzle solving, Simogo forces users to step-back and appreciate the creative genius invested into the application.&lt;/p&gt;
+
+&lt;div id=&quot;attachment_4783&quot; style=&quot;max-width: 830px&quot; class=&quot;wp-caption aligncenter&quot;&gt;
+  &lt;a href=&quot;/wp-content/uploads/2014/11/device_6_screen01.jpg&quot;&gt;&lt;img class=&quot;wp-image-4783 size-large&quot; src=&quot;/wp-content/uploads/2014/11/device_6_screen01-1024x576.jpg&quot; alt=&quot;device_6_screen01&quot; width=&quot;820&quot; height=&quot;461&quot; srcset=&quot;/wp-content/uploads/2014/11/device_6_screen01-1024x576.jpg 1024w, /wp-content/uploads/2014/11/device_6_screen01-300x169.jpg 300w, /wp-content/uploads/2014/11/device_6_screen01-180x101.jpg 180w, /wp-content/uploads/2014/11/device_6_screen01-360x202.jpg 360w, /wp-content/uploads/2014/11/device_6_screen01-790x445.jpg 790w, /wp-content/uploads/2014/11/device_6_screen01-1095x616.jpg 1095w, /wp-content/uploads/2014/11/device_6_screen01.jpg 1136w&quot; sizes=&quot;(max-width: 820px) 100vw, 820px&quot; /&gt;&lt;/a&gt;
+  
+  &lt;p class=&quot;wp-caption-text&quot;&gt;
+    Text-based puzzle solving of Device 6
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Most recently, Simogo released The Sailor’s Dream. This game immerses in a small pocket universe of an application with dream-like visuals. Users are drawn to explore a world solely for the purpose of exploration. Wrapped with beautiful music, this application moves away from solely creative expression towards creative storytelling. The adventure is more about figuring out a story and less so about progressing through a quest or journey. Reading like a storybook, this application almost turns the user into a character who is living outside of the author. The Sailor’s Dream captures a beautiful sense of mystical, explorative storytelling.&lt;/p&gt;
+
+&lt;p&gt;If you are interested in checking out some aesthetically creative iOS applications, I highly encourage you to look into Simogo’s applications.&lt;/p&gt;</content><author><name>Nikhil Palanki</name></author><category term="game" /><category term="indie" /><category term="ios" /><category term="iphone" /><category term="simogo" /><category term="video game" /><summary type="html">While I don’t consider myself to be an avid video gamer, what I find most interesting about the media genre is the story, visual, and audio craft. Depending on the medium, whether it is a console or handheld device, I am interested in the defamiliarization that developers strive to achieve with their gamecraft. When I stumble upon a game that is aesthetically original, I can’t help feeling intrigued.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/wp-content/uploads/2014/11/tsd_logo.png" /></entry><entry><title type="html">Terminal – New Online Computing Environment</title><link href="/2014/10/27/terminal-new-online-computing-environment/" rel="alternate" type="text/html" title="Terminal &amp;#8211; New Online Computing Environment" /><published>2014-10-27T06:24:03-07:00</published><updated>2014-10-27T06:24:03-07:00</updated><id>/2014/10/27/terminal-new-online-computing-environment</id><content type="html" xml:base="/2014/10/27/terminal-new-online-computing-environment/">&lt;p&gt;While CodeBunk and Neutron Drive have free and accessible online developing environments, they lack a certain robustness characteristic of offline computing. Terminal is a new online computing environment that seeks to provide fast and powerful tools for deploying applications, testing software, and executing computations via external servers. Developers face the hassle of setting up environments on their desktop that hinder the computer from being used in other contexts (without stripping the environment). In many cases, multiple servers, IDEs, and chats may be open as coworkers collaborate and rush to finish projects. This can be a quite cluttered desktop environment. Terminal seeks to provide a powerful online environment to allow users to run their environments off of external machines.&lt;/p&gt;
+
+&lt;div id=&quot;attachment_4768&quot; style=&quot;max-width: 830px&quot; class=&quot;wp-caption aligncenter&quot;&gt;
+  &lt;img class=&quot;wp-image-4768 size-large&quot; src=&quot;/wp-content/uploads/2014/10/Screen-Shot-2014-10-27-at-2.01.51-PM-1024x490.png&quot; alt=&quot;Screen Shot 2014-10-27 at 2.01.51 PM&quot; width=&quot;820&quot; height=&quot;392&quot; srcset=&quot;/wp-content/uploads/2014/10/Screen-Shot-2014-10-27-at-2.01.51-PM-1024x490.png 1024w, /wp-content/uploads/2014/10/Screen-Shot-2014-10-27-at-2.01.51-PM-300x143.png 300w, /wp-content/uploads/2014/10/Screen-Shot-2014-10-27-at-2.01.51-PM-180x86.png 180w, /wp-content/uploads/2014/10/Screen-Shot-2014-10-27-at-2.01.51-PM-360x172.png 360w, /wp-content/uploads/2014/10/Screen-Shot-2014-10-27-at-2.01.51-PM-790x378.png 790w, /wp-content/uploads/2014/10/Screen-Shot-2014-10-27-at-2.01.51-PM-1095x524.png 1095w, /wp-content/uploads/2014/10/Screen-Shot-2014-10-27-at-2.01.51-PM.png 1250w&quot; sizes=&quot;(max-width: 820px) 100vw, 820px&quot; /&gt;
+  
+  &lt;p class=&quot;wp-caption-text&quot;&gt;
+    Terminal&amp;#8217;s home page. Looks like Bootstrap.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Here are a few unique features that Terminal offers:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1. Servers&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Users are given the opportunity to use environments known as &lt;strong&gt;Terminal instances. &lt;/strong&gt;These are essentially virtual machines that allow users to run applications on a remote server.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. Environments&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Terminal functions like any other desktop. It’s an all-inclusive environment that boasts support for a wide-variety of languages. Computing power can be resized without a need to restart the server.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. Snapshots&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Snapshots are exactly as they sound: pictures. They are pictures of the running state of virtual machines. They let you compare various environments and reload past set-ups.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4. Fast, Easy, and Efficient&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Terminal boasts a 5 second start-up time, wide scalability (you can choose how much RAM and CPU power you use for your given project and you’re charged accordingly), and ease of application deployment. Terminal can be used as a powerful collaborative tool as well.&lt;/p&gt;
+
+&lt;p&gt;Altogether, Terminal is worth checking out if you’re a developer getting frustrated with the accumulating clutter on your desktop.&lt;/p&gt;
+
+&lt;p&gt;If you’re interested in checking out this new type of environment, you can find it &lt;a href=&quot;http://terminal.com&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;</content><author><name>Nikhil Palanki</name></author><category term="online computing" /><category term="online development environment" /><category term="servers" /><category term="terminal" /><summary type="html">While CodeBunk and Neutron Drive have free and accessible online developing environments, they lack a certain robustness characteristic of offline computing. Terminal is a new online computing environment that seeks to provide fast and powerful tools for deploying applications, testing software, and executing computations via external servers. Developers face the hassle of setting up environments on their desktop that hinder the computer from being used in other contexts (without stripping the environment). In many cases, multiple servers, IDEs, and chats may be open as coworkers collaborate and rush to finish projects. This can be a quite cluttered desktop environment. Terminal seeks to provide a powerful online environment to allow users to run their environments off of external machines.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="/wp-content/uploads/2014/10/Screen-Shot-2014-10-27-at-2.23.30-PM.png" /></entry></feed>

@@ -1,0 +1,775 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.9.1 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>JAVA Tutorial II – Data Types (Part II – Integers) - Byte Revel</title>
+<meta name="description" content="In this tutorial, we’ll create simple programs using Eclipse that compute solid numbers. We’ll create a program the divides 2 numbers and a program that adds 2 numbers.">
+
+
+  <meta name="author" content="Nikhil Palanki">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Byte Revel">
+<meta property="og:title" content="JAVA Tutorial II – Data Types (Part II – Integers)">
+<meta property="og:url" content="/2011/09/16/java-tutorial-ii-data-types-part-ii-integers/">
+
+
+  <meta property="og:description" content="In this tutorial, we’ll create simple programs using Eclipse that compute solid numbers. We’ll create a program the divides 2 numbers and a program that adds 2 numbers.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2011-09-16T11:05:58-07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/2011/09/16/java-tutorial-ii-data-types-part-ii-integers/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Byte Revel",
+      "url": null,
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Byte Revel Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Byte Revel</a>
+        <ul class="visible-links">
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Nikhil Palanki</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        I have been writing at ByteRevel since its inception in 2011 and helped make it what it is today. I've always been fascinated by the intersection between human phenomena and computing, specifically in fields of education, financial markets, and creative design. My programming interests are in machine learning, artificial intelligence, neural networks, cryptography, blockchain infrastructure, market making, simulation and modeling, and quantum computing. Outside of ByteRevel, I co-founded and spent four years working on a software consulting company, Quadral Apps (It's now defunct as the founders have all left). My interests outside of computer science are poverty alleviation, humanitarian engineering, education, financial markets and economics research.
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/nikhilpalanki" itemprop="sameAs">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="JAVA Tutorial II – Data Types (Part II – Integers)">
+    <meta itemprop="description" content="In this tutorial, we’ll create simple programs using Eclipse that compute solid numbers. We’ll create a program the divides 2 numbers and a program that adds 2 numbers.">
+    <meta itemprop="datePublished" content="September 16, 2011">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">JAVA Tutorial II – Data Types (Part II – Integers)
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>In this tutorial, we’ll create simple programs using Eclipse that compute solid numbers. We’ll create a program the divides 2 numbers and a program that adds 2 numbers.</p>
+
+<p><strong>What’s an Integer?</strong></p>
+
+<p>An integer is a number that can be expressed as either a negative or a positive value, but can never be a decimal value. For instance, <strong>3.4</strong> is not an integer, but <strong>-122</strong> is an integer.</p>
+
+<p>Ex) 4/2 = 2. The program will respond with a 2.</p>
+
+<p>Ex) 4/3 = 1.33333… The program will respond with a 1 instead of the expected/correct answer of 1.33333 .</p>
+
+<p>Why? Because you specified the number to be an Integer, not a Float or Double.</p>
+
+<p><strong>Setting Up the Project</strong></p>
+
+<p>I’m assuming you are familiar with setting up a standard Java Program in Eclipse. But in case it slipped your memory here are the steps:</p>
+
+<ol>
+  <li>
+    <p>Go to <strong>File &gt; New &gt; Java Project</strong></p>
+  </li>
+  <li>
+    <p>Label the project “Integer”</p>
+  </li>
+  <li>
+    <p>Go to <strong>File &gt; New &gt; Class</strong></p>
+  </li>
+  <li>
+    <p>Click Browse adjacent to source and select “Integer” as the Source folder</p>
+  </li>
+  <li>
+    <p>Label the class “Integer”</p>
+  </li>
+</ol>
+
+<p>Congratulations!</p>
+
+<p><strong>Part I of Part II of Java Tutorial II</strong></p>
+
+<p>So we’ll start with observing the adding of integers in a Java program. Here is the code you’ll need:</p>
+
+<table border="0">
+  <tr>
+    <td>
+      import java.util.Scanner;public class Integer {public static void main(String [] args) { &lt;/p&gt; 
+      
+      <p>
+        System.out.print(&#8220;Enter Your First Number&#8221;);
+      </p>
+      
+      <p>
+        Scanner scan = new Scanner(System.in);
+      </p>
+      
+      <p>
+        int x = scan.nextInt();
+      </p>
+      
+      <p>
+        System.out.print(&#8220;Enter Your Second Number&#8221;);
+      </p>
+      
+      <p>
+        Scanner scan2 = new Scanner(System.in);
+      </p>
+      
+      <p>
+        int y = scan2.nextInt();
+      </p>
+      
+      <p>
+        int total = x+y;
+      </p>
+      
+      <p>
+        System.out.print(&#8220;The Sum of the Two Numbers is &#8221; + total);
+      </p>
+      
+      <p>
+        }
+      </p>
+      
+      <p>
+        }&lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt; 
+        
+        <p>
+          If you want to look at a colored example as the text may help you see the code better, here is a screenshot of the code.
+        </p>
+        
+        <div id="attachment_2452" style="max-width: 549px" class="wp-caption aligncenter">
+          <a href="/2011/09/16/java-tutorial-ii-data-types-part-ii-integers/screen-shot-2011-08-21-at-10-53-09-am-2/" rel="attachment wp-att-2452"><img class="size-full wp-image-2452" title="Screen shot 2011-08-21 at 10.53.09 AM" src="/wp-content/uploads/2011/08/Screen-shot-2011-08-21-at-10.53.09-AM1.png" alt="" width="539" height="510" srcset="/wp-content/uploads/2011/08/Screen-shot-2011-08-21-at-10.53.09-AM1.png 539w, /wp-content/uploads/2011/08/Screen-shot-2011-08-21-at-10.53.09-AM1-300x283.png 300w, /wp-content/uploads/2011/08/Screen-shot-2011-08-21-at-10.53.09-AM1-180x170.png 180w, /wp-content/uploads/2011/08/Screen-shot-2011-08-21-at-10.53.09-AM1-360x340.png 360w" sizes="(max-width: 539px) 100vw, 539px" /></a>
+          
+          <p class="wp-caption-text">
+            Here is the Code
+          </p>
+        </div>
+        
+        <p>
+          <strong>import java.util.Scanner;</strong>
+        </p>
+        
+        <p>
+          There are 2 major ways of allowing the user to input data. You can use BufferedReader (which we will eventually cover) or Scanner. Scanner is much easier to use and for our learning sake, we&#8217;ll use it. But in order to use the Scanner, you have to import it first. <em>import java.util.Scanner;</em> is the piece of code you use.
+        </p>
+        
+        <p>
+          So when you use the scanner, you do the following:
+        </p>
+        
+        <p>
+          1. Scanner scan = new Scanner(System.in); //System.in means you are going to input data. &#8220;scan&#8221; after Scanner is like a new instance of it. That&#8217;s why during the second block of code, you use &#8220;scan2&#8221; because scan is already in use.
+        </p>
+        
+        <p>
+          2. int x = scan.nextInt(); //You declare the integer you are using here and you MUST put the &#8220;scan&#8221; that you are going to scan with. This is very vague isn&#8217;t it? Well, you can figure this part out if my explanation was too obscure (chances are it was)
+        </p>
+        
+        <p>
+          <strong>Declaring Ints</strong>
+        </p>
+        
+        <p>
+          You can declare an integer anywhere by placing the <strong>int </strong>next to a name followed by a semi-colon. But in this case, it has to be declared at a certain point. And that certain point is directly after you declare the Scanner.
+        </p>
+        
+        <p>
+          <strong>Addition Logic</strong>
+        </p>
+        
+        <p>
+          When adding 2 numbers, you have to come up with the resulting integer. &#8220;Int total = x+y;&#8221; was the code to use.
+        </p>
+        
+        <div id="attachment_2453" style="max-width: 694px" class="wp-caption aligncenter">
+          <a href="/2011/09/16/java-tutorial-ii-data-types-part-ii-integers/screen-shot-2011-08-21-at-11-08-19-am/" rel="attachment wp-att-2453"><img class="size-full wp-image-2453 " title="Screen shot 2011-08-21 at 11.08.19 AM" src="/wp-content/uploads/2011/08/Screen-shot-2011-08-21-at-11.08.19-AM.png" alt="" width="684" height="156" srcset="/wp-content/uploads/2011/08/Screen-shot-2011-08-21-at-11.08.19-AM.png 760w, /wp-content/uploads/2011/08/Screen-shot-2011-08-21-at-11.08.19-AM-300x68.png 300w, /wp-content/uploads/2011/08/Screen-shot-2011-08-21-at-11.08.19-AM-180x40.png 180w, /wp-content/uploads/2011/08/Screen-shot-2011-08-21-at-11.08.19-AM-360x81.png 360w" sizes="(max-width: 684px) 100vw, 684px" /></a>
+          
+          <p class="wp-caption-text">
+            Example of the Console's Building of the Application
+          </p>
+        </div>
+        
+        <p>
+          <strong>Part II of Part II of Java Tutorial II</strong>
+        </p>
+        
+        <p>
+          Now we are going to look at division. Not because division is cool or difficult or starts with a &#8220;d.&#8221; Division requires a float to be as the quotient of the problem because most division problems result with a non-integral number. But since this is an Integer tutorial, we are going to not use float just because we are rebels.
+        </p>
+        
+        <p>
+          <strong>Creating the Program</strong>
+        </p>
+        
+        <p>
+          You do not need to create a new class or anything. Just stick with what you already have. All you have to do is change the section where it says &#8220;int total = x+y&#8221; to &#8220;int total = x/y.&#8221; Then you can change all of the System.out.print to (&#8220;Enter the Dividend&#8221;) and to (&#8220;Enter the Divisor&#8221;). Then you can change the System.out.print that says (&#8220;The Sum of the Two Numbers is&#8221; + total); to (&#8220;The Quotient of the Two Numbers is&#8221; + total);
+        </p>
+        
+        <p>
+          Here is what the code should look like in the program:
+        </p>
+        
+        <div id="attachment_2454" style="max-width: 547px" class="wp-caption aligncenter">
+          <a href="/2011/09/16/java-tutorial-ii-data-types-part-ii-integers/screen-shot-2011-08-21-at-11-15-28-am/" rel="attachment wp-att-2454"><img class="size-full wp-image-2454" title="Screen shot 2011-08-21 at 11.15.28 AM" src="/wp-content/uploads/2011/08/Screen-shot-2011-08-21-at-11.15.28-AM.png" alt="" width="537" height="507" srcset="/wp-content/uploads/2011/08/Screen-shot-2011-08-21-at-11.15.28-AM.png 537w, /wp-content/uploads/2011/08/Screen-shot-2011-08-21-at-11.15.28-AM-300x283.png 300w, /wp-content/uploads/2011/08/Screen-shot-2011-08-21-at-11.15.28-AM-180x169.png 180w, /wp-content/uploads/2011/08/Screen-shot-2011-08-21-at-11.15.28-AM-360x339.png 360w" sizes="(max-width: 537px) 100vw, 537px" /></a>
+          
+          <p class="wp-caption-text">
+            Notice the changes in the System.out.print and the Math Logic
+          </p>
+        </div>
+        
+        <p>
+          So let&#8217;s compile this program and launch it. If you enter numbers that would normally result in a decimal, it&#8217;ll round down. Always. So you should replace the &#8220;Int&#8221; before &#8220;total&#8221; with a &#8220;Float.&#8221;
+        </p>
+        
+        <div id="attachment_2455" style="max-width: 691px" class="wp-caption aligncenter">
+          <a href="/2011/09/16/java-tutorial-ii-data-types-part-ii-integers/screen-shot-2011-08-21-at-11-19-37-am/" rel="attachment wp-att-2455"><img class="size-full wp-image-2455 " title="Screen shot 2011-08-21 at 11.19.37 AM" src="/wp-content/uploads/2011/08/Screen-shot-2011-08-21-at-11.19.37-AM.png" alt="" width="681" height="131" srcset="/wp-content/uploads/2011/08/Screen-shot-2011-08-21-at-11.19.37-AM.png 757w, /wp-content/uploads/2011/08/Screen-shot-2011-08-21-at-11.19.37-AM-300x57.png 300w, /wp-content/uploads/2011/08/Screen-shot-2011-08-21-at-11.19.37-AM-180x34.png 180w, /wp-content/uploads/2011/08/Screen-shot-2011-08-21-at-11.19.37-AM-360x69.png 360w" sizes="(max-width: 681px) 100vw, 681px" /></a>
+          
+          <p class="wp-caption-text">
+            Just What I thought. 4 divided by 3 equals 0. I'll ace AP Division for sure.
+          </p>
+        </div>
+        
+        <p style="text-align: center;">
+          So, you are now a master of inputting floats and such. Congratulations.
+        </p>
+        
+        <p style="text-align: center;">
+          Are you ready for Part III, floats? &#8211; <a href="/2011/09/16/java-tutorial-ii-data-types-part-iii-floats/">Next Page&gt;&gt;</a>
+        </p>
+        
+        <p style="text-align: center;">
+          <a href="/2011/09/16/java-tutorial-ii-data-types-scanners-and-java-math-part-i/">&lt; &lt;Previous Page</a> &#8211; Need to Go Back to Part I?&lt;/a&gt;
+        </p>
+</p></td></tr></table>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#ints" class="page__taxonomy-item" rel="tag">ints</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#java" class="page__taxonomy-item" rel="tag">java</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#math" class="page__taxonomy-item" rel="tag">math</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#pre-algebra-essentails" class="page__taxonomy-item" rel="tag">pre-algebra essentails</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#stuffs" class="page__taxonomy-item" rel="tag">stuffs</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#tutorials" class="page__taxonomy-item" rel="tag">tutorials</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#java" class="page__taxonomy-item" rel="tag">JAVA</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/categories/#tutorials" class="page__taxonomy-item" rel="tag">Tutorials</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2011-09-16T11:05:58-07:00">September 16, 2011</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/2011/09/16/java-tutorial-ii-data-types-part-v-char/" class="pagination--pager" title="JAVA Tutorial II – Data Types (Part V – Char)
+">Previous</a>
+    
+    
+      <a href="/2011/09/16/java-tutorial-ii-data-types-scanners-and-java-math-part-i/" class="pagination--pager" title="JAVA Tutorial II – Data Types, Scanners, and Java Math (Part I)
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2016/08/icon1024.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2016/08/21/beardedspice-for-mac-lets-you-control-any-music-website-with-your-media-keys/" rel="permalink">BeardedSpice for Mac Lets You Control Any Music Website with Your Media Keys
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2016/02/uber-logo.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2016/02/21/the-growth-of-sharing-services/" rel="permalink">The Growth of Sharing Services
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Over the past few years, the tech sector has seen an emergence of, for lack of a better term, “sharing services,” or companies that network and rent out dist...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2015/11/Quantopian_S1.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2015/11/02/quantopian-technology-to-backtest-and-execute-algorithmic-trading/" rel="permalink">Quantopian – Technology to Backtest and Execute Algorithmic Trading
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Algorithmic trading is growing field in finance that uses computers to execute securities trades. With growing research in artificial intelligence and machin...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2015/10/Cu_computer_science.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2015/10/17/computer-science-at-undergraduate-level-part-i/" rel="permalink">Computer Science at Undergraduate Level (Part I)
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Computer Science is rapidly becoming a popular major among students as the job market for CS majors shows consistent growth. Additionally, the market for CS ...</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap">
+  <input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  <div id="results" class="results"></div>
+</div>
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Byte Revel. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+
+
+  
+  
+  <script src="/assets/js/lunr/lunr.min.js"></script>
+  <script src="/assets/js/lunr/lunr-store.js"></script>
+  <script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "/2011/09/16/java-tutorial-ii-data-types-part-ii-integers/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/2011/09/16/java-tutorial-ii-data-types-part-ii-integers"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://byte-revel.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+  </body>
+</html>

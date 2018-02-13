@@ -1,0 +1,664 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.9.1 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Understanding Sorting Algorithms - Byte Revel</title>
+<meta name="description" content="Question: What the !#$% is a Sorting Algorithm?">
+
+
+  <meta name="author" content="Nikhil Palanki">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Byte Revel">
+<meta property="og:title" content="Understanding Sorting Algorithms">
+<meta property="og:url" content="/2011/06/19/understanding-sorting-algorithms/">
+
+
+  <meta property="og:description" content="Question: What the !#$% is a Sorting Algorithm?">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2011-06-19T03:52:53-07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/2011/06/19/understanding-sorting-algorithms/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Byte Revel",
+      "url": null,
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Byte Revel Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Byte Revel</a>
+        <ul class="visible-links">
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Nikhil Palanki</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        I have been writing at ByteRevel since its inception in 2011 and helped make it what it is today. I've always been fascinated by the intersection between human phenomena and computing, specifically in fields of education, financial markets, and creative design. My programming interests are in machine learning, artificial intelligence, neural networks, cryptography, blockchain infrastructure, market making, simulation and modeling, and quantum computing. Outside of ByteRevel, I co-founded and spent four years working on a software consulting company, Quadral Apps (It's now defunct as the founders have all left). My interests outside of computer science are poverty alleviation, humanitarian engineering, education, financial markets and economics research.
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/nikhilpalanki" itemprop="sameAs">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Understanding Sorting Algorithms">
+    <meta itemprop="description" content="Question: What the !#$% is a Sorting Algorithm?">
+    <meta itemprop="datePublished" content="June 19, 2011">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Understanding Sorting Algorithms
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>Question: What the !#$% is a Sorting Algorithm?</p>
+
+<p>Answer: Don’t !@$#-ing swear on Byte Revel. A Sorting Algorithm is a process of putting a group of objects in a certain list or order.</p>
+
+<p>Question: Why the heck would I need a Sorting Algorithm?</p>
+
+<p>Answer: Programs don’t just sort stuff when you tell them to. They need to have a method for sorting things and putting them in a certain order. If you have four numbers; 4,5,6, and 7; and you want to put them in order of largest odd number to smallest even number, you use a sorting algorithm. Now this seems pretty obvious; 7,5,6,4 is the answer. But how can you get a program to do this? You know the answer.</p>
+
+<p>There are several algorithms for programming usage. Some are just downright complicated. I’ll show you 3 algorithms that are simple to use so you get the gist of it.</p>
+
+<ul>
+  <li><strong>Bubble Sorting Algorithm</strong></li>
+</ul>
+
+<p>The Bubble Sorting Algorithm, or Bubble Sort, is one of the most simple ways to sort items. It compares 2 adjacent items together and swaps their position depending on the value of the item. The higher the value, it goes higher up. Here is an example of the Bubble Sort Algorithm:</p>
+
+<p>{7, 3, 1, 9, 5, 8} is a set of numbers that needs to be ordered</p>
+
+<p>{<strong>7, 3</strong>, 1, 9, 5, 8} Since 7 and 3 are the first two numbers in the set, they are swapped because {<strong>3, 7</strong>, 1, 9, 5, 8}</p>
+
+<p>{3, <strong>7, 1</strong>, 9, 5, 8} Since 7 and 1 are the next two numbers in the set, they are swapped because 1&lt;7 {3, <strong>1, 7</strong>, 9, 5, 8}</p>
+
+<p>{3, 1, <strong>7, 9,</strong> 5, 8} Since 7 and 9 are the next two numbers in the set, they aren’t swapped because 7&lt;9</p>
+
+<p>{3, 1, 7, <strong>9, 5,</strong> 8} Since 9 and 5 are the next two numbers in the set, they are swapped because 9&gt;5 {3, 1, 7, <strong>5, 9</strong>, 8}</p>
+
+<p>{3, 1, 7, 5, <strong>9, 8</strong>} Since 9 and 8 are the next two numbers in the set, they are swapped because 9&gt;8 {3, 1, 7, 5, <strong>8, 9</strong>}</p>
+
+<p>This isn’t finished because 7 is before 5 and 3 is before 1. So the process repeats itself:</p>
+
+<p>{<strong>3, 1</strong>, 7, 5, 8, 9} Since 3 and 1 are the next two numbers in the set, they are swapped because 3&gt;1 {<strong>1, 3</strong>, 7, 5, 8, 9}</p>
+
+<p>{1, 3, <strong>7, 5,</strong> 8, 9} Since 7 and 5 are the next two numbers in the set, they are swapped because 7&gt;5 {1, 3, <strong>5, 7</strong>, 8, 9}</p>
+
+<p>The rest is unnecessary but you have to program it. Look at this picture I got off of wikipedia to explain all of the stuff I just wrote.</p>
+
+<div id="attachment_1308" style="max-width: 310px" class="wp-caption aligncenter">
+  <a rel="attachment wp-att-1308" href="/2011/06/19/understanding-sorting-algorithms/bubble-sort-example-300px/"><img class="size-full wp-image-1308" title="Bubble-sort-example-300px" src="/wp-content/uploads/2011/06/Bubble-sort-example-300px.gif" alt="" width="300" height="180" /></a>
+  
+  <p class="wp-caption-text">
+    Observe
+  </p>
+</div>
+
+<ul>
+  <li><strong>Selection Sort</strong></li>
+</ul>
+
+<p>Selection Sort is a very simple algorithm. But very inefficient. What it does is it searches through the entire list of items, finds the smallest value, and swaps it with the first item. It the finds the second smallest value and swamps it with the second item. And that is all that happens. Look at the following picture (from Wikipedia) and see how it works.</p>
+
+<div id="attachment_1309" style="max-width: 110px" class="wp-caption aligncenter">
+  <a rel="attachment wp-att-1309" href="/2011/06/19/understanding-sorting-algorithms/selection-sort-animation/"><img class="size-full wp-image-1309" title="Selection Sort" src="/wp-content/uploads/2011/06/Selection-Sort-Animation.gif" alt="" width="100" height="371" /></a>
+  
+  <p class="wp-caption-text">
+    It is Slower than Most Other Algorithms
+  </p>
+</div>
+
+<ul>
+  <li><strong>Bogus Sort</strong></li>
+</ul>
+
+<p>This is a very amusing sorting algorithm. It almost impossible to use. An example of using the Bogus Sort is checking a deck of cards or list of numbers. If they are in order from smallest to largest or however they are supposed to be, nothing happens. If they are not in order, and even if there are just 2 items misplaced, you throw the entire stack of numbers or deck of cards all over the place. That’s right. You throw them all over the place. You collect the cards or numbers, and see if they are in order. If they aren’t, you repeat the process. Eventually they will be in order, but after a maximum of (n-1)n! (if using a stack of numbers) or 52! if using the deck of cards. As you can see, Bogus Sort deserves its name.</p>
+
+<p>I hope you now have a better grasp of Sorting Algorithms. Enjoy!</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#algorithms" class="page__taxonomy-item" rel="tag">algorithms</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#bogus-sort" class="page__taxonomy-item" rel="tag">bogus sort</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#bubble-sort" class="page__taxonomy-item" rel="tag">bubble sort</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#great-sorting-algorithms" class="page__taxonomy-item" rel="tag">great sorting algorithms</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#how-can-i-use-an-algorithm" class="page__taxonomy-item" rel="tag">how can i use an algorithm</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#how-to-use-a-sorting-algorithm" class="page__taxonomy-item" rel="tag">how to use a sorting algorithm</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#monkey-sort-bogosort" class="page__taxonomy-item" rel="tag">monkey sort bogosort</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#selection-sort" class="page__taxonomy-item" rel="tag">selection sort</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#what-is-a-sorting-algorithm" class="page__taxonomy-item" rel="tag">what is a sorting algorithm</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#how-to" class="page__taxonomy-item" rel="tag">How To</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/categories/#tutorials" class="page__taxonomy-item" rel="tag">Tutorials</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/categories/#uncategorized" class="page__taxonomy-item" rel="tag">Uncategorized</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2011-06-19T03:52:53-07:00">June 19, 2011</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/2011/06/18/5-more-websites-where-you-can-listen-to-music-for-free/" class="pagination--pager" title="5 More Websites Where You Can Listen To Music For Free
+">Previous</a>
+    
+    
+      <a href="/2011/06/20/nestopia-play-classic-nintendo-games-on-your-computer/" class="pagination--pager" title="Play Classic Nintendo Games On Your Computer With The Nestopia Emulator
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2016/08/icon1024.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2016/08/21/beardedspice-for-mac-lets-you-control-any-music-website-with-your-media-keys/" rel="permalink">BeardedSpice for Mac Lets You Control Any Music Website with Your Media Keys
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2016/02/uber-logo.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2016/02/21/the-growth-of-sharing-services/" rel="permalink">The Growth of Sharing Services
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Over the past few years, the tech sector has seen an emergence of, for lack of a better term, “sharing services,” or companies that network and rent out dist...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2015/11/Quantopian_S1.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2015/11/02/quantopian-technology-to-backtest-and-execute-algorithmic-trading/" rel="permalink">Quantopian – Technology to Backtest and Execute Algorithmic Trading
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Algorithmic trading is growing field in finance that uses computers to execute securities trades. With growing research in artificial intelligence and machin...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2015/10/Cu_computer_science.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2015/10/17/computer-science-at-undergraduate-level-part-i/" rel="permalink">Computer Science at Undergraduate Level (Part I)
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Computer Science is rapidly becoming a popular major among students as the job market for CS majors shows consistent growth. Additionally, the market for CS ...</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap">
+  <input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  <div id="results" class="results"></div>
+</div>
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Byte Revel. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+
+
+  
+  
+  <script src="/assets/js/lunr/lunr.min.js"></script>
+  <script src="/assets/js/lunr/lunr-store.js"></script>
+  <script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "/2011/06/19/understanding-sorting-algorithms/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/2011/06/19/understanding-sorting-algorithms"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://byte-revel.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+  </body>
+</html>

@@ -1,0 +1,673 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.9.1 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Introduction to Stochastics – A Look at Monte Carlo Method and Hidden Markov Model - Byte Revel</title>
+<meta name="description" content="Note: This is a paper I wrote for my AH Computer Science course, hence the formality.">
+
+
+  <meta name="author" content="Nikhil Palanki">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Byte Revel">
+<meta property="og:title" content="Introduction to Stochastics – A Look at Monte Carlo Method and Hidden Markov Model">
+<meta property="og:url" content="/2015/01/18/introduction-to-stochastics-a-look-at-monte-carlo-method-and-hidden-markov-model/">
+
+
+  <meta property="og:description" content="Note: This is a paper I wrote for my AH Computer Science course, hence the formality.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2015-01-18T02:52:19-08:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/2015/01/18/introduction-to-stochastics-a-look-at-monte-carlo-method-and-hidden-markov-model/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Byte Revel",
+      "url": null,
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Byte Revel Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Byte Revel</a>
+        <ul class="visible-links">
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Nikhil Palanki</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        I have been writing at ByteRevel since its inception in 2011 and helped make it what it is today. I've always been fascinated by the intersection between human phenomena and computing, specifically in fields of education, financial markets, and creative design. My programming interests are in machine learning, artificial intelligence, neural networks, cryptography, blockchain infrastructure, market making, simulation and modeling, and quantum computing. Outside of ByteRevel, I co-founded and spent four years working on a software consulting company, Quadral Apps (It's now defunct as the founders have all left). My interests outside of computer science are poverty alleviation, humanitarian engineering, education, financial markets and economics research.
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/nikhilpalanki" itemprop="sameAs">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Introduction to Stochastics – A Look at Monte Carlo Method and Hidden Markov Model">
+    <meta itemprop="description" content="Note: This is a paper I wrote for my AH Computer Science course, hence the formality.">
+    <meta itemprop="datePublished" content="January 18, 2015">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Introduction to Stochastics – A Look at Monte Carlo Method and Hidden Markov Model
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  10 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p><strong>Note: </strong>This is a paper I wrote for my AH Computer Science course, hence the formality.</p>
+
+<p><strong>Preface</strong></p>
+
+<p>A stochastic process is a process that involves aggregating results to find patterns in an otherwise random-seeming phenomena. Sometimes we can’t determine exact functions for representing complicated events or processes and rather than assuming everything is arbitrary and random, mathematicians and computer scientists have developed algorithms for modeling these processes and determining trends. While the models tend not to be consistent exactly with reality, as they are simplifying assumptions, they do help us determine trends in things that we would otherwise think are random processes.</p>
+
+<p>The Hidden Markov Model and Monte Carlo Method are two different ideas in computer science with a connected goal of determining algorithms although they solve different problems. The Hidden Markov Model is a model developed to understand processes where the effects can be observed but the algorithm is unknown. The hidden process is referred to as the “Markov Process,” and the model is the graphical interpretation of the possible algorithms. The Monte Carlo Method is a class of algorithms rather than a model for visualizing possible processes. The algorithms are designed to compute values that are generally not easy to find via a function through probabilistic sampling. These algorithms, while part of a broad category, follow a general structure of taking a domain of possible input values with probabilities of these values occurring and then using a “deterministic algorithm” (an algorithm that takes gives a unique output for each unique input) to find individual results. The idea is that aggregating all of the algorithm results will maintain some sort of consistent behavior with which we can use to determine the behavior of the object for which the Monte Carlo algorithm was designed.</p>
+
+<p><strong>Hidden Markov Process</strong></p>
+
+<p>There are a few definitions surrounding what a Markov Process is. A Markov Process is not solely a hidden algorithm. It’s an algorithm that, at each state of the algorithm, we are able to determine the entire history of the algorithm (Ghahramani). For example, consider speech. A person talks with a non-random string of words (because humans cannot be random). We don’t know for certain what word will come next but we can use the previous words to make a guess as to what will come next. This is a Markov Process.</p>
+
+<p><strong>Hidden Markov Model</strong></p>
+
+<p>The HMM is a model for visualizing a Markov Process. Instead of delving into the mathematics, I will first illustrate how this model works by showing a few examples.</p>
+
+<div id="attachment_4838" style="max-width: 437px" class="wp-caption alignright">
+  <a href="/wp-content/uploads/2015/01/Screen-Shot-2015-01-18-at-9.28.34-PM.png"><img class="size-full wp-image-4838" src="/wp-content/uploads/2015/01/Screen-Shot-2015-01-18-at-9.28.34-PM.png" alt="Observe this schematic" width="427" height="232" srcset="/wp-content/uploads/2015/01/Screen-Shot-2015-01-18-at-9.28.34-PM.png 427w, /wp-content/uploads/2015/01/Screen-Shot-2015-01-18-at-9.28.34-PM-300x163.png 300w, /wp-content/uploads/2015/01/Screen-Shot-2015-01-18-at-9.28.34-PM-180x98.png 180w, /wp-content/uploads/2015/01/Screen-Shot-2015-01-18-at-9.28.34-PM-360x196.png 360w" sizes="(max-width: 427px) 100vw, 427px" /></a>
+  
+  <p class="wp-caption-text">
+    Observe this schematic
+  </p>
+</div>
+
+<p>Here is an example of the Hidden Markov Model that I came up with. Let’s say Spencer is in a room with <em>n</em> different dictionaries, each of the same language. The problem is that each definition within each dictionary is unique. We don’t know how they are unique but we know that each dictionary has a random assortment of definitions although they all contain the same words. Alex is on the outside of the room. Spencer, with an unknown algorithm, chooses a definition from any of the dictionaries and sends out to Alex to determine which dictionary it came from so he can find what word it is. Alex has no way of figuring out how Spencer is choosing definitions but can say with a certain probability, specifically 1/n, which dictionary it is coming from. Spencer continues with this process and over a finite period of time, Alex will be able to determine the algorithm through probabilistic interpolation.</p>
+
+<p>An example given on Wikipedia is that there is a room with a conveyor belt leading out. A genie is within the room with <em>n</em> urns containing some assortment of colored balls and has a hidden Markov Process or unknown algorithm for sending the balls out of the room. An observer, we’ll say Peter, is outside observing the stream of colored balls exiting the room. He can’t determine what algorithm the genie is using because he doesn’t know from which urns the colored balls are coming from (because the colored balls exist in all possible urns). But he can make probability guesses as to figure out what the algorithm is. Consider the following schematic on the left. The long arrow indicates direction while the arrows from urns to the colored circles indicate possible ball orderings. One aspect about the Markov Process is that the genie’s choice of next urn is dependent on the present urn.</p>
+
+<p><strong>Monte Carlo Method</strong>**</p>
+
+<p>**</p>
+
+<p>The Monte Carlo Method is a class of algorithms based on random sampling. Based on the statistical idea that a near-infinite quantity (yet finite) of tests will reveal a pattern and if a near-infinite quantity of tests doesn’t reveal a pattern, we can conclude that it is a random procedure.</p>
+
+<p>Let’s say you want to find the value of pi. The ratio of the area of a circle to the area of a square with a side length congruent to the radius of the circle is equal to pi. So we place the square within the circle and proceed to throw grains of rice, each of unit area 1, onto the circle-square body. We continue with this random sampling of points, all the while taking the ratio of number of rice grains outside of the square and within the square to the number of rice grains found within the square. This ratio will be very close to pi once both the square and circle are covered in rice grains.</p>
+
+<p>An important aspect of the Monte Carlo Method is that these algorithms tend to follow a general procedure:</p>
+
+<ol>
+  <li>Given a domain of possible inputs, determine each input’s probability of being chosen</li>
+  <li>Use a deterministic algorithm to sample each input and record the output</li>
+  <li>Aggregate the outputs</li>
+</ol>
+
+<p>The Monte Carlo Method allows computers to quickly calculate all possible outcomes within a reasonable time period. This is a useful procedure especially in situations where there exists uncertainty to human perspective but a computer can visualize with probabilities all risky outcomes.</p>
+
+<p>The Monte Carlo Method is one of the defining algorithms of stochastics as it depends on aggregating results from a model.</p>
+
+<p><strong>Monte Carlo Algorithm Examples</strong></p>
+
+<p>Here is an example I thought of while driving. Let’s say you throw a handful of sand onto a sidewalk and you want to determine each grain’s location. You could start with looking at each sand grain’s trajectory, factoring in its mass and its direction by projecting the grains into three-dimensional space. You could then account for the various directions of forces acting on the flying sand grains. This is wildly unrealistic given all of the anomalous forces that could affect a tiny sand grain, including the gravitational force of every sand grain on each other. We have to simplify the forces acting on the grains of sand but let’s say we reduce it to several thousand varying forces. So, with a rather long calculation (somewhat long for a computer to calculate trajectories for a thousand sand grains in three-dimensional space) we can estimate the locations of grains of sand.</p>
+
+<p>An alternate way, by using the Monte Carlo Method, ignores all varying forces that could be acting on the grains of sand. Here is the algorithm I propose:</p>
+
+<ol>
+  <li>Assume that all of the anomalous forces are not anomalous but consistent with every trial. Similarly, assume that all external factors are held constant, each handful of sand is equal in mass and volume to the next, and each throw is consistent. These are reasonable assumptions given that external factors don’t vary much, grains of sand are close to being the same, and each throw can be made consistent. Similarly, we are only searching for an estimate, not an exact calculation. Finally, we assume that each grain of sand corresponds to another grain in a consecutive trial. These grains have the same initial trajectory.</li>
+  <li>Take a handful of sand and throw it. Record the locations in 2-d space of all grains of sand.</li>
+  <li>Clear sidewalk and repeat step 1 until you’ve collected enough results, whatever “enough” is in your definition. I would say several hundred thousand.</li>
+  <li>Aggregate the results by averaging the positions of each grain of sand based on their initial trajectory.</li>
+</ol>
+
+<p>We should be able to estimate where grains of sand will land given certain conditions because of repeated analysis.</p>
+
+<p>In general though, Monte Carlo Methods aren’t straight-up repeated aggregations of experiments. Sometimes there exist models which are repeatedly tested until a general pattern emerges.</p>
+
+<p><strong>Applications of the Hidden Markov Model &amp; Monte Carlo Method</strong></p>
+
+<p>A Hidden Markov Model is a way of modeling a Hidden Markov Process or an algorithm that cannot be viewed except for its output states. Examples of Hidden Markov Processes include speaking, weather, and financial forecasting. We can use models that view the previous outputs and then extrapolate or predict the next output based off of certain probabilities. The Hidden Markov Model can be used in many different contexts, ranging from AI video game design to stock market predictions. Yet, while the HMM is a surprisingly simple concept, applying it can range in complexity. Generally, applications of the Hidden Markov Model require a physical knowledge of the phenomena that the system describes. For example, if I wanted to design an algorithm to predict stock market movement, I would have to physically determine a relationship between market behavior and its past few states.</p>
+
+<p>A connection between the Hidden Markov Model and the Monte Carlo Method is that the HMM relies on a physical correlation to be clear while the Monte Carlo Method can determine a physical correlation via random sampling tests. Let’s say we have a model for a Hidden Markov process but we don’t have a physical relationship (like numbers corresponding to probabilities, etc…), we can use the Monte Carlo Method based on the model to derive probabilities via random sampling. If we have a process that we think we have modeled, and would like to determine the physical correlation, we could run the model many, many times and aggregate the results. The results would then show a probability trend distributed over the tests which we could then use in conjunction with the Hidden Markov Model to definitively determine and implement an algorithm or computer software that predicts process outputs.</p>
+
+<p>The Monte Carlo Method isn’t solely for procedures with hidden algorithms or processes. But, it is used when computing a trend or exact value is not evident, timely, or possible within a reasonable time period. It’s easy to run repeated tests and aggregate results, but it is not easy to determine theoretical answers to problems via logical reasoning. Its myriad applications include everything from investment analysis to operations research.</p>
+
+<p><strong>Introduction to Stochastics</strong></p>
+
+<p>The Hidden Markov Model and the Monte Carlo Method are both part of a discipline known as stochastics. Stochastics is the science of determining or predicting future states with a given probability. While we cannot be one hundred percent certain about future events, we can try to determine the probability (and to a greater extent, the certainty) behind a given phenomena. The Hidden Markov Model is a way of correlating outputs with a hidden process and the Monte Carlo Method is a way of determining patterns in processes that are seemingly impossible to compute or determine. The Monte Carlo Method requires a model to run tests on (which could be the Hidden Markov Model) while the Hidden Markov Model is a way of representing the connection between hidden algorithms and their outputs. These two ideas are fundamental to the discipline of stochastics and have wide applications ranging from bioinformatics, finance, linguistics, and meteorology.</p>
+
+<p>Stochastics is a wide field extending into a variety of human and scientific disciplines. Essentially, it is the science of uncertainty, randomness, and probability. The Monte Carlo Method and the Hidden Markov Model are two fundamental ideas in stochastics. Yet, these two ideas are very wide-reaching and contain many different sub-categories for research and software development. When designing software that deals with physically random phenomena, the Monte Carlo Method and Hidden Markov Model are two approaches to use when modeling and designing algorithms to achieve physical results.</p>
+
+<p><strong>Works Cited</strong></p>
+
+<p><a href="http://mlg.eng.cam.ac.uk/zoubin/papers/ijprai.pdf">http://mlg.eng.cam.ac.uk/zoubin/papers/ijprai.pdf</a></p>
+
+<p><a href="http://www.cs.umd.edu/~djacobs/CMSC828/ApplicationsHMMs.pdf">http://www.cs.umd.edu/~djacobs/CMSC828/ApplicationsHMMs.pdf</a></p>
+
+<p><a href="http://statweb.stanford.edu/~owen/mc/Ch-intro.pdf">http://statweb.stanford.edu/~owen/mc/Ch-intro.pdf</a></p>
+
+<p><a href="http://en.wikipedia.org/wiki/Hidden_Markov_model">http://en.wikipedia.org/wiki/Hidden_Markov_model</a></p>
+
+<p><a href="https://www.ma.utexas.edu/users/gordanz/notes/introduction_to_stochastic_processes.pdf">https://www.ma.utexas.edu/users/gordanz/notes/introduction_to_stochastic_processes.pdf</a></p>
+
+<p> </p>
+
+<p> </p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#explaining-stochastics" class="page__taxonomy-item" rel="tag">explaining stochastics</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#hidden-markov-model" class="page__taxonomy-item" rel="tag">hidden markov model</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#monte-carlo-method" class="page__taxonomy-item" rel="tag">monte carlo method</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#stochastics" class="page__taxonomy-item" rel="tag">stochastics</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#what-are-stochastics" class="page__taxonomy-item" rel="tag">what are stochastics</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#computer-science" class="page__taxonomy-item" rel="tag">Computer Science</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/categories/#programming" class="page__taxonomy-item" rel="tag">Programming</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2015-01-18T02:52:19-08:00">January 18, 2015</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/2014/11/30/simogo-aesthetically-creative-ios-developers/" class="pagination--pager" title="Simogo – Aesthetically Creative iOS Developers
+">Previous</a>
+    
+    
+      <a href="/2015/01/18/rabb-it-is-a-revolution-in-social-web-browsing-and-video-streaming/" class="pagination--pager" title="Rabb.it is a Revolution in Social Web Browsing and Video Streaming
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2016/08/icon1024.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2016/08/21/beardedspice-for-mac-lets-you-control-any-music-website-with-your-media-keys/" rel="permalink">BeardedSpice for Mac Lets You Control Any Music Website with Your Media Keys
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2016/02/uber-logo.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2016/02/21/the-growth-of-sharing-services/" rel="permalink">The Growth of Sharing Services
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Over the past few years, the tech sector has seen an emergence of, for lack of a better term, “sharing services,” or companies that network and rent out dist...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2015/11/Quantopian_S1.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2015/11/02/quantopian-technology-to-backtest-and-execute-algorithmic-trading/" rel="permalink">Quantopian – Technology to Backtest and Execute Algorithmic Trading
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Algorithmic trading is growing field in finance that uses computers to execute securities trades. With growing research in artificial intelligence and machin...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2015/10/Cu_computer_science.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2015/10/17/computer-science-at-undergraduate-level-part-i/" rel="permalink">Computer Science at Undergraduate Level (Part I)
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Computer Science is rapidly becoming a popular major among students as the job market for CS majors shows consistent growth. Additionally, the market for CS ...</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap">
+  <input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  <div id="results" class="results"></div>
+</div>
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Byte Revel. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+
+
+  
+  
+  <script src="/assets/js/lunr/lunr.min.js"></script>
+  <script src="/assets/js/lunr/lunr-store.js"></script>
+  <script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "/2015/01/18/introduction-to-stochastics-a-look-at-monte-carlo-method-and-hidden-markov-model/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/2015/01/18/introduction-to-stochastics-a-look-at-monte-carlo-method-and-hidden-markov-model"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://byte-revel.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+  </body>
+</html>

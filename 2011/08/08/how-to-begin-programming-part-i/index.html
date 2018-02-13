@@ -1,0 +1,662 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.9.1 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>How to Begin Programming Part I - Byte Revel</title>
+<meta name="description" content="Programming is a dead useful knowledge one could acquire. It could be applied to any sciences job. It could help one create their own software tailored to their own usage. But beginning programming and mastering programming are two very separate things. Nonetheless, you need to start somewhere.">
+
+
+  <meta name="author" content="Nikhil Palanki">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Byte Revel">
+<meta property="og:title" content="How to Begin Programming Part I">
+<meta property="og:url" content="/2011/08/08/how-to-begin-programming-part-i/">
+
+
+  <meta property="og:description" content="Programming is a dead useful knowledge one could acquire. It could be applied to any sciences job. It could help one create their own software tailored to their own usage. But beginning programming and mastering programming are two very separate things. Nonetheless, you need to start somewhere.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2011-08-08T07:15:00-07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/2011/08/08/how-to-begin-programming-part-i/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Byte Revel",
+      "url": null,
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Byte Revel Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Byte Revel</a>
+        <ul class="visible-links">
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Nikhil Palanki</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        I have been writing at ByteRevel since its inception in 2011 and helped make it what it is today. I've always been fascinated by the intersection between human phenomena and computing, specifically in fields of education, financial markets, and creative design. My programming interests are in machine learning, artificial intelligence, neural networks, cryptography, blockchain infrastructure, market making, simulation and modeling, and quantum computing. Outside of ByteRevel, I co-founded and spent four years working on a software consulting company, Quadral Apps (It's now defunct as the founders have all left). My interests outside of computer science are poverty alleviation, humanitarian engineering, education, financial markets and economics research.
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/nikhilpalanki" itemprop="sameAs">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="How to Begin Programming Part I">
+    <meta itemprop="description" content="Programming is a dead useful knowledge one could acquire. It could be applied to any sciences job. It could help one create their own software tailored to their own usage. But beginning programming and mastering programming are two very separate things. Nonetheless, you need to start somewhere.">
+    <meta itemprop="datePublished" content="August 08, 2011">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">How to Begin Programming Part I
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>Programming is a dead useful knowledge one could acquire. It could be applied to any sciences job. It could help one create their own software tailored to their own usage. But beginning programming and mastering programming are two very separate things. Nonetheless, you need to start somewhere.</p>
+
+<p><strong>Reason for Learning</strong></p>
+
+<p>Everyone learns for their own reasons. If you enjoy programming, then you should definitely learn it  (this is paradoxical. If you know programming, then you already know how to). If you need to learn programming, you should figure out which language you should learn, depending on your job’s requirements.</p>
+
+<p><strong>Which programming language to choose?</strong></p>
+
+<p>With the thousands of programming languages out there, picking one may seem to be an arduous decision. But it actually is quite easy. Only about 30 of those languages are actually used today, commercially. The other 970+ languages are used by companies for their own purposes or individual developers. Your best bet is to learn a language that is widely known for 2 reasons: More people can help you and there is more documentation for the language.</p>
+
+<p><strong>So how do you choose the language?</strong></p>
+
+<p>You can look over the <a href="/2011/06/29/top-10-programming-languages-based-on-prolific-usage/">list</a> of the most prolific languages and select one that you’d like to learn. But if you cannot decide, let’s take a logical approach. Ask yourself this: “Why would I need to learn a programming language? Which job do I have requires the use of programming?”</p>
+
+<p><strong>Science and Mathematics</strong></p>
+
+<p>If you work in sciences and mathematics fields, the programming may help you a lot. When you need to write a program to hold data or manipulate it, or when you need to find an accurate way of displaying data, knowledge of a solid programming language will help you much.</p>
+
+<p>In Sciences and Mathematics, the best computer languages are ones <em>created</em> by the user. Now this is incredibly far-fetched, but when one designs their own language, they can utilize it and tailor it exactly to their needs.</p>
+
+<p>But you’d need a computer sciences background to write a language compiler and interpreter, so you should stick to the learning path of a language.</p>
+
+<p>So for Sciences and Mathematics, you’d need a type of language that can handle piles of data, but remain tailored to your other research needs. The programming language you use doesn’t have to fast or pre-compiled, but being faster is a bonus.  So here are the three programming languages that you’d benefit most from.</p>
+
+<ul>
+  <li><strong>Perl</strong> – Many believe Perl to be the new COBOL, but it has more uses than COBOL did. It works very easily when storing data and writing software to store data. It is pretty easy to learn.</li>
+  <li><strong>Python</strong> – Named after Monty Python, this language lacks the speed of C++ or FORTRAN but is one of the easier mainstream languages to learn.</li>
+  <li><strong>Ruby –</strong> This should be tried, only when Perl and Python have proven not to work for you. Ruby is the fusion of 5 programming languages (2 of which are esoteric) and lacks the amount of libraries that Python and Perl provide. It is also easy to learn, but not as efficient as the previous 2.</li>
+</ul>
+
+<p>**Computer Sciences and Engineering</p>
+
+<p>**</p>
+
+<p>If you want to become a programmer as a full-time career, learning and acquiring 5+ languages is necessary. You need languages that can efficiently write programs, but depending on the type of program you specialize in, the speed at which the program works at should be accounted for.</p>
+
+<p>As an engineer, knowing 1 or 2 programming languages gives you the versatility when constructing devices and programming them (only if the devices are computers mind you).</p>
+
+<p>So here are 6 programming languages that are basic stuff to learn before majoring in Computer Sciences and what not.</p>
+
+<ul>
+  <li><strong>C++</strong> – A majority of programmers use this language and learn it first for 3 reasons; it is widespread, easy to use, and many languages are influenced by C++ syntax. C# and Java share much of their syntax with C++.</li>
+  <li><strong>C</strong> – This isn’t necessary due to the fact it is being obsolesced by the newer C’s but if learned, makes any programming language that much easier. C inspired many other languages to come about.</li>
+  <li><strong>Java –</strong> Has cross-platforming capabilities but is slow as heck. Many computers do work with it and it is considered by many to be the “greatest programming language ever.” It certainly is something of a language, despite its caveat.</li>
+  <li><strong>Python</strong> – Becoming increasingly popular due to its easiness to learn and many uses it has. Since becoming a Computer Sciences major and eventually a programmer requires to learn the most popular and widespread languages first, Python should be learned.</li>
+  <li><strong>Objective-C</strong> – If you want to go to the Apple side of the spectrum of major computer development, Objective-C is essential as you can efficiently develop iOS and MacOS applications.</li>
+  <li><strong>C# –</strong> Objective-C’s counterpart for Windows. Thanks to Mono, you can develop C# on your Mac, but it has much more use when working with .NET.</li>
+</ul>
+
+<p>**Web Development and Networking</p>
+
+<p>**</p>
+
+<p>Web Development requires one to learn many languages. Markup, Scripting, and Programming will all become a part of <em>**</em>the learning process. Here are 10 languages that would present much  use when beginning Web Development.</p>
+
+<ul>
+  <li><strong>HTML –</strong> What Web Development requires at its bare-essentials. Technically, you only need to know HTML, CSS, and JavaScript at least to make your website successful.</li>
+  <li><strong>CSS</strong> – Organizes, colors, and cleans up the web pages you make.</li>
+  <li><strong>JavaScript</strong> – Essential to know. It has uses outside of Web Development too, such as iOS development.</li>
+  <li><strong>PHP</strong> – A beautiful language that connects your Database with your website. If you create a website that has any form of searching through a database, PHP is the best way to go.</li>
+  <li><strong>Ruby on Rails</strong> – A framework that does a lot of the work for you when creating a website that resembles a blog. It created Twitter, Kongregate, Hulu, LivingSocial, and many other Web Applications.</li>
+  <li><strong>XML –</strong> Used for transporting data to be displayed on the HTML page. It, in no way, replaces PHP. It’s main use, though, is to work with Javascript to create the language below…</li>
+  <li><strong>AJAX</strong> – Okay, okay, stop yelling. AJAX is not a language. It is the mixture of Javascript and XML. GMail, Flickr, and GoogleMaps had much of their interfaces created by using AJAX in lieu of other bulky languages like Python.</li>
+  <li><strong>Tcl/Perl </strong>– Tcl has some advantages over Perl, but it is mainly up to the preference of the user on which programming language would suit their needs. They are both Interpreted languages, but Tcl is newer (created in Feb. 2011) and Perl has more libraries and documentation.</li>
+  <li><strong>Python</strong> – Very versatile. It can be used to create Internet applications as well as Computer applications. Most of YouTube was coded in Python and the video-interface was mainly coded in Python.</li>
+  <li><strong>C#</strong> – Used to create server-side applications. Those of you who want to work with the .NET hooligans (I say this in the most affectionate way possible), C# could be of utmost help.</li>
+</ul>
+
+<div>
+  <strong>For the Heck of It</strong>
+</div>
+
+<div>
+  If you want to learn a programming language for the heck of it (God knows what reason passed through your head), then you should stick to learning either <strong>C++</strong>, <strong>Python, </strong>or <strong>Java.</strong> Python is easy to learn, Java is widespread, and C++ has many professional advantages. They each have their caveats which the other makes up for, i.e.: C++ is faster and Python and Java are slower to run. Python is easier to learn and Java and C++ are harder to learn.
+</div>
+
+<div>
+  So once you have decided the programming language you are going to learn, proceed to Part II for the next step in learning the programming language.
+</div>
+
+<div style="text-align: center;">
+  Part 2 &gt;&gt;
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#easiest-programming-languae" class="page__taxonomy-item" rel="tag">easiest programming languae</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#first-programming-language-to-learn" class="page__taxonomy-item" rel="tag">first programming language to learn</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#how-to-begin-programming" class="page__taxonomy-item" rel="tag">how to begin programming</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#how-to-learn-programming-languages" class="page__taxonomy-item" rel="tag">how to learn programming languages</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#how-to" class="page__taxonomy-item" rel="tag">How To</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/categories/#programming" class="page__taxonomy-item" rel="tag">Programming</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/categories/#review" class="page__taxonomy-item" rel="tag">Review</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2011-08-08T07:15:00-07:00">August 08, 2011</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/2011/08/03/ten-very-interesting-ios-games-of-2011-jan-to-jul/" class="pagination--pager" title="Ten Best iOS Games of 2011 (Jan. to Jul.)
+">Previous</a>
+    
+    
+      <a href="/2011/08/12/top-ten-text-editors-and-ides-for-web-development/" class="pagination--pager" title="Top Ten Text Editors and IDEs for Web Development
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2016/08/icon1024.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2016/08/21/beardedspice-for-mac-lets-you-control-any-music-website-with-your-media-keys/" rel="permalink">BeardedSpice for Mac Lets You Control Any Music Website with Your Media Keys
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2016/02/uber-logo.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2016/02/21/the-growth-of-sharing-services/" rel="permalink">The Growth of Sharing Services
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Over the past few years, the tech sector has seen an emergence of, for lack of a better term, “sharing services,” or companies that network and rent out dist...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2015/11/Quantopian_S1.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2015/11/02/quantopian-technology-to-backtest-and-execute-algorithmic-trading/" rel="permalink">Quantopian – Technology to Backtest and Execute Algorithmic Trading
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Algorithmic trading is growing field in finance that uses computers to execute securities trades. With growing research in artificial intelligence and machin...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/wp-content/uploads/2015/10/Cu_computer_science.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2015/10/17/computer-science-at-undergraduate-level-part-i/" rel="permalink">Computer Science at Undergraduate Level (Part I)
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Computer Science is rapidly becoming a popular major among students as the job market for CS majors shows consistent growth. Additionally, the market for CS ...</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap">
+  <input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  <div id="results" class="results"></div>
+</div>
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Byte Revel. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+
+
+  
+  
+  <script src="/assets/js/lunr/lunr.min.js"></script>
+  <script src="/assets/js/lunr/lunr-store.js"></script>
+  <script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "/2011/08/08/how-to-begin-programming-part-i/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/2011/08/08/how-to-begin-programming-part-i"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://byte-revel.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+  </body>
+</html>
