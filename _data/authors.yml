@@ -1,0 +1,13 @@
+Nikhil Palanki:
+  name: "Nikhil Palanki"
+  bio: "I've always been fascinated by the intersection between human phenomena and computing, specifically in fields of education, financial markets, and creative design. My programming interests are in machine learning, artificial intelligence, neural networks, cryptography, blockchain infrastructure, market making, simulation and modeling, and quantum computing. Outside of ByteRevel, I co-founded and spent four years working on a software consulting company, Quadral Apps (It's now defunct as the founders have all left). My interests outside of computer science are poverty alleviation, humanitarian engineering, education, financial markets and economics research."
+  linkedin: "nikhilpalanki"
+
+Ben Lawson:
+  name             : "Ben Lawson"
+  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "I am a computer science student at UCLA."
+  location         : "California"
+  github           : "BenjaminLawson"
+  keybase          : "benlawson"
+  linkedin         : "ben-lawson-a17a2879" # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
